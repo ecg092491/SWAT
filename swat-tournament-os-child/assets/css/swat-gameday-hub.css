@@ -142,7 +142,7 @@ body.swat-hub-ui .swat-gameday.swat-hub .swat-updated{color:var(--gd-muted)!impo
 .swat-hub .swat-dayhead:first-child{margin-top:4px}
 .swat-hub .swat-timehead{margin:12px 0 0;font-family:var(--gd-head);font-weight:800;font-size:19px;line-height:1.15;font-variant-numeric:tabular-nums}
 .swat-hub .swat-gc{display:block;min-width:0;padding:10px 14px 4px;border:1px solid var(--gd-line);border-radius:var(--gd-radius);background:var(--gd-bg);color:var(--gd-ink);box-shadow:var(--gd-shadow)}
-.swat-hub .swat-gc.is-followed{border:1.5px solid var(--gd-line-strong);box-shadow:inset 4px 0 0 var(--gd-accent),var(--gd-shadow)}
+.swat-hub .swat-gc.is-followed{border:1.5px solid var(--gd-line-strong);box-shadow:none}
 .swat-hub .swat-gc.is-live{border-color:var(--gd-accent);box-shadow:inset 0 0 0 1px var(--gd-accent),var(--gd-shadow)}
 .swat-hub .swat-gc.is-championship{border:2px solid var(--gd-accent)}
 .swat-hub .swat-gc.is-cancelled .swat-gc-team{opacity:.7}
@@ -286,14 +286,14 @@ body.swat-hub-ui .swat-gameday.swat-hub .swat-updated{color:var(--gd-muted)!impo
 .swat-hub .swat-followed-chip{display:inline-flex;align-items:center;gap:8px;max-width:100%;min-height:var(--gd-touch);padding:6px 12px 6px 14px;border:1px solid var(--gd-line);border-radius:999px;background:var(--gd-bg);font-weight:600;font-size:14px;text-align:left;color:var(--gd-ink)}
 .swat-hub .swat-followed-chip span:first-child{min-width:0;overflow-wrap:anywhere;white-space:normal;overflow:visible;text-overflow:clip}
 .swat-hub .swat-followed-chip em{font-style:normal;font-size:20px;line-height:1;color:var(--gd-muted)}
-.swat-hub .swat-team-tone-1{box-shadow:inset 4px 0 0 #c99a00}.swat-hub .swat-team-tone-2{box-shadow:inset 4px 0 0 #1c6b9c}.swat-hub .swat-team-tone-3{box-shadow:inset 4px 0 0 #7a55a6}
+.swat-hub .swat-team-tone-1{box-shadow:none}.swat-hub .swat-team-tone-2{box-shadow:none}.swat-hub .swat-team-tone-3{box-shadow:none}
 .swat-hub .swat-itinerary-empty{display:grid;gap:10px;justify-items:start;margin-top:10px;padding:16px;border:1.5px dashed var(--gd-line);border-radius:var(--gd-radius)}
 .swat-hub .swat-itinerary-empty p{color:var(--gd-ink-2)}
 .swat-hub .swat-itinerary-empty button{min-height:var(--gd-touch);padding:8px 16px;border-radius:10px;background:var(--gd-accent);color:var(--gd-accent-ink);font-weight:700}
 .swat-hub .swat-next-game-focus{margin-top:12px}
 .swat-hub .swat-home-up-next-label{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}
 .swat-hub .swat-home-up-next-label>span{color:var(--gd-muted);font-weight:700;font-size:14px}
-.swat-hub .swat-home-next-card{display:grid;gap:4px;padding:14px 14px 10px 16px;border:1.5px solid var(--gd-line-strong);border-radius:var(--gd-radius);background:var(--gd-bg);color:var(--gd-ink);box-shadow:inset 4px 0 0 var(--gd-accent)}
+.swat-hub .swat-home-next-card{display:grid;gap:4px;padding:14px 14px 10px 16px;border:1.5px solid var(--gd-line-strong);border-radius:var(--gd-radius);background:var(--gd-bg);color:var(--gd-ink);box-shadow:none}
 .swat-hub .swat-home-next-card.is-live{background:var(--gd-accent-soft)}
 .swat-hub .swat-home-next-time{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
 .swat-hub .swat-home-next-time strong{font-family:var(--gd-head);font-weight:800;font-size:clamp(32px,9vw,40px);line-height:1;font-variant-numeric:tabular-nums;color:var(--gd-ink)}
@@ -384,7 +384,7 @@ body.swat-hub-ui .swat-gameday.swat-hub .swat-updated{color:var(--gd-muted)!impo
 .swat-hub .swat-game-detail-pitching{margin-top:14px}
 
 /* Context card / game detail */
-.swat-hub .swat-context-card{display:grid;gap:10px;margin-top:14px;padding:14px;border:1.5px solid var(--gd-line-strong);border-radius:var(--gd-radius);background:var(--gd-bg);color:var(--gd-ink);box-shadow:inset 4px 0 0 var(--gd-accent)}
+.swat-hub .swat-context-card{display:grid;gap:10px;margin-top:14px;padding:14px;border:1.5px solid var(--gd-line-strong);border-radius:var(--gd-radius);background:var(--gd-bg);color:var(--gd-ink);box-shadow:none}
 .swat-hub .swat-context-card h2{font-family:var(--gd-head);font-weight:800;font-size:26px;line-height:1.08;overflow-wrap:anywhere;color:var(--gd-ink)}
 .swat-hub .swat-context-card :is(p,small){overflow-wrap:anywhere}
 .swat-hub .swat-context-card small{color:var(--gd-muted)}
@@ -432,7 +432,7 @@ body.swat-hub-ui .swat-gameday.swat-hub .swat-updated{color:var(--gd-muted)!impo
 .swat-hub .swat-btn-gold{background:var(--gd-accent);color:var(--gd-accent-ink)}
 .swat-hub .swat-btn-block{width:100%}
 .swat-hub .swat-form-note{font-size:14px;color:var(--gd-muted)}
-.swat-hub .swat-form-result .is-success{padding:12px;border-radius:10px;background:var(--gd-surface);box-shadow:inset 4px 0 0 var(--gd-win)}
+.swat-hub .swat-form-result .is-success{padding:12px;border-radius:10px;background:var(--gd-surface);box-shadow:none}
 .swat-hub .swat-form-result .is-error{padding:12px;border-radius:10px;background:var(--gd-danger-soft);color:var(--gd-danger);font-weight:600}
 .swat-hub .swat-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 
@@ -457,7 +457,7 @@ body.swat-hub-ui .swat-team-pick-row span{display:grid;min-width:0}
 body.swat-hub-ui .swat-team-pick-row strong{overflow-wrap:anywhere}
 body.swat-hub-ui .swat-team-pick-row small{color:var(--gd-muted);font-size:13px}
 body.swat-hub-ui .swat-team-pick-row em{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--gd-surface);font-style:normal;font-weight:700}
-body.swat-hub-ui .swat-team-pick-row.is-followed{border-color:var(--gd-line-strong);box-shadow:inset 4px 0 0 var(--gd-accent)}
+body.swat-hub-ui .swat-team-pick-row.is-followed{border-color:var(--gd-line-strong);box-shadow:none}
 body.swat-hub-ui .swat-team-pick-row.is-followed em{background:var(--gd-accent);color:var(--gd-accent-ink)}
 body.swat-hub-ui .swat-team-picker-count{position:sticky;bottom:0;margin-top:10px;padding:10px 4px;background:var(--gd-bg);text-align:center;color:var(--gd-muted);font-weight:600}
 body.swat-hub-ui .swat-picker-empty{padding:18px;text-align:center;color:var(--gd-muted)}

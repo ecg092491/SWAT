@@ -44,7 +44,7 @@
 #swat-postseason .swat-ps-table .swat-ps-team{width:40%;min-width:150px;position:sticky;left:0;z-index:1;text-align:left;white-space:normal;overflow-wrap:anywhere;background:var(--gd-surface);box-shadow:1px 0 var(--gd-line)}
 #swat-postseason .swat-ps-table th.swat-ps-team{z-index:2}
 #swat-postseason .swat-ps-team a{display:flex;align-items:center;min-height:44px;color:var(--gd-ink);text-decoration:underline}
-#swat-postseason .swat-ps-table .is-followed-team .swat-ps-team{border-left:3px solid var(--gd-accent)}
+#swat-postseason .swat-ps-table .is-followed-team .swat-ps-team{color:var(--gd-gold-text)}
 #swat-postseason .swat-ps-table .is-leader .swat-ps-team{font-weight:600}
 #swat-postseason .swat-coin{display:block;font-size:var(--gd-meta);color:var(--gd-muted)}
 #swat-postseason .swat-ps-rules{margin:16px 0}

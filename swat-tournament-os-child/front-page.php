@@ -41,7 +41,7 @@ $render_event = static function ( $event, $variant ) {
 		<p class="swh-event__meta"><?php echo esc_html( $event['dates'] ?: __( 'Dates TBD', 'swat-tournament-os-child' ) ); ?></p>
 		<?php if ( $event['divisions'] ) : ?><p class="swh-event__meta"><?php echo esc_html( $event['divisions'] ); ?> · <?php esc_html_e( 'Clemmons, NC', 'swat-tournament-os-child' ); ?></p><?php else : ?><p class="swh-event__meta"><?php esc_html_e( 'Divisions TBD · Clemmons, NC', 'swat-tournament-os-child' ); ?></p><?php endif; ?>
 		<?php if ( $event['note'] ) : ?><p class="swh-event__note<?php echo $event['has_schedule'] ? ' is-posted' : ''; ?>"><?php echo esc_html( $event['note'] ); ?></p><?php endif; ?>
-		<?php if ( $event['deadline_label'] ) : ?><p class="swh-event__note"><?php echo esc_html( $event['deadline_label'] ); ?></p><?php endif; ?>
+		<?php if ( $event['deadline_label'] ) : ?><p class="swh-event__note"><?php echo esc_html( $event['deadline_label'] ); ?></p><?php elseif ( $event['show_badge'] && in_array( $event['reg_state']['status'], array( 'open', 'limited' ), true ) ) : ?><p class="swh-event__note"><?php esc_html_e( 'Registration deadline TBD', 'swat-tournament-os-child' ); ?></p><?php endif; ?>
 		<div class="swh-event__actions">
 			<?php if ( in_array( $event['reg_state']['status'], array( 'sold_out', 'closed' ), true ) ) : ?><button type="button" class="swh-btn" disabled><?php esc_html_e( 'Registration unavailable', 'swat-tournament-os-child' ); ?></button><?php endif; ?>
 			<?php foreach ( $event['actions'] as $action ) { swat_child_home_action_link( $action ); } ?>
@@ -58,7 +58,7 @@ $render_event = static function ( $event, $variant ) {
 	// same weekend models as the This Weekend cards, so it never claims more.
 	$hero_live = false;
 	foreach ( $weekend as $event ) {
-		$hero_live = $hero_live || $event['is_live'];
+		$hero_live = $hero_live || ( $event['is_live'] && 'cancelled' !== $event['reg_state']['status'] );
 	}
 	?>
 	<?php if ( $hero_live ) : ?><a class="swh-live-banner swh-wrap" href="<?php echo esc_url( $gameday_url ); ?>"><span><?php esc_html_e( 'Game Day is live', 'swat-tournament-os-child' ); ?></span><span><?php esc_html_e( 'Open Game Day →', 'swat-tournament-os-child' ); ?></span></a><?php endif; ?>

@@ -82,7 +82,7 @@ body.swat-hub-ui .swat-hub :is(.swat-app-empty p,.swat-personal-warning){color:v
 body.swat-hub-ui .swat-hub .swat-personal-warning{color:var(--gd-gold-text)}
 body.swat-hub-ui .swat-team-picker-sheet{background:var(--gd-surface);color:var(--gd-ink);padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));font-family:var(--gd-body)}
 body.swat-hub-ui .swat-team-picker :is(button,input){min-height:44px;font-family:var(--gd-body);border-radius:var(--gd-control-radius)}
-body.swat-hub-ui .swat-team-pick-row.is-followed{box-shadow:inset 3px 0 var(--gd-accent)}
+body.swat-hub-ui .swat-team-pick-row.is-followed{box-shadow:none}
 body.swat-hub-ui .swat-team-pick-row.is-followed em{background:var(--gd-accent);color:var(--gd-accent-ink)}
 body.swat-hub-ui .swat-hub .swat-skeleton{min-height:296px}
 .swat-skeleton>div{background:var(--gd-surface-2);border-radius:var(--gd-control-radius);margin-bottom:12px;animation:swat-skeleton 1.4s ease-in-out infinite alternate}
