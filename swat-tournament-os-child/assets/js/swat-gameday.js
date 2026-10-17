@@ -118,8 +118,9 @@
 		function displayStatus(g) {
 			if (isFinal(g)) return 'FINAL';
 			if (isLive(g)) return 'LIVE';
-			if (isPastUnresolved(g)) return 'RESULT PENDING';
 			const raw = norm(g && g.status);
+            if (!raw) return 'STATUS TBD';
+			if (isPastUnresolved(g)) return 'SCHEDULED · UPDATE OVERDUE';
 			return raw === 'SCHEDULED' ? 'UPCOMING' : (raw || 'STATUS TBD');
 		}
 
@@ -143,6 +144,8 @@
 		const el = q('[data-swat-connection]');
 		if (!el) return;
 		el.dataset.connectionMode = mode || '';
+        if (mode === 'error') state.syncFailed = true;
+        if (mode === 'online') state.syncFailed = false;
         el.textContent = label;
 			qa('[data-swat-refresh]').forEach((button) => button.setAttribute('aria-busy', mode === 'loading' ? 'true' : 'false'));
 		el.className = 'swat-status-pill' + (mode ? ' is-' + mode : '');
@@ -151,21 +154,24 @@
     function updateAge() {
         const el = q('[data-swat-updated]'), chip = q('[data-swat-connection]'), bar = q('.swat-app-statusbar');
         if (!el || !chip || !bar) return;
-        const all = canonicalGames();
-        const hasData = all.length > 0 || bracketGames().length > 0;
-        bar.hidden = !hasData;
-        chip.hidden = true;
-        let synced = state.data && state.data.last_success_ts ? new Date(state.data.last_success_ts * 1000) : null;
-        if (!synced && state.data && state.data.last_sync) {
-            const raw = String(state.data.last_sync).replace(' ', 'T');
-            const parsed = new Date(raw + (/(Z|[+-]\d\d:\d\d)$/.test(raw) ? '' : 'Z'));
-            synced = Number.isNaN(parsed.getTime()) ? null : parsed;
+        const info = SWATGameDayModel.syncSummary(state.data, Date.now(), navigator.onLine, state.syncFailed, chip.dataset.connectionMode === 'loading');
+        bar.hidden = false;
+        chip.hidden = !info.warning;
+        chip.textContent = info.label;
+        bar.classList.toggle('is-stale-today', info.warning);
+        el.textContent = info.age;
+        el.title = info.label + '. Last checked: ' + relative(state.lastLoaded);
+        qa('[data-swat-refresh]').forEach(button => {
+            button.textContent = info.warning ? 'Retry' : 'Refresh';
+            button.setAttribute('aria-label', info.loading ? 'Checking tournament updates' : 'Refresh tournament data');
+            button.setAttribute('aria-busy', String(info.loading));
+        });
+        const loading = q('[data-swat-loading]');
+        if (loading) {
+            loading.hidden = Boolean(state.data);
+            loading.setAttribute('aria-busy', String(!state.data && info.loading));
+            if (!state.data) loading.innerHTML = state.syncFailed ? empty('Tournament data unavailable', 'Use Retry above to check again. Scores have not been loaded.') : '<div class="swat-skeleton" role="status"><span class="screen-reader-text">Loading tournament games</span><div class="swat-skeleton-heading"></div><div class="swat-skeleton-row"></div><div class="swat-skeleton-row"></div><div class="swat-skeleton-actions"></div></div>';
         }
-        const fresh = !state.data.source_stale && synced && synced.getTime() <= Date.now()+60000 && Date.now()-synced.getTime() <= 120000;
-        const activeToday = all.some(g => g.date === todayKey() && !isFinal(g) && !/CANCEL|POSTPON/.test(norm(g.status)));
-        bar.classList.toggle('is-stale-today', Boolean(activeToday && (!fresh || !navigator.onLine || chip.dataset.connectionMode === 'error')));
-        el.textContent = !navigator.onLine ? 'Offline · saved data' : chip.dataset.connectionMode === 'loading' ? 'Checking for updates…' : synced ? relative(synced) : 'Update time unavailable';
-        el.title = 'Last checked: ' + relative(state.lastLoaded);
     }
 
 	function empty(title, text) {
@@ -263,10 +269,14 @@
 			html += starButton(name, id);
 			html += '<a class="swat-gc-name" href="' + esc(appUrl(SWATGameDay.gamedayUrl, {team:id || name, event:g.event_slug || state.event})) + '">' + esc(name) + '</a>';
 		}
-		if (showScore) html += '<span class="swat-gc-score">' + esc(Number(score)) + '</span>';
+		html += '<span class="swat-gc-score' + (showScore ? '' : ' is-missing') + '">' + (showScore ? esc(Number(score)) : 'TBD') + '</span>';
 		return html + '</div>';
 	}
 
+    function scoreLabel(g) {
+        const score = side => (isLive(g) || isFinal(g)) && hasScore(g[side + '_score']) ? g[side + '_score'] : 'score TBD';
+        return (g.away || 'TBD') + ' ' + score('away') + ', ' + (g.home || 'TBD') + ' ' + score('home') + ', ' + displayStatus(g);
+    }
 	function gameCard(g, opts) {
 		opts = opts || {};
 		const final = isFinal(g);
@@ -286,23 +296,23 @@
 		if (followed) classes.push('is-followed');
 		if (!isPoolGame(g)) classes.push('is-bracket');
 		if (isChampionship(g)) classes.push('is-championship');
-		let html = '<article class="' + classes.join(' ') + '" data-game-id="' + esc(id) + '">';
+		let html = '<article class="' + classes.join(' ') + '" data-game-id="' + esc(id) + '" aria-label="' + esc(scoreLabel(g)) + '">';
 		html += '<div class="swat-gc-head"><span class="swat-gc-where">' +
 			(field ? '<a class="swat-gc-field" href="' + esc(appUrl(SWATGameDay.gamedayUrl, {field:field, event:g.event_slug || state.event})) + '">' + esc(field) + '</a>' : '<span class="swat-gc-field">Field TBD</span>') +
 			'<span class="swat-gc-label">' + esc(gameLabel(g)) + (opts.showDate ? ' · ' + esc(shortDate(g.date)) : '') + '</span></span>' +
-			'<span class="swat-pill ' + cls + '">' + esc(pillLabel(g)) + '</span></div>';
+			'<span class="swat-pill ' + cls + '">' + esc(displayStatus(g)) + '</span></div>';
 		if (cls === 'is-delayed' && g.time) html += '<p class="swat-gc-alert">Scheduled ' + esc(formatTime(g.time)) + '. Watch for SWAT updates.</p>';
 		if (cls === 'is-cancelled') html += '<p class="swat-gc-alert">This game is cancelled.</p>';
 		const changed = changeNote(g);
 		if (changed) html += '<p class="swat-gc-alert">' + esc(changed) + '</p>';
 		if (!isPoolGame(g) && (isPlaceholderTeam(g.away) || isPlaceholderTeam(g.home)) && !final) html += '<p class="swat-gc-cond">' + (/^division place/i.test(String(g.away)) && /^division place/i.test(String(g.home)) ? 'Matchup set by final pool standings' : 'Matchup depends on advancement') + '</p>';
-		if (opts.showTime) html += '<p class="swat-gc-when">' + esc(shortDate(g.date)) + ' · ' + esc(g.time ? formatTime(g.time) + tzSuffix : 'Time TBD') + '</p>';
+		html += '<p class="swat-gc-when">' + esc(shortDate(g.date)) + ' · ' + esc(g.time ? formatTime(g.time) + tzSuffix : 'Time TBD') + '</p>';
 		html += teamLine(g, 'away', winner) + teamLine(g, 'home', winner);
 		const note = [facilityName(field) || 'Venue TBD', g.event || eventLabel()].filter(Boolean).map(esc).join(' · ') + (sponsors[field] ? ' · Presented by ' + esc(sponsors[field]) : '');
 		let actions = field ? '<a href="' + esc(appUrl('/gameday/help/',{field:field,event:g.event_slug || state.event})) + '">Field help</a>' : '';
 		if (directions) actions += '<a href="' + esc(directions) + '" target="_blank" rel="noopener">Directions</a>';
 		if (realGame && hub.pitchingEnabled !== false) actions += '<a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {game:id, event:g.event_slug || state.event})) + '#game">Game + pitching</a>';
-		if (!final && realGame) actions += '<a href="' + esc(appUrl('/gameday/report-score/', {game:id, event:g.event_slug || state.event})) + '">Report score</a>';
+		if (realGame) actions += '<a' + (final ? ' class="swat-action-placeholder" tabindex="-1" aria-hidden="true"' : '') + ' href="' + esc(appUrl('/gameday/report-score/', {game:id, event:g.event_slug || state.event})) + '">Report score</a>';
 		if (note || actions) html += '<div class="swat-gc-foot"><span class="swat-gc-note">' + note + '</span><span class="swat-gc-actions">' + actions + '</span></div>';
 		return html + '</article>';
 	}
@@ -601,7 +611,7 @@
 			html += '<details class="swat-tv-bracket"' + (next ? '' : ' open') + '><summary><span>Possible bracket games · ' + esc(teamDivisions.map((d) => d.replace(/\s+Open$/i, '')).join(', ')) + '</span><small>' + pending.length + (pending.length === 1 ? ' game' : ' games') + ' · depend on advancement</small></summary>';
 			html += '<p class="swat-tv-dim">Matchups are set by pool results and earlier bracket games. Times and fields below are SWAT’s published slots.</p><ul>';
 			sorted(pending).forEach((g) => {
-				html += '<li><span class="swat-tv-bwhen">' + esc(shortDate(g.date)) + ' · ' + esc(g.time ? formatTime(g.time) + tzSuffix : 'Time TBD') + '</span><span class="swat-tv-bwhat">' + esc([g.bracket_name, gameRound(g) || 'Bracket'].filter(Boolean).join(' ')) + ': ' + esc(placeholderLabel(g.away)) + ' vs ' + esc(placeholderLabel(g.home)) + '</span><span class="swat-tv-bwhere">' + esc(g.field ? (facilityName(g.field) ? facilityName(g.field) + ' · Field ' + g.field : 'Field ' + g.field) : 'Field TBD') + (isOff(g) ? ' · ' + esc(pillLabel(g)) : '') + '</span></li>';
+				html += '<li><span class="swat-tv-bwhen">' + esc(shortDate(g.date)) + ' · ' + esc(g.time ? formatTime(g.time) + tzSuffix : 'Time TBD') + '</span><span class="swat-tv-bwhat">' + esc([g.bracket_name, gameRound(g) || 'Bracket'].filter(Boolean).join(' ')) + ': ' + esc(placeholderLabel(g.away)) + ' vs ' + esc(placeholderLabel(g.home)) + '</span><span class="swat-tv-bwhere">' + esc(g.field ? (facilityName(g.field) ? facilityName(g.field) + ' · Field ' + g.field : 'Field ' + g.field) : 'Field TBD') + (isOff(g) ? ' · ' + esc(displayStatus(g)) : '') + '</span></li>';
 			});
 			html += '</ul></details>';
 		}
@@ -1269,7 +1279,7 @@ function populateFilters(games) {
 		qa('details[data-swat-round]', root).forEach(el => { state.roundOpen[el.dataset.swatRound] = el.open; });
 		const gamesForBracket = bracketGames();
 		const all = canonicalGames();
-		const availableDivisions = unique(all.concat(gamesForBracket).flatMap(g => SWATGameDayModel.divisionMembers(g))).sort((a,b) => a.localeCompare(b, undefined, {numeric:true}));
+		const availableDivisions = SWATGameDayModel.divisionOptions(all.concat(gamesForBracket)).sort((a,b) => a.localeCompare(b, undefined, {numeric:true}));
 		if (!availableDivisions.includes(state.bracketDivision)) {
 			const followed = followedDivisions(all.concat(gamesForBracket));
 			const selected = all.find(g => state.selectedTeam && [String(g.away_id || g.away), String(g.home_id || g.home)].includes(state.selectedTeam));
@@ -1322,10 +1332,10 @@ function populateFilters(games) {
 				if (decided) {
 					const winner = decided;
 					const loser = winner === 'home' ? 'away' : 'home';
-					cards += '<article class="swat-ps-champ is-final"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Champion</p><p class="swat-ps-winner">' + esc(bracketTeamLabel(g[winner])) + '</p><p class="swat-ps-k is-quiet">Runner-Up</p><p class="swat-ps-runner">' + esc(bracketTeamLabel(g[loser])) + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '"><strong>' + esc(g[winner + '_score']) + '–' + esc(g[loser + '_score']) + '</strong> final</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
+					cards += '<article class="swat-ps-champ is-final" data-game-id="' + esc(g.id) + '" aria-label="' + esc(scoreLabel(g)) + '"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Champion</p><p class="swat-ps-winner">' + esc(bracketTeamLabel(g[winner])) + '</p><p class="swat-ps-k is-quiet">Runner-Up</p><p class="swat-ps-runner">' + esc(bracketTeamLabel(g[loser])) + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '"><strong>' + esc(g[winner + '_score']) + '–' + esc(g[loser + '_score']) + '</strong> final</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
 				} else {
-					const live = isLive(g) && hasScore(g.away_score) && hasScore(g.home_score);
-					cards += '<article class="swat-ps-champ' + (isLive(g) ? ' is-live' : '') + '"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Championship' + (isLive(g) ? ' · Live' : '') + '</p><p class="swat-ps-matchup">' + esc(bracketTeamLabel(g.away)) + (live ? ' <b>' + esc(g.away_score) + '</b>' : '') + '<span>vs</span>' + esc(bracketTeamLabel(g.home)) + (live ? ' <b>' + esc(g.home_score) + '</b>' : '') + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '">' + (isLive(g) ? 'Live' : (isFinal(g) ? 'Final · no champion declared' : (norm(g.status).indexOf('DELAY') !== -1 ? 'Delayed' : (g.status ? 'Upcoming' : 'Status TBD')))) + '</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
+					const live = (isLive(g) || isFinal(g)) && hasScore(g.away_score) && hasScore(g.home_score);
+					cards += '<article class="swat-ps-champ' + (isLive(g) ? ' is-live' : '') + '" data-game-id="' + esc(g.id) + '" aria-label="' + esc(scoreLabel(g)) + '"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Championship' + (isLive(g) ? ' · Live' : '') + '</p><p class="swat-ps-matchup">' + esc(bracketTeamLabel(g.away)) + (live ? ' <b>' + esc(g.away_score) + '</b>' : '') + '<span>vs</span>' + esc(bracketTeamLabel(g.home)) + (live ? ' <b>' + esc(g.home_score) + '</b>' : '') + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '">' + (isLive(g) ? 'Live' : (isFinal(g) ? 'Final · no champion declared' : (norm(g.status).indexOf('DELAY') !== -1 ? 'Delayed' : (g.status ? 'Upcoming' : 'Status TBD')))) + '</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
 				}
 			});
 			const rounds = [];
@@ -1462,7 +1472,7 @@ function populateFilters(games) {
  const summary = q('[data-swat-team-summary]');
  if (summary) summary.hidden = state.view !== 'today' || Boolean(state.game || state.field || state.team);
 		qa('[data-swat-section]').forEach((section) => { section.hidden = section.dataset.swatSection !== state.view; if (['today','schedule','scores','standings','more'].includes(section.dataset.swatSection)) { section.id = section.id || 'swat-view-' + section.dataset.swatSection; section.setAttribute('role','tabpanel'); section.setAttribute('aria-labelledby','swat-tab-' + section.dataset.swatSection); const tab = q('.swat-bottom-nav [data-swat-view="' + section.dataset.swatSection + '"]'); if (tab) tab.setAttribute('aria-controls',section.id); } });
-		qa('[data-swat-home-only]').forEach((element) => { element.hidden = state.view !== 'today'; });
+		qa('[data-swat-home-only]').forEach((element) => { element.hidden = state.view !== 'today' || Boolean(state.game || state.field || state.team); });
 		qa('[data-swat-view]').forEach((control) => {
 			const active = control.dataset.swatView === state.view;
 			control.classList.toggle('is-active', active);
@@ -1472,7 +1482,7 @@ function populateFilters(games) {
                 control.setAttribute('aria-selected', String(active));
                 control.id = 'swat-tab-' + control.dataset.swatView;
                 control.setAttribute('aria-controls', q('[data-swat-section="' + control.dataset.swatView + '"]')?.id || 'swat-view-' + control.dataset.swatView);
-                control.tabIndex = active ? 0 : -1;
+                control.tabIndex = active || (!['today','schedule','scores','standings','more'].includes(state.view) && control.dataset.swatView === 'more') ? 0 : -1;
             }
 		});
 		if (updateHash !== false && history.replaceState) {
@@ -1495,7 +1505,20 @@ function populateFilters(games) {
 		}
 	}
 
+    function rememberView() {
+        const active = document.activeElement;
+        const controls = qa('button,a,input,select,summary', app);
+        const key = el => JSON.stringify([el.tagName,el.getAttribute('href'),el.id,el.getAttribute('data-team-id'),el.getAttribute('data-swat-follow'),el.getAttribute('data-swat-schedule-day'),el.getAttribute('data-swat-chip'),el.getAttribute('aria-label')]);
+        const match = active && app.contains(active) ? key(active) : null;
+        const ordinal = match ? controls.filter(el => key(el) === match).indexOf(active) : -1;
+        const disclosures = qa('details',app).map(el => ({el,open:el.open,id:el.id,round:el.dataset.swatRound}));
+        return () => {
+            disclosures.forEach(item => { const el = item.el.isConnected ? item.el : item.id ? document.getElementById(item.id) : item.round ? qa('details[data-swat-round]',app).find(d => d.dataset.swatRound === item.round) : null; if (el) el.open = item.open; });
+            if (match && !active.isConnected) qa('button,a,input,select,summary',app).filter(el => key(el) === match)[ordinal]?.focus({preventScroll:true});
+        };
+    }
 	function render() {
+        const restore = rememberView();
 		const all = canonicalGames();
         updateAge();
 		if (!state.data && !all.length) return;
@@ -1514,6 +1537,7 @@ function populateFilters(games) {
 		renderWeather();
 		populateForms(all);
 		setView(state.view, false);
+        restore();
 		if (state.timer) clearTimeout(state.timer);
 		state.timer = setTimeout(load, all.some(isLive) ? 30000 : 60000);
 	}
@@ -1528,6 +1552,7 @@ function populateFilters(games) {
 		refreshController = controller;
 		const timeout = setTimeout(() => controller.abort(), 15000);
 		setConnection('UPDATING', 'loading');
+        updateAge();
 		try {
 			const dataUrl = previewAware(requestedEvent ? SWATGameDay.gamesEndpoint + '?event=' + encodeURIComponent(requestedEvent) : SWATGameDay.publicEndpoint);
 			const options = {cache:'no-store', credentials:'same-origin', signal:controller.signal};
@@ -1551,6 +1576,8 @@ function populateFilters(games) {
 				return;
 			}
 			const stale = responses[0].headers.get('X-SWAT-Stale') === '1';
+            const previous = new Map(canonicalGames().concat(state.data?.bracket_fixtures || []).map(g => [String(g.id), g]));
+            const changed = !stale ? (fresh.games || []).concat(fresh.bracket_fixtures || []).filter(g => { const old = previous.get(String(g.id)); return old && ['status','home_score','away_score'].some(k => String(old[k] ?? '') !== String(g[k] ?? '')); }) : [];
 			if (!stale || !state.data) state.data = Object.assign({}, state.data || {}, fresh);
 			if (responses[1] && responses[1].ok) {
 				const alertData = await responses[1].json();
@@ -1561,12 +1588,17 @@ function populateFilters(games) {
 			setConnection(stale ? 'SAVED DATA · RETRY' : 'ONLINE', stale ? 'error' : 'online');
 			updateAge();
 			render();
+            const changedIds = new Set(changed.map(g => String(g.id)));
+            qa('[data-game-id]').forEach(card => { if (changedIds.has(card.dataset.gameId)) { card.classList.add('is-updated'); setTimeout(() => card.classList.remove('is-updated'), 1800); } });
+            const announcement = q('[data-swat-refresh-announcement]');
+            if (announcement && changed.length) announcement.textContent = changed.map(scoreLabel).join('. ');
 		} catch (error) {
 			if (sequence !== requestSequence || state.event !== requestedEvent) return;
 			setConnection(navigator.onLine ? 'UPDATES FAILED · RETRY' : 'OFFLINE · SAVED DATA', 'error');
 			updateAge();
             render();
-            if (!canonicalGames().length) toast('Updates unavailable right now. Try Refresh in More.');
+            const announcement = q('[data-swat-refresh-announcement]');
+            if (announcement) announcement.textContent = 'Sync failed. Saved data may be out of date. Use Retry.';
 		} finally {
 			clearTimeout(timeout);
 			if (sequence === requestSequence) {
@@ -1622,7 +1654,7 @@ function populateFilters(games) {
 			refresh.className = 'swat-refresh-link';
 			refresh.setAttribute('data-swat-refresh', '');
 			refresh.setAttribute('aria-label','Refresh tournament data');
-            refresh.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M5.6 7a8 8 0 0 1 13-1L20 8M4 16l1.4 2a8 8 0 0 0 13-1"/></svg>';
+            refresh.textContent = 'Refresh';
 			bar.appendChild(refresh);
 		}
 	}());

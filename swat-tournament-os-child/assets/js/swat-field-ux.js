@@ -6,7 +6,7 @@
  const appearanceButtons=app.querySelectorAll('[data-swat-appearance-choice]');
  const systemAppearance=window.matchMedia('(prefers-color-scheme: dark)');
  function updateAppearanceButtons(){
-  const mode=document.body.dataset.swatAppearance || (systemAppearance.matches?'dark':'light');
+  const mode=document.body.dataset.swatAppearance || 'dark';
   appearanceButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.swatAppearanceChoice===mode)));
  }
  appearanceButtons.forEach(button=>button.addEventListener('click',()=>{
@@ -18,7 +18,6 @@
  if(systemAppearance.addEventListener)systemAppearance.addEventListener('change',updateAppearanceButtons);
  updateAppearanceButtons();
  const refresh=app.querySelector('[data-swat-refresh]');
- if(refresh){refresh.setAttribute('aria-label','Refresh tournament data');refresh.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M5.6 7a8 8 0 0 1 13-1L20 8M4 16l1.4 2a8 8 0 0 0 13-1"/></svg>';}
  const row=document.querySelector('[data-swat-smart-alert-row]');
  let dismissed=false;
  try{dismissed=sessionStorage.getItem('swatAlertsDismissedV1')==='1';}catch(_){}

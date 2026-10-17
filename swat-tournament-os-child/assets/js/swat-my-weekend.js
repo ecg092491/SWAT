@@ -238,11 +238,13 @@
 			chips.innerHTML = '';
 			return;
 		}
+        const focusKey = chips.contains(document.activeElement) ? document.activeElement.dataset.swatRemoveTeam : null;
 		chips.innerHTML = followed.map((team, index) =>
 			'<button type="button" class="swat-followed-chip swat-team-tone-' + (index + 1) + '" data-swat-remove-team="' + esc(team.id) + '">' +
 				'<span>' + esc(team.name) + '</span><em aria-hidden="true">×</em><span class="screen-reader-text">Unfollow ' + esc(team.name) + '</span>' +
 			'</button>'
 		).join('');
+        if (focusKey) qa('[data-swat-remove-team]',chips).find(button => button.dataset.swatRemoveTeam === focusKey)?.focus({preventScroll:true});
 		qa('[data-swat-remove-team]', chips).forEach((button) => button.addEventListener('click', () => {
 			followed = followed.filter((item) => String(item.id) !== String(button.dataset.swatRemoveTeam));
 			saveTeams();
@@ -326,8 +328,9 @@
 		if (['FINAL','COMPLETE','COMPLETED'].includes(value)) return {label:'FINAL', cls:'is-final'};
 		if (value.includes('DELAY')) return {label:'DELAYED', cls:'is-delayed'};
 		if (value.includes('CANCEL')) return {label:'CANCELLED', cls:'is-cancelled'};
-		if (isPastUnresolved(game)) return {label:'RESULT PENDING', cls:'is-pending'};
-			return {label:value === 'SCHEDULED' ? 'UPCOMING' : (value || 'UPCOMING'), cls:'is-upcoming'};
+		if (!value) return {label:'STATUS TBD', cls:'is-upcoming'};
+		if (value === 'SCHEDULED' && isPastUnresolved(game)) return {label:'SCHEDULED · UPDATE OVERDUE', cls:'is-pending'};
+			return {label:value === 'SCHEDULED' ? 'UPCOMING' : (value || 'STATUS TBD'), cls:'is-upcoming'};
 	}
 
 	function timelineFingerprint(items) {
@@ -555,7 +558,10 @@
 		try {
 			const response = await fetch(url, {cache:'no-store', credentials:'same-origin', signal:controller.signal});
 			if (!response.ok) throw new Error('weekend-data');
-			payload = await response.json();
+			const fresh = await response.json();
+            if (!fresh || !Array.isArray(fresh.timeline)) throw new Error('Invalid weekend data');
+            payload = fresh;
+            window.SWATMyWeekendStale = response.headers.get('X-SWAT-Stale') === '1' || fresh.sync_status === 'error' || Boolean(fresh.source_stale);
 			window.SWATMyWeekendPayload = payload;
 			window.dispatchEvent(new CustomEvent('swat:weekend-loaded', {detail:{payload:payload}}));
 			directory = Array.isArray(payload.team_directory) ? payload.team_directory : [];
@@ -563,6 +569,7 @@
 			localStorage.setItem(STORAGE_CACHE, JSON.stringify({savedAt:Date.now(), payload:payload}));
 		} catch (e) {
 			if (e && e.name === 'AbortError') return;
+            window.SWATMyWeekendStale = true;
 			try {
 				const cached = JSON.parse(localStorage.getItem(STORAGE_CACHE) || 'null');
 				if (cached?.payload) {
@@ -578,6 +585,7 @@
 		if (controller.signal.aborted) return;
 		renderPicker();
 		renderWeekend();
+        document.dispatchEvent(new CustomEvent('swat:ux-rendered'));
 	}
 
 	function urlBase64ToUint8Array(value) {
@@ -848,6 +856,7 @@
 		if (document.visibilityState === 'visible') loadWeekend();
 	}, 30000);
 	window.addEventListener('online', loadWeekend);
+    document.addEventListener('click', event => { if (event.target.closest('[data-swat-retry-weekend],[data-swat-refresh]')) loadWeekend(); });
 	window.addEventListener('focus', loadWeekend);
 	document.addEventListener('visibilitychange', () => {
 		if (document.visibilityState === 'visible') loadWeekend();

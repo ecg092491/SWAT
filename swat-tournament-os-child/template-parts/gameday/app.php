@@ -239,7 +239,7 @@ $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 	<button type="button" data-swat-view="standings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/><path d="M3 19h18"/></svg><span>Standings</span></button>
 		<button type="button" data-swat-view="more"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg><span>More</span></button>
 </nav>
-
+<div data-swat-loading hidden></div>
 
 				<div class="swat-smart-alert-row" data-swat-smart-alert-row data-swat-home-only hidden>
 					<button type="button" class="swat-alert-dismiss" data-swat-dismiss-alerts aria-label="Dismiss alerts invitation">×</button><div><strong>SMART TEAM ALERTS</strong><span>Get your team’s time, field and weather changes.</span></div>
@@ -401,6 +401,7 @@ $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 <div class="swat-more-footer"><div class="swat-more-grid"><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><strong>Contact SWAT</strong><span>Get help</span></a></div>
 <button type="button" class="swat-refresh-link" data-swat-refresh>Refresh tournament data</button>
 <button class="swat-install-link" type="button" data-swat-install hidden>ADD TO HOME SCREEN</button>
+<details class="swat-install-help"><summary>Game alerts on iPhone</summary><p>In Safari, tap Share, then Add to Home Screen. Open SWAT Game Day from your Home Screen, follow your team, then turn on team alerts.</p></details>
 <div class="swat-appearance-setting"><strong>Appearance</strong><div class="swat-appearance" role="group" aria-label="Page appearance"><button type="button" data-swat-appearance-choice="light" aria-pressed="false">Light</button><button type="button" data-swat-appearance-choice="dark" aria-pressed="false">Dark</button></div></div></div>
 </section>
 <section class="swat-app-view" data-swat-section="fields" hidden>
