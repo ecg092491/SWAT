@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),{spawn}=require('node:chil
 const theme=path.resolve(process.argv[2]||path.join(__dirname,'../..'));
 const out=path.resolve(process.argv[3]||'gameday-evidence');
 const revision=process.argv[4]||'after';
-const widths=[375,390,768],themes=['dark','light'];
+const widths=[375,390,768,1280],themes=['dark','light'];
 const states=['pregame','live','final','empty','sync-failed','stale','no-data','unverified','loading'];
 const views=['today','schedule','scores','standings','division','more'];
 fs.mkdirSync(out,{recursive:true});

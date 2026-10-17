@@ -4,6 +4,7 @@ if ( ! in_array( PHP_SAPI, array('cli', 'cli-server'), true ) || getenv('SWAT_FI
 define('ABSPATH', __DIR__ . '/');
 $theme = realpath(getenv('SWAT_FIXTURE_THEME') ?: __DIR__ . '/../..');
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+if ($path === '/style.css') { header('Content-Type: text/css'); readfile($theme . '/style.css'); exit; }
 if (strpos($path, '/assets/') === 0) {
     $file=realpath($theme . $path);
     if (!$file || strpos($file, $theme . '/assets/') !== 0) { http_response_code(404); exit; }
@@ -76,8 +77,8 @@ function get_template_part($name,$slug=null,$args=array()){include $GLOBALS['the
 header('Content-Type: text/html; charset=utf-8');
 ?><!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>SWAT Game Day local fixture</title>
 <style>*{box-sizing:border-box}.screen-reader-text{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.fixture-note{font:12px system-ui;padding:4px 16px;background:#17171b;color:#f4f4f6}svg{width:24px;height:24px}</style>
-<?php foreach(array('child-fonts','gameday-tokens','swat-gameday-hub','team-schedule','postseason','swat-gameday-compact','sponsors') as $css) if(is_file($theme.'/assets/css/'.$css.'.css'))echo '<link rel="stylesheet" href="/assets/css/'.$css.'.css">'; ?>
-</head><body class="swat-gameday-mode swat-hub-ui"><div class="fixture-note">LOCAL FIXTURE — synthetic test data, not live scores</div><main id="main" class="swat-app-main">
+<?php foreach(array_merge(is_file($theme.'/assets/css/shared-fonts.css') ? array('shared-fonts','shared-components') : array('child-fonts','gameday-tokens'), array('swat-gameday-hub','team-schedule','postseason','swat-gameday-compact','sponsors')) as $css) if(is_file($theme.'/assets/css/'.$css.'.css'))echo '<link rel="stylesheet" href="/assets/css/'.$css.'.css">'; ?>
+<link rel="stylesheet" href="/style.css"><script src="/assets/js/appearance-boot.js"></script></head><body class="swat-gameday-mode swat-hub-ui swat-shared-ui"><div class="fixture-note">LOCAL FIXTURE — synthetic test data, not live scores</div><main id="main" class="swat-app-main">
 <?php $args=array('view'=>$_GET['view']??'today');ob_start();include $theme.'/template-parts/gameday/app.php';$markup=ob_get_clean();if($case==='loading')$markup=preg_replace('#(data-swat-initial-payload>).*?(</script>)#s','$1null$2',$markup);echo $markup; ?>
 </main><script>
 window.SWATGameDay=<?php echo json_encode(array('gamesEndpoint'=>"/__fixture/$case/games",'publicEndpoint'=>"/__fixture/$case/games",'alertEndpoint'=>"/__fixture/$case/alerts",'myWeekendEndpoint'=>"/__fixture/$case/weekend",'gamedayUrl'=>'/','fieldDirections'=>array(),'scoreEndpoint'=>'/__fixture/disabled','helpEndpoint'=>'/__fixture/disabled')); ?>;

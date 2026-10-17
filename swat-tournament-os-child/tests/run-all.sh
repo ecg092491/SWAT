@@ -11,6 +11,7 @@ echo "== registration precedence tests"
 php tests/resolver-test.php
 echo "== homepage actions (schedule vs registration) and bracket placeholders"
 php tests/home-actions-test.php
+php tests/home-render-test.php
 echo "== Gold / Silver split finals"
 php tests/bracket-tier-test.php
 echo "== team profiles (records, seasons, events)"
