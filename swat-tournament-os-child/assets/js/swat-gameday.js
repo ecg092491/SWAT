@@ -261,7 +261,7 @@
 			html += '<span class="swat-star-spacer" aria-hidden="true"></span><span class="swat-gc-name is-placeholder">' + esc(name) + '</span>';
 		} else {
 			html += starButton(name, id);
-			html += '<a class="swat-gc-name" href="' + esc(appUrl(SWATGameDay.gamedayUrl, {team:id || name})) + '">' + esc(name) + '</a>';
+			html += '<a class="swat-gc-name" href="' + esc(appUrl(SWATGameDay.gamedayUrl, {team:id || name, event:g.event_slug || state.event})) + '">' + esc(name) + '</a>';
 		}
 		if (showScore) html += '<span class="swat-gc-score">' + esc(Number(score)) + '</span>';
 		return html + '</div>';
@@ -288,7 +288,7 @@
 		if (isChampionship(g)) classes.push('is-championship');
 		let html = '<article class="' + classes.join(' ') + '" data-game-id="' + esc(id) + '">';
 		html += '<div class="swat-gc-head"><span class="swat-gc-where">' +
-			(field ? '<a class="swat-gc-field" href="' + esc(appUrl(SWATGameDay.gamedayUrl, {field:field})) + '">' + esc(field) + '</a>' : '<span class="swat-gc-field">Field TBD</span>') +
+			(field ? '<a class="swat-gc-field" href="' + esc(appUrl(SWATGameDay.gamedayUrl, {field:field, event:g.event_slug || state.event})) + '">' + esc(field) + '</a>' : '<span class="swat-gc-field">Field TBD</span>') +
 			'<span class="swat-gc-label">' + esc(gameLabel(g)) + (opts.showDate ? ' · ' + esc(shortDate(g.date)) : '') + '</span></span>' +
 			'<span class="swat-pill ' + cls + '">' + esc(pillLabel(g)) + '</span></div>';
 		if (cls === 'is-delayed' && g.time) html += '<p class="swat-gc-alert">Scheduled ' + esc(formatTime(g.time)) + '. Watch for SWAT updates.</p>';
@@ -296,13 +296,13 @@
 		const changed = changeNote(g);
 		if (changed) html += '<p class="swat-gc-alert">' + esc(changed) + '</p>';
 		if (!isPoolGame(g) && (isPlaceholderTeam(g.away) || isPlaceholderTeam(g.home)) && !final) html += '<p class="swat-gc-cond">' + (/^division place/i.test(String(g.away)) && /^division place/i.test(String(g.home)) ? 'Matchup set by final pool standings' : 'Matchup depends on advancement') + '</p>';
-		if (opts.showTime && g.time && cls !== 'is-upcoming') html += '<p class="swat-gc-when">' + esc(shortDate(g.date)) + ' · ' + esc(formatTime(g.time)) + '</p>';
+		if (opts.showTime) html += '<p class="swat-gc-when">' + esc(shortDate(g.date)) + ' · ' + esc(g.time ? formatTime(g.time) + tzSuffix : 'Time TBD') + '</p>';
 		html += teamLine(g, 'away', winner) + teamLine(g, 'home', winner);
-		const note = sponsors[field] ? esc(field) + ' presented by ' + esc(sponsors[field]) : (!final && facilityName(field) ? esc(facilityName(field)) : '');
-		let actions = '';
-		if (directions && !final) actions += '<a href="' + esc(directions) + '" target="_blank" rel="noopener">Directions</a>';
-		if (realGame && hub.pitchingEnabled !== false) actions += '<a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {game:id})) + '#game">Game + pitching</a>';
-		if (!final && realGame) actions += '<a href="' + esc(appUrl('/gameday/report-score/', {game:id})) + '">Report score</a>';
+		const note = [facilityName(field) || 'Venue TBD', g.event || eventLabel()].filter(Boolean).map(esc).join(' · ') + (sponsors[field] ? ' · Presented by ' + esc(sponsors[field]) : '');
+		let actions = field ? '<a href="' + esc(appUrl('/gameday/help/',{field:field,event:g.event_slug || state.event})) + '">Field help</a>' : '';
+		if (directions) actions += '<a href="' + esc(directions) + '" target="_blank" rel="noopener">Directions</a>';
+		if (realGame && hub.pitchingEnabled !== false) actions += '<a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {game:id, event:g.event_slug || state.event})) + '#game">Game + pitching</a>';
+		if (!final && realGame) actions += '<a href="' + esc(appUrl('/gameday/report-score/', {game:id, event:g.event_slug || state.event})) + '">Report score</a>';
 		if (note || actions) html += '<div class="swat-gc-foot"><span class="swat-gc-note">' + note + '</span><span class="swat-gc-actions">' + actions + '</span></div>';
 		return html + '</article>';
 	}
@@ -702,44 +702,36 @@
     function renderFindTeam() {
         const root = q('[data-swat-team-strips]'), manage = q('[data-swat-manage-teams]');
         if (!root || !manage) return;
-        const teams = followedTeamsSnapshot().slice(0,3), all = sorted(canonicalGames());
+        const teams = followedTeamsSnapshot().slice(0, 3);
         manage.textContent = teams.length ? 'Manage teams' : 'Follow your team';
         manage.classList.toggle('swat-follow-primary', !teams.length);
         manage.classList.toggle('swat-manage-link', Boolean(teams.length));
         q('[data-swat-my-weekend]')?.classList.toggle('has-followed-teams', Boolean(teams.length));
-        root.hidden = !teams.length;
-        // 1.0.19: each followed team gets its own clearly labelled next game (day,
-        // time, opponent, facility + field) across every event this weekend.
-        const currentSlug = String(state.event || (state.data && state.data.event && state.data.event.slug) || '');
-        const weekend = window.SWATMyWeekendPayload && Array.isArray(window.SWATMyWeekendPayload.timeline) ? window.SWATMyWeekendPayload.timeline : [];
-        const schedule = sorted(scheduleGames());
-        root.innerHTML = teams.map(team => {
-            const name = String(team.displayName || team.name || 'Your team');
-            const key = norm(name);
-            const registrations = Array.isArray(team.knownRegistrations) ? team.knownRegistrations : [];
-            const ids = registrations.map(r => String(r.teamId || '')).filter(Boolean);
-            const sideOf = (g) => (norm(g.away) === key || (g.away_id && ids.includes(String(g.away_id)))) ? 'away' : ((norm(g.home) === key || (g.home_id && ids.includes(String(g.home_id)))) ? 'home' : '');
-            const here = schedule.filter(sideOf).map(g => Object.assign({}, g, {event_slug: currentSlug}));
-            const elsewhere = weekend.filter(g => String(g.event_slug || '') !== currentSlug && sideOf(g));
-            const games = sorted(here.concat(elsewhere));
-            const next = games.find(isLive) || games.find(g => !isFinal(g) && !isOff(g) && !isPastUnresolved(g));
-            let body = '<span class="swat-ts-line">' + esc(!all.length && !elsewhere.length ? 'Schedule not posted yet.' : 'No upcoming game posted this weekend.') + '</span>';
-            let actions = '';
-            if (next) {
-                const side = sideOf(next);
-                const opp = side === 'home' ? next.away : next.home;
-                const when = (next.date === todayKey() ? 'Today' : shortDate(next.date)) + ' · ' + (next.time ? formatTime(next.time) + tzSuffix : 'Time TBD');
-                const vs = isPlaceholderTeam(opp) ? 'Opponent TBD' : 'vs. ' + opp;
-                const place = [facilityName(next.field || ''), next.field ? 'Field ' + next.field : 'Field TBD'].filter(Boolean).join(' · ');
-                const status = isLive(next) ? 'Live now' : (norm(next.status).indexOf('DELAY') !== -1 ? 'Delayed' : '');
-                body = '<span class="swat-ts-line"><strong>' + esc(when) + '</strong>' + (status ? ' <em class="swat-ts-status">' + esc(status) + '</em>' : '') + ' · ' + esc(vs) + '</span><span class="swat-ts-line">' + esc(place) + (next.event_slug && next.event_slug !== currentSlug && next.event ? ' · ' + esc(next.event) : '') + '</span>';
-                const url = next.field ? fieldDirectionsUrl(next.field) : '';
-                const teamParam = String((side === 'home' ? next.home_id : next.away_id) || name);
-                const scheduleUrl = appUrl(SWATGameDay.gamedayUrl, {event: next.event_slug || currentSlug, team: teamParam, view: 'schedule'});
-                actions = '<a href="' + esc(scheduleUrl) + '" aria-label="Schedule for ' + esc(name) + '">Schedule</a>' + (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener" aria-label="Directions for ' + esc(name) + '">Directions</a>' : '');
-            }
-            return '<div class="swat-team-strip-row"><p><strong class="swat-ts-name">' + esc(name) + '</strong>' + body + '</p>' + (actions ? '<div class="swat-ts-actions">' + actions + '</div>' : '') + '</div>';
-        }).join('');
+        root.hidden = false;
+        if (!teams.length) {
+            root.innerHTML = empty('Follow a team to see its games here', 'Use Follow your team above. Choose up to three teams.');
+        } else {
+            const currentSlug = String(state.event || state.data?.event?.slug || '');
+            const weekend = Array.isArray(window.SWATMyWeekendPayload?.timeline) ? window.SWATMyWeekendPayload.timeline : [];
+            const here = scheduleGames().map(g => Object.assign({}, g, {event_slug:currentSlug}));
+            const elsewhere = weekend.filter(g => String(g.event_slug || '') !== currentSlug);
+            const seen = new Set();
+            const games = sorted(here.concat(elsewhere)).filter(g => {
+                if (!isFollowedTeam(g.away,g.away_id) && !isFollowedTeam(g.home,g.home_id)) return false;
+                const key = String(g.event_slug || '') + ':' + String(g.playbook_id || g.id || [g.date,g.time,g.field,g.away,g.home].join('|'));
+                if (seen.has(key)) return false;
+                seen.add(key); return true;
+            });
+            const live = games.filter(isLive);
+            const upcoming = games.filter(g => !isLive(g) && !isFinal(g) && !isOff(g) && !isPastUnresolved(g));
+            const next = upcoming[0];
+            const later = upcoming.filter(g => g !== next && g.date === todayKey());
+            let html = window.SWATMyWeekendStale ? '<p class="swat-personal-warning">Other-event games may be out of date. <button type="button" data-swat-retry-weekend>Retry</button></p>' : '';
+            if (live.length) html += '<h3>Playing now</h3><div class="swat-game-list">' + live.map(g => gameCard(g,{showTime:true,showDate:true})).join('') + '</div>';
+            html += '<h3>Next game</h3>' + (next ? gameCard(next,{showTime:true,showDate:true,priority:true}) : empty('No upcoming game posted', 'Check Schedule for completed games or follow another team.'));
+            if (later.length) html += '<h3>Later today</h3><div class="swat-game-list">' + later.map(g => gameCard(g,{showTime:true})).join('') + '</div>';
+            root.innerHTML = html;
+        }
         const itinerary = q('.swat-team-all-games'), timeline = q('[data-swat-weekend-timeline]');
         if (itinerary) itinerary.hidden = !teams.length || !timeline || timeline.hidden;
     }
@@ -1404,7 +1396,7 @@ function populateFilters(games) {
 				const directions = fieldDirectionsUrl(field);
 				html += '<article class="swat-fd-card"><div class="swat-fd-top"><h4>' + esc(field) + '</h4>' + (live ? '<span class="swat-pill is-live">Live</span>' : '') + '</div><p>' + summary + '</p><div class="swat-fd-actions">' +
 					(directions && directions !== placeDirections ? '<a href="' + esc(directions) + '" target="_blank" rel="noopener">Directions</a>' : '') +
-					'<a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {field:field})) + '">Field schedule</a><a href="' + esc(appUrl('/gameday/help/', {field:field})) + '">Field help</a></div></article>';
+					'<a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {field:field, event:state.event})) + '">Field schedule</a><a href="' + esc(appUrl('/gameday/help/', {field:field, event:state.event})) + '">Field help</a></div></article>';
 			});
 			html += '</section>';
 		});
@@ -1465,16 +1457,23 @@ function populateFilters(games) {
     }
     window.addEventListener('resize', updateStickyOffsets);
 	function setView(view, updateHash) {
-		state.view = !view || view === 'today' ? 'schedule' : view;
+		state.view = view || 'today';
         app.dataset.uxView = state.view;
  const summary = q('[data-swat-team-summary]');
- if (summary) summary.hidden = Boolean(state.game || state.field || state.team);
-		qa('[data-swat-section]').forEach((section) => { section.hidden = section.dataset.swatSection !== state.view; });
+ if (summary) summary.hidden = state.view !== 'today' || Boolean(state.game || state.field || state.team);
+		qa('[data-swat-section]').forEach((section) => { section.hidden = section.dataset.swatSection !== state.view; if (['today','schedule','scores','standings','more'].includes(section.dataset.swatSection)) { section.id = section.id || 'swat-view-' + section.dataset.swatSection; section.setAttribute('role','tabpanel'); section.setAttribute('aria-labelledby','swat-tab-' + section.dataset.swatSection); const tab = q('.swat-bottom-nav [data-swat-view="' + section.dataset.swatSection + '"]'); if (tab) tab.setAttribute('aria-controls',section.id); } });
 		qa('[data-swat-home-only]').forEach((element) => { element.hidden = state.view !== 'today'; });
 		qa('[data-swat-view]').forEach((control) => {
 			const active = control.dataset.swatView === state.view;
 			control.classList.toggle('is-active', active);
 			control.setAttribute('aria-current', active ? 'page' : 'false');
+            if (control.closest('.swat-bottom-nav')) {
+                control.setAttribute('role', 'tab');
+                control.setAttribute('aria-selected', String(active));
+                control.id = 'swat-tab-' + control.dataset.swatView;
+                control.setAttribute('aria-controls', q('[data-swat-section="' + control.dataset.swatView + '"]')?.id || 'swat-view-' + control.dataset.swatView);
+                control.tabIndex = active ? 0 : -1;
+            }
 		});
 		if (updateHash !== false && history.replaceState) {
 				const currentUrl = new URL(window.location.href);
@@ -1604,6 +1603,14 @@ function populateFilters(games) {
             if (bracketTab) bracketTab.click();
         }
 	});
+    document.addEventListener('keydown', event => {
+        const tab = event.target.closest('[role="tab"]');
+        if (!tab || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+        const tabs = qa('[role="tab"]', tab.closest('[role="tablist"]'));
+        const i = tabs.indexOf(tab);
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (i + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        event.preventDefault(); tabs[next].click(); tabs[next].focus({preventScroll:true});
+    });
 	// Event-page layout: section tabs sit at the top of the content; refresh lives in the status bar
 	// (the minimal app header that used to hold it is replaced by the site header).
 	(function () {

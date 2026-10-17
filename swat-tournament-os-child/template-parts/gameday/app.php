@@ -108,7 +108,7 @@ $pitch_count_url = $pitch_playbook_slug ? swat_os_pitch_count_url( $pitch_playbo
 $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 
 ?>
-<script>(function(){try{var mode=localStorage.getItem('swatAppearanceV1');if(mode==='light'||mode==='dark')document.body.setAttribute('data-swat-appearance',mode);}catch(e){}})();</script>
+<script>(function(){try{var mode=localStorage.getItem('swatAppearanceV1');document.body.setAttribute('data-swat-appearance',mode==='light'?'light':'dark');}catch(e){}})();</script>
 <div class="swat-gameday swat-hub" data-swat-app data-initial-view="<?php echo esc_attr( $view ); ?>" data-team="<?php echo esc_attr( $team ); ?>" data-field="<?php echo esc_attr( $field ); ?>" data-game="<?php echo esc_attr( $game ? (string) $game : '' ); ?>" data-event="<?php echo esc_attr( $event ); ?>">
 	<?php echo function_exists( 'swat_child_gameday_sponsor_strip' ) ? swat_child_gameday_sponsor_strip( 'header', $current_event ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in helper. ?>
 	<?php get_template_part( 'template-parts/gameday/home-hero', null, array( 'current_event' => $current_event, 'games' => $initial_games, 'is_action' => (bool) $action ) ); ?>
@@ -116,7 +116,7 @@ $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 	<div class="swat-app-statusbar">
 		<div>
 			<span class="swat-status-pill" data-swat-connection>CONNECTING</span>
-			<span class="swat-updated" data-swat-updated aria-live="polite">Loading tournament data…</span>
+			<span class="swat-updated" data-swat-updated>Loading tournament data…</span>
 		</div>
 
 	</div>
@@ -125,6 +125,7 @@ $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 	<script type="application/json" data-swat-initial-payload><?php echo wp_json_encode( $initial_payload, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT ); ?></script>
 
 
+		<p class="screen-reader-text" data-swat-refresh-announcement role="status" aria-live="polite"></p>
 		<div class="swat-alert-stack" data-swat-alerts aria-live="polite"></div>
 
 	<?php if ( 'report-score' === $action ) : ?>
@@ -230,19 +231,16 @@ $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 
 
 
-<section class="swat-my-weekend swat-team-strip" data-swat-my-weekend data-swat-team-summary aria-label="Your teams">
-    <div data-swat-team-strips aria-live="polite"></div>
-    <button type="button" class="swat-follow-primary" data-swat-manage-teams>Follow your team</button>
-    <details class="swat-team-all-games" hidden><summary>View all my games →</summary><div id="swat-team-itinerary" class="swat-weekend-timeline" data-swat-weekend-timeline hidden></div></details>
-</section>
-<nav class="swat-bottom-nav" aria-label="Game Day navigation">
-
+<nav class="swat-bottom-nav" role="tablist" aria-label="Game Day navigation">
+<button type="button" data-swat-view="today"><span>Today</span></button>
 	<button type="button" data-swat-view="schedule"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M8 14h3M13 14h3M8 17h3"/></svg><span>Schedule</span></button>
 
 	<button type="button" data-swat-view="scores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v12H5z"/><path d="M8 10h3M13 10h3M8 14h3M13 14h3"/></svg><span>Scores</span></button>
-	<button type="button" data-swat-view="standings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/><path d="M3 19h18"/></svg><span>Bracket &amp; Standings</span></button>
+	<button type="button" data-swat-view="standings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/><path d="M3 19h18"/></svg><span>Standings</span></button>
 		<button type="button" data-swat-view="more"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg><span>More</span></button>
 </nav>
+
+
 				<div class="swat-smart-alert-row" data-swat-smart-alert-row data-swat-home-only hidden>
 					<button type="button" class="swat-alert-dismiss" data-swat-dismiss-alerts aria-label="Dismiss alerts invitation">×</button><div><strong>SMART TEAM ALERTS</strong><span>Get your team’s time, field and weather changes.</span></div>
 					<button type="button" data-swat-enable-alerts aria-pressed="false">TURN ON ALERTS</button>
@@ -305,6 +303,14 @@ $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 <?php if ( $gdc_pitching_enabled ) : ?><section class="swat-pitch-limits swat-app-view" data-swat-section="pitching" hidden aria-label="Pitching limits"><h3>Pitching limits</h3><table><caption>Maximum innings per tournament</caption><thead><tr><th scope="col">Division</th><th scope="col">1 day</th><th scope="col">3 days</th></tr></thead><tbody><tr><th scope="row">8U Kid Pitch</th><td>6</td><td>6</td></tr><tr><th scope="row">9U–12U</th><td>6</td><td>8</td></tr><tr><th scope="row">13U–15U</th><td>7</td><td>9</td></tr></tbody></table><p>One pitch counts as one inning. More than 3 innings Saturday makes a pitcher ineligible Sunday. Once removed, a pitcher cannot return to the mound.</p><a href="<?php echo esc_url( home_url( '/pitching/' ) ); ?>">All pitching rules and logs →</a></section><?php endif; ?>
 
 		<section class="swat-app-view" data-swat-section="today">
+<section class="swat-my-weekend swat-team-strip" data-swat-my-weekend data-swat-team-summary data-swat-home-only aria-labelledby="swat-your-teams">
+    <div class="swat-my-weekend-head"><h2 id="swat-your-teams">Your teams</h2><button type="button" class="swat-follow-primary" data-swat-manage-teams>Follow your team</button></div>
+    <div class="swat-followed-chips" data-swat-followed-chips></div>
+    <div data-swat-team-strips></div>
+    <details class="swat-team-all-games" hidden><summary>View all my games</summary><div id="swat-team-itinerary" class="swat-weekend-timeline" data-swat-weekend-timeline hidden></div></details>
+</section>
+<?php get_template_part( 'template-parts/gameday/home-tools', null, array( 'rules_url' => $gameday_rules_url ) ); ?>
+
 				<div class="swat-championships-panel" data-swat-championships-wrap hidden>
 					<div class="swat-app-section-heading">
 						<div><p class="swat-app-eyebrow">TITLE GAMES</p><h2>CHAMPIONSHIPS</h2></div>

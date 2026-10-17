@@ -78,10 +78,10 @@ $title_tag = $is_action ? 'p' : 'h1';
 <header class="swat-event-head<?php echo esc_attr( $variant ); ?>" aria-label="Tournament">
 		<div class="swat-event-name-row">
             <<?php echo esc_html( $title_tag ); ?> class="swat-event-title" id="swat-home-event-title"><?php echo esc_html( $name ); ?></<?php echo esc_html( $title_tag ); ?>>
-            <?php if ( count( $choices ) > 1 && ! $is_action ) : ?><span class="swat-event-chevron" aria-hidden="true">▾</span><?php endif; ?>
+            <?php if ( count( $choices ) > 1 && ! $is_action ) : ?><span class="swat-event-chevron" aria-hidden="true">Change event ▾</span><?php endif; ?>
 	<?php if ( count( $choices ) > 1 && ! $is_action ) : ?>
-		<label class="swat-event-switch"><span class="screen-reader-text">Change tournament</span>
-			<select data-swat-event-switch aria-label="Change tournament" aria-describedby="swat-home-event-title">
+		<label class="swat-event-switch"><span class="screen-reader-text">Change event</span>
+			<select data-swat-event-switch aria-label="Change event" aria-describedby="swat-home-event-title">
 				<?php
 				$has_selected = false;
 				foreach ( $choices as $choice ) {
