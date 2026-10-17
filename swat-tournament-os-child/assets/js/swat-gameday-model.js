@@ -33,5 +33,10 @@
     }
     const divisionKey = v => norm(v).replace(/\s+OPEN$/, '');
     const belongsToDivision = (g, division) => !division || divisionMembers(g).some(d => divisionKey(d) === divisionKey(division));
-    return {hasScore, isChampionship, championSide, syncSummary, divisionMembers, belongsToDivision};
+    function divisionOptions(games) {
+        const values = new Map();
+        games.flatMap(divisionMembers).forEach(d => { const key = divisionKey(d); if (!values.has(key)) values.set(key,d); });
+        return [...values.values()];
+    }
+    return {divisionOptions,hasScore, isChampionship, championSide, syncSummary, divisionMembers, belongsToDivision};
 }));

@@ -1174,15 +1174,15 @@ function populateFilters(games) {
 			const rows = rankStandingRows(Object.values(table.table), table.games);
 			const pending = group.games.some((g) => isPoolGame(g) && !isFinal(g) && norm(g.status).indexOf('CANCEL') === -1);
 			html += '<section class="swat-ps-pool" id="swat-div-' + esc(sanitizeEventSlug(group.label)) + '"><div class="swat-ps-pool-head"><h3>' + esc(group.label) + '</h3><span>' + (pending ? 'Pool play in progress' : 'Pool play final') + '</span></div>' +
-				'<table class="swat-ps-table"><caption class="swat-ps-sr">' + esc(group.label) + ' standings</caption><thead><tr><th scope="col" class="swat-ps-rank"><abbr title="Seed">#</abbr></th><th scope="col" class="swat-ps-team">Team</th><th scope="col" class="swat-ps-num"><abbr title="Wins-Losses' + (rows.some((r) => r.t) ? '-Ties' : '') + '">W-L</abbr></th><th scope="col" class="swat-ps-num"><abbr title="Run differential">RD</abbr></th></tr></thead><tbody>';
+                '<div class="swat-ps-scroll" role="region" tabindex="0" aria-label="' + esc(group.label) + ' standings, scroll for statistics"><table class="swat-ps-table"><caption class="swat-ps-sr">' + esc(group.label) + ' standings</caption><thead><tr><th scope="col" class="swat-ps-rank">#</th><th scope="col" class="swat-ps-team">Team</th>' + [['W','Wins'],['L','Losses'],['T','Ties'],['RS','Runs scored'],['RA','Runs allowed'],['RD','Run differential']].map(([label,title]) => '<th scope="col"><abbr title="' + title + '">' + label + '</abbr></th>').join('') + '</tr></thead><tbody>';
 			rows.forEach((r, index) => {
 				const id = ids[r.team] || '';
 				const diff = r.rf - r.ra;
 				const leader = index === 0 && !r.coinFlip;
-				const record = r.w + '-' + r.l + (r.t ? '-' + r.t : '');
-				html += '<tr class="' + [leader ? 'is-leader' : '', isFollowedTeam(r.team, id) ? 'is-followed-team' : ''].filter(Boolean).join(' ') + '"><td class="swat-ps-rank">' + (r.coinFlip ? '—' : String(index + 1)) + '</td><td class="swat-ps-team"><a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {team:id || r.team})) + '">' + esc(r.team) + '</a>' + (r.coinFlip ? '<small class="swat-coin">Coin flip required</small>' : '') + '<small class="swat-ps-runs">RS ' + r.rf + ' · RA ' + r.ra + '</small></td><td class="swat-ps-num">' + record + '</td><td class="swat-ps-num">' + (diff > 0 ? '+' : '') + diff + '</td></tr>';
+				// Keep separate W/L/T values, including zero ties.
+				html += '<tr class="' + [leader ? 'is-leader' : '', isFollowedTeam(r.team, id) ? 'is-followed-team' : ''].filter(Boolean).join(' ') + '"><td class="swat-ps-rank">' + (r.coinFlip ? '—' : String(index + 1)) + '</td><td class="swat-ps-team"><a href="' + esc(appUrl(SWATGameDay.gamedayUrl, {team:id || r.team})) + '">' + esc(r.team) + '</a>' + (r.coinFlip ? '<small class="swat-coin">Coin flip required</small>' : '') + '</td>' + [r.w,r.l,r.t,r.rf,r.ra].map(value => '<td class="swat-ps-num">' + value + '</td>').join('') + '<td class="swat-ps-num">' + (diff > 0 ? '+' : '') + diff + '</td></tr>';
 			});
-			html += '</tbody></table></section>';
+			html += '</tbody></table></div></section>';
 		});
 		if (!html) {
 			root.innerHTML = empty('Standings appear after pool play.','');

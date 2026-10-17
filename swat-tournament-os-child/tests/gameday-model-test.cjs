@@ -33,6 +33,7 @@ test('combined source brackets appear under every member without inventing membe
     assert.equal(m.belongsToDivision(g,'12U Open'),true);
     assert.equal(m.belongsToDivision(g,'13U'),true);
     assert.equal(m.belongsToDivision(g,'11U'),false);
+    assert.deepEqual(m.divisionOptions([{division:'12U Open'},g]),['12U Open','13U']);
     assert.equal(m.belongsToDivision({division:'12U',home:'13U team'},'13U'),false);
     assert.deepEqual(m.divisionMembers({division:'12U',member_divisions:['12U','13U']}),['12U','13U']);
 });
