@@ -338,7 +338,7 @@ function swat_child_home_assets() {
 	wp_dequeue_script( 'swat-front-page-weekend' );
 	$css = SWAT_CHILD_DIR . '/assets/css/home.css';
 	$js  = SWAT_CHILD_DIR . '/assets/js/home.js';
-	$deps = array();
+	$deps = array( 'swat-shared-components' );
 	foreach ( array( 'swat-os', 'swat-flagship', 'swat-mobile-nav-refine', 'swat-child-fonts', 'swat-child' ) as $handle ) {
 		if ( wp_style_is( $handle, 'enqueued' ) ) {
 			$deps[] = $handle;
@@ -348,3 +348,9 @@ function swat_child_home_assets() {
 	wp_enqueue_script( 'swat-child-home', SWAT_CHILD_URI . '/assets/js/home.js', array(), (string) filemtime( $js ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'swat_child_home_assets', 210 );
+
+/** Home badge uses the resolved status; never derives availability from styling. */
+function swat_child_home_status_badge( $state ) {
+    if ( 'sold_out' !== $state['status'] ) { return swat_child_status_badge( $state ); }
+    return '<span class="swat-reg-badge swat-reg-badge--sold-out">' . esc_html__( 'Sold out', 'swat-tournament-os-child' ) . '</span>';
+}

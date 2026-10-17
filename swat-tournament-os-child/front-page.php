@@ -28,19 +28,22 @@ $gameday_url = function_exists( 'swat_os_gameday_url' ) ? swat_os_gameday_url() 
  * @param string $variant 'weekend' | 'list'.
  */
 $render_event = static function ( $event, $variant ) {
-	$tag = 'weekend' === $variant ? 'h3' : 'h4';
+	$tag = 'h3';
+	$date = DateTimeImmutable::createFromFormat( '!Y-m-d', (string) $event['start'], wp_timezone() );
 	?>
 	<article class="swh-event swh-event--<?php echo esc_attr( $variant ); ?><?php echo $event['is_live'] ? ' is-live' : ''; ?>">
 		<p class="swh-event__when">
-			<span><?php echo esc_html( $event['dates'] ); ?></span>
+			<span class="swh-event__date"><?php if ( $date ) : ?><small><?php echo esc_html( wp_date( 'M', $date->getTimestamp() ) ); ?></small><?php echo esc_html( wp_date( 'j', $date->getTimestamp() ) ); ?><?php else : ?><?php esc_html_e( 'TBD', 'swat-tournament-os-child' ); ?><?php endif; ?></span>
 			<?php if ( $event['is_live'] && $event['has_schedule'] ) : ?><span class="swh-chip swh-chip--live"><?php esc_html_e( 'Happening now', 'swat-tournament-os-child' ); ?></span><?php endif; ?>
-			<?php if ( $event['show_badge'] ) { echo swat_child_status_badge( $event['reg_state'] ); } // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in helper. ?>
+			<?php if ( $event['show_badge'] ) { echo swat_child_home_status_badge( $event['reg_state'] ); } // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in helper. ?>
 		</p>
 		<<?php echo esc_html( $tag ); ?> class="swh-event__title"><a href="<?php echo esc_url( $event['detail_url'] ); ?>"><?php echo esc_html( $event['title'] ); ?></a></<?php echo esc_html( $tag ); ?>>
-		<?php if ( $event['divisions'] ) : ?><p class="swh-event__meta"><?php echo esc_html( $event['divisions'] ); ?> · <?php esc_html_e( 'Clemmons, NC', 'swat-tournament-os-child' ); ?></p><?php else : ?><p class="swh-event__meta"><?php esc_html_e( 'Clemmons, NC', 'swat-tournament-os-child' ); ?></p><?php endif; ?>
+		<p class="swh-event__meta"><?php echo esc_html( $event['dates'] ?: __( 'Dates TBD', 'swat-tournament-os-child' ) ); ?></p>
+		<?php if ( $event['divisions'] ) : ?><p class="swh-event__meta"><?php echo esc_html( $event['divisions'] ); ?> · <?php esc_html_e( 'Clemmons, NC', 'swat-tournament-os-child' ); ?></p><?php else : ?><p class="swh-event__meta"><?php esc_html_e( 'Divisions TBD · Clemmons, NC', 'swat-tournament-os-child' ); ?></p><?php endif; ?>
 		<?php if ( $event['note'] ) : ?><p class="swh-event__note<?php echo $event['has_schedule'] ? ' is-posted' : ''; ?>"><?php echo esc_html( $event['note'] ); ?></p><?php endif; ?>
 		<?php if ( $event['deadline_label'] ) : ?><p class="swh-event__note"><?php echo esc_html( $event['deadline_label'] ); ?></p><?php endif; ?>
 		<div class="swh-event__actions">
+			<?php if ( in_array( $event['reg_state']['status'], array( 'sold_out', 'closed' ), true ) ) : ?><button type="button" class="swh-btn" disabled><?php esc_html_e( 'Registration unavailable', 'swat-tournament-os-child' ); ?></button><?php endif; ?>
 			<?php foreach ( $event['actions'] as $action ) { swat_child_home_action_link( $action ); } ?>
 		</div>
 	</article>
@@ -55,21 +58,14 @@ $render_event = static function ( $event, $variant ) {
 	// same weekend models as the This Weekend cards, so it never claims more.
 	$hero_live = false;
 	foreach ( $weekend as $event ) {
-		$hero_live = $hero_live || ( $event['is_live'] && $event['has_schedule'] );
+		$hero_live = $hero_live || $event['is_live'];
 	}
 	?>
+	<?php if ( $hero_live ) : ?><a class="swh-live-banner swh-wrap" href="<?php echo esc_url( $gameday_url ); ?>"><span><?php esc_html_e( 'Game Day is live', 'swat-tournament-os-child' ); ?></span><span><?php esc_html_e( 'Open Game Day →', 'swat-tournament-os-child' ); ?></span></a><?php endif; ?>
 	<section class="swh-hero" aria-labelledby="swh-hero-title">
-		<svg class="swh-hero__diamond" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><path d="M20 210A255 255 0 0 1 380 210" /><path d="M200 330 300 230 200 130 100 230Z" /><circle cx="200" cy="232" r="16" /><path d="M193 323h14v14h-14zM293 223h14v14h-14zM193 123h14v14h-14zM93 223h14v14h-14z" class="is-base" /><path d="M200 330 20 150M200 330 380 150" /></svg>
 		<div class="swh-wrap swh-hero__grid">
 			<div class="swh-hero__copy">
-				<?php if ( $weekend ) : ?>
-					<a class="swh-hero__status<?php echo $hero_live ? ' is-live' : ''; ?>" href="#this-weekend">
-						<span class="swh-hero__dot" aria-hidden="true"></span>
-						<span><?php echo $hero_live ? esc_html__( 'Happening now', 'swat-tournament-os-child' ) : esc_html__( 'Next up', 'swat-tournament-os-child' ); ?> · <?php echo esc_html( $sections['weekend_label'] ); ?></span>
-					</a>
-				<?php else : ?>
-					<p class="swh-kicker"><?php esc_html_e( 'SWAT Tournaments · Clemmons, NC', 'swat-tournament-os-child' ); ?></p>
-				<?php endif; ?>
+				<p class="swh-kicker"><?php esc_html_e( 'Youth baseball · Clemmons, NC', 'swat-tournament-os-child' ); ?></p>
 				<h1 class="swh-hero__title" id="swh-hero-title"><?php esc_html_e( 'Youth baseball tournaments', 'swat-tournament-os-child' ); ?> <span><?php esc_html_e( 'in the NC Triad', 'swat-tournament-os-child' ); ?></span></h1>
 				<p class="swh-hero__text"><?php esc_html_e( 'Pool play, brackets and Game Day for every SWAT event.', 'swat-tournament-os-child' ); ?></p>
 
@@ -86,7 +82,7 @@ $render_event = static function ( $event, $variant ) {
 				</ul>
 			</div>
 			<div class="swh-hero__ctas">
-				<a class="swh-btn swh-btn--primary swh-btn--lg" href="#tournaments" data-swh-open="upcoming"><?php esc_html_e( 'REGISTER FOR A TOURNAMENT', 'swat-tournament-os-child' ); ?></a>
+				<a class="swh-btn swh-btn--primary swh-btn--lg" href="https://play.swatourneys.com/"><?php esc_html_e( 'REGISTER FOR A TOURNAMENT', 'swat-tournament-os-child' ); ?></a>
 				<a class="swh-btn swh-btn--secondary swh-btn--lg" href="<?php echo esc_url( $gameday_url ); ?>"><?php esc_html_e( 'OPEN GAME DAY', 'swat-tournament-os-child' ); ?></a>
 			</div>
 		</div>
@@ -111,15 +107,15 @@ $render_event = static function ( $event, $variant ) {
 
 	<section class="swh-band swh-lists" id="tournaments" aria-label="<?php esc_attr_e( 'Tournaments', 'swat-tournament-os-child' ); ?>">
 		<div class="swh-wrap">
-			<div class="swh-disclosure" data-swh-disclosure="upcoming">
+			<div class="swh-disclosure is-open" data-swh-disclosure="upcoming">
 				<h2 class="swh-disclosure__heading">
-					<button type="button" class="swh-disclosure__toggle" aria-expanded="false" aria-controls="swh-upcoming-panel" id="swh-upcoming-toggle" data-swh-toggle>
+					<button type="button" class="swh-disclosure__toggle" aria-expanded="true" aria-controls="swh-upcoming-panel" id="swh-upcoming-toggle" data-swh-toggle>
 						<span class="swh-disclosure__copy"><span class="swh-kicker"><?php esc_html_e( 'Register', 'swat-tournament-os-child' ); ?></span><span class="swh-disclosure__title"><?php esc_html_e( 'Upcoming tournaments', 'swat-tournament-os-child' ); ?></span></span>
 						<span class="swh-disclosure__count"><?php echo esc_html( count( $sections['upcoming'] ) + $sections['upcoming_more'] ); ?></span>
 						<svg class="swh-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
 					</button>
 				</h2>
-				<div class="swh-disclosure__panel" id="swh-upcoming-panel" role="region" aria-labelledby="swh-upcoming-toggle" hidden>
+				<div class="swh-disclosure__panel" id="swh-upcoming-panel" role="region" aria-labelledby="swh-upcoming-toggle">
 					<?php if ( $sections['upcoming'] ) : ?>
 						<div class="swh-list">
 							<?php foreach ( $sections['upcoming'] as $event ) { $render_event( $event, 'list' ); } ?>
@@ -161,10 +157,21 @@ $render_event = static function ( $event, $variant ) {
 		</div>
 	</section>
 
+	<section class="swh-band" aria-labelledby="swh-facility-title"><div class="swh-wrap"><div class="swh-card">
+        <h2 class="swh-head__title" id="swh-facility-title"><?php esc_html_e( 'Southwest Athletics Complex', 'swat-tournament-os-child' ); ?></h2>
+        <p class="swh-text"><?php esc_html_e( 'Clemmons, NC', 'swat-tournament-os-child' ); ?></p>
+        <a class="swh-btn swh-btn--secondary swh-btn--lg" href="<?php echo esc_url( home_url( '/fields-facilities/' ) ); ?>"><?php esc_html_e( 'Fields & directions', 'swat-tournament-os-child' ); ?></a>
+    </div></div></section>
+
 	<section class="swh-band swh-light swh-arrival" aria-labelledby="swh-arrival-title">
 		<div class="swh-wrap">
 			<p class="swh-kicker swh-kicker--dark"><?php esc_html_e( 'Know before you arrive', 'swat-tournament-os-child' ); ?></p>
 			<h2 class="swh-head__title" id="swh-arrival-title"><?php esc_html_e( 'Make game day easy.', 'swat-tournament-os-child' ); ?></h2>
+            <nav class="swh-quick-links" aria-label="<?php esc_attr_e( 'Know before you go', 'swat-tournament-os-child' ); ?>">
+                <?php foreach ( array( '/rules/' => __( 'Rules', 'swat-tournament-os-child' ), '/admissions/' => __( 'Admissions', 'swat-tournament-os-child' ), '/fields-facilities/' => __( 'Directions', 'swat-tournament-os-child' ), '/contact/' => __( 'Contact', 'swat-tournament-os-child' ) ) as $path => $label ) : ?>
+                <a class="swh-card" href="<?php echo esc_url( home_url( $path ) ); ?>"><?php echo esc_html( $label ); ?></a>
+                <?php endforeach; ?>
+            </nav>
 			<div class="swh-faq">
 				<details>
 					<summary><span><?php esc_html_e( 'Admission', 'swat-tournament-os-child' ); ?> <strong><?php esc_html_e( '$13 adults', 'swat-tournament-os-child' ); ?></strong></span><svg class="swh-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary>
@@ -189,6 +196,7 @@ $render_event = static function ( $event, $variant ) {
 			<a class="swh-textlink" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About SWAT', 'swat-tournament-os-child' ); ?> <span aria-hidden="true">→</span></a>
 		</div>
 	</section>
+    <div class="swh-wrap swh-appearance" role="group" aria-label="<?php esc_attr_e( 'Appearance', 'swat-tournament-os-child' ); ?>"><button type="button" data-swat-home-theme="light" aria-pressed="false"><?php esc_html_e( 'Light', 'swat-tournament-os-child' ); ?></button><button type="button" data-swat-home-theme="dark" aria-pressed="true"><?php esc_html_e( 'Dark', 'swat-tournament-os-child' ); ?></button></div>
 </div>
 <?php
 get_footer();
