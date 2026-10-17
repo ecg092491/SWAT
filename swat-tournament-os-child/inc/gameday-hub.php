@@ -80,12 +80,14 @@ function swat_child_hub_enqueue() {
 			$deps[] = $handle;
 		}
 	}
+	wp_enqueue_style( 'swat-gameday-tokens', SWAT_CHILD_URI . '/assets/css/gameday-tokens.css', array(), SWAT_CHILD_VERSION );
+	$deps[] = 'swat-gameday-tokens';
 	$hub = SWAT_CHILD_DIR . '/assets/css/swat-gameday-hub.css';
 	wp_enqueue_style( 'swat-gameday-hub', SWAT_CHILD_URI . '/assets/css/swat-gameday-hub.css', $deps, is_readable( $hub ) ? (string) filemtime( $hub ) : SWAT_CHILD_VERSION );
 	$compact = SWAT_CHILD_DIR . '/assets/css/swat-gameday-compact.css';
-	wp_enqueue_style( 'swat-gameday-compact', SWAT_CHILD_URI . '/assets/css/swat-gameday-compact.css', array( 'swat-gameday-hub' ), is_readable( $compact ) ? (string) filemtime( $compact ) : SWAT_CHILD_VERSION );
+	wp_enqueue_style( 'swat-gameday-compact', SWAT_CHILD_URI . '/assets/css/swat-gameday-compact.css', array( 'swat-postseason' ), is_readable( $compact ) ? (string) filemtime( $compact ) : SWAT_CHILD_VERSION );
 	$team_view = SWAT_CHILD_DIR . '/assets/css/team-schedule.css';
-	wp_enqueue_style( 'swat-team-schedule', SWAT_CHILD_URI . '/assets/css/team-schedule.css', array( 'swat-gameday-compact' ), is_readable( $team_view ) ? (string) filemtime( $team_view ) : SWAT_CHILD_VERSION );
+	wp_enqueue_style( 'swat-team-schedule', SWAT_CHILD_URI . '/assets/css/team-schedule.css', array( 'swat-gameday-hub' ), is_readable( $team_view ) ? (string) filemtime( $team_view ) : SWAT_CHILD_VERSION );
 	// 1.0.30: Bracket & Standings view; loads after every other Game Day sheet (field-ux included).
 	$postseason      = SWAT_CHILD_DIR . '/assets/css/postseason.css';
 	$postseason_deps = array( 'swat-team-schedule' );

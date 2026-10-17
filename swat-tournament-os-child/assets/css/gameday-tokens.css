@@ -1,0 +1,23 @@
+/* Game Day's sole palette, type and geometry tokens. Local fonts: SIL OFL. */
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/Barlow-Regular.ttf") format("truetype")}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/Barlow-Medium.ttf") format("truetype")}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/Barlow-SemiBold.ttf") format("truetype")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/BarlowCondensed-SemiBold.ttf") format("truetype")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/BarlowCondensed-Bold.ttf") format("truetype")}
+body.swat-hub-ui{
+ --gd-bg:#0c0c0e;--gd-page:var(--gd-bg);--gd-surface:#17171b;--gd-surface-2:#202026;
+ --gd-line:#2c2c34;--gd-ink:#f4f4f6;--gd-ink-2:var(--gd-ink);--gd-muted:#a2a2ae;
+ --gd-accent:#f5c518;--gd-accent-ink:#14110a;--gd-gold-text:#f5c518;--gd-accent-soft:var(--gd-surface-2);
+ --gd-line-strong:#747480;--gd-win:var(--gd-gold-text);--gd-danger:var(--gd-gold-text);--gd-danger-soft:var(--gd-surface-2);
+ --gd-warn-ink:var(--gd-gold-text);--gd-warn-soft:var(--gd-surface-2);--gd-star:var(--gd-gold-text);--gd-shadow:none;
+ --gd-radius:16px;--gd-radius-lg:16px;--gd-control-radius:10px;--gd-gutter:16px;--gd-touch:44px;--gd-nav-h:48px;
+ --gd-head:"Barlow Condensed","Arial Narrow",sans-serif;--gd-body:"Barlow",system-ui,sans-serif;
+ --gd-display:40px;--gd-title:24px;--gd-item:20px;--gd-body-size:15px;--gd-meta:13px;
+ --gd-page-title:var(--gd-title);--gd-section-title:var(--gd-title);color-scheme:dark;
+}
+body.swat-hub-ui[data-swat-appearance="light"]{
+ --gd-bg:#f2f2f4;--gd-surface:#fff;--gd-surface-2:#e9e9ee;--gd-line:#dcdce2;
+ --gd-ink:#14141a;--gd-muted:#5c5c68;--gd-line-strong:#767680;
+ /* #c98a00 does not reach 4.5:1 on white for meta text. */
+ --gd-gold-text:#8a5d00;color-scheme:light;
+}
