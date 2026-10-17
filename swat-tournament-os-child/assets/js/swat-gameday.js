@@ -120,7 +120,7 @@
 			if (isLive(g)) return 'LIVE';
 			const raw = norm(g && g.status);
             if (!raw) return 'STATUS TBD';
-			if (isPastUnresolved(g)) return 'SCHEDULED · UPDATE OVERDUE';
+			if (raw === 'SCHEDULED' && isPastUnresolved(g)) return 'SCHEDULED · UPDATE OVERDUE';
 			return raw === 'SCHEDULED' ? 'UPCOMING' : (raw || 'STATUS TBD');
 		}
 
