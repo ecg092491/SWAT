@@ -6,12 +6,12 @@
  const appearanceButtons=app.querySelectorAll('[data-swat-appearance-choice]');
  const systemAppearance=window.matchMedia('(prefers-color-scheme: dark)');
  function updateAppearanceButtons(){
-  const mode=document.body.dataset.swatAppearance || 'dark';
+  const mode=document.body.dataset.swatAppearance || document.documentElement.dataset.swatAppearance || 'dark';
   appearanceButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.swatAppearanceChoice===mode)));
  }
  appearanceButtons.forEach(button=>button.addEventListener('click',()=>{
   const mode=button.dataset.swatAppearanceChoice;
-  document.body.dataset.swatAppearance=mode;
+  document.body.dataset.swatAppearance=mode;document.documentElement.dataset.swatAppearance=mode;
   try{localStorage.setItem('swatAppearanceV1',mode);}catch(_){}
   updateAppearanceButtons();
  }));

@@ -1,0 +1,38 @@
+/* One component vocabulary for Home and Game Day. Layout belongs to each surface. */
+body.swat-shared-ui{background:var(--gd-bg);color:var(--gd-ink);font:400 var(--gd-body-size)/1.5 var(--gd-body);color-scheme:dark}
+:root[data-swat-appearance="light"] body.swat-shared-ui{color-scheme:light}
+body.swat-shared-ui *,body.swat-shared-ui *::before,body.swat-shared-ui *::after{box-sizing:border-box}
+body.swat-shared-ui [hidden]{display:none!important}
+body.swat-shared-ui :is(h1,h2,h3,h4,button,.swat-btn,.swh-btn){font-family:var(--gd-head)!important}
+body.swat-shared-ui :is(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid var(--gd-gold-text)!important;outline-offset:3px}
+body.swat-shared-ui :is(.swh-card,.swh-event,.swh-empty,.swh-faq details,.swat-gc,.swat-app-empty,.swat-skeleton,.swat-ps-champ,.swat-ps-round,.swat-ps-pool,.swat-tv-next,.swat-fd-card,.swat-weather-card,.swat-itinerary-game,.swat-app-panel,.swat-pitch-limits,.swat-context-card,.swat-filter-disclosure){border:1px solid var(--gd-line);border-radius:var(--gd-radius);padding:16px;background:var(--gd-surface);color:var(--gd-ink);box-shadow:none}
+body.swat-shared-ui :is(.swh-btn,.swat-btn,.swat-btn-primary,.swat-btn-ghost,.swat-gc-actions a){display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 14px;border:1px solid var(--gd-line-strong);border-radius:var(--gd-control-radius);background:transparent;color:var(--gd-ink);font:600 16px/1.2 var(--gd-head);text-transform:uppercase;text-align:center;text-decoration:none}
+body.swat-shared-ui :is(.swh-btn--primary,.swat-btn-gold,.swat-btn-primary,.swat-follow-primary){background:var(--gd-accent);border-color:var(--gd-accent);color:var(--gd-accent-ink)}
+body.swat-shared-ui :is(.swh-btn--lg,.swat-header-register){min-height:48px}
+body.swat-shared-ui button:disabled{cursor:not-allowed;color:var(--gd-muted);border-color:var(--gd-line);background:var(--gd-surface-2);opacity:1}
+body.swat-shared-ui :is(.swat-reg-badge,.swh-chip){display:inline-flex;align-items:center;padding:4px 10px;border:1px solid currentColor;border-radius:10px;font:600 14px/1.4 var(--gd-body);color:var(--swat-neutral);background:var(--swat-neutral-bg)}
+body.swat-shared-ui :is(.swat-reg-badge--open,.swh-chip--live){color:var(--swat-ok);background:var(--swat-ok-bg)}
+body.swat-shared-ui .swat-reg-badge--limited{color:var(--swat-warn);background:var(--swat-warn-bg)}
+body.swat-shared-ui :is(.swat-reg-badge--sold-out,.swat-reg-badge--cancelled){color:var(--swat-bad);background:var(--swat-bad-bg)}
+body.swat-shared-ui :is(time,.swat-gc-score,.swat-gc-when,.swat-ps-num,.swh-event__date){font-variant-numeric:tabular-nums}
+body.swat-shared-ui .swat-site-header{position:sticky;top:0;z-index:300;background:var(--gd-bg);color:var(--gd-ink);border-bottom:1px solid var(--gd-line);padding-top:env(safe-area-inset-top,0px)}
+body.swat-shared-ui .swat-header-inner{width:min(1100px,calc(100% - 32px));margin:auto;min-height:64px;display:flex;align-items:center;gap:12px;flex-wrap:nowrap}
+body.swat-shared-ui .swat-logo{display:flex;align-items:center;min-height:44px;flex-shrink:1;min-width:0}
+body.swat-shared-ui .swat-logo img{max-width:110px;max-height:48px;width:auto;height:auto}
+body.swat-shared-ui .swat-header-actions{display:flex!important;margin-left:auto}
+body.swat-shared-ui .swat-header-register{display:inline-flex!important;background:var(--gd-accent);color:var(--gd-accent-ink);border-color:var(--gd-accent);font-size:16px;padding:8px 12px}
+body.swat-shared-ui .swat-primary-nav a{color:var(--gd-ink);min-height:44px;display:flex;align-items:center;padding:8px 12px}
+body.swat-shared-ui .swat-submenu,body.swat-shared-ui .sub-menu{background:var(--gd-surface);border-color:var(--gd-line)}
+body.swat-shared-ui .swat-menu-toggle{min-width:44px;min-height:44px;color:var(--gd-ink);background:var(--gd-surface-2);border:1px solid var(--gd-line-strong);border-radius:10px}
+body.swat-shared-ui .swat-finder{--sf-bg:var(--gd-surface);--sf-ink:var(--gd-ink);--sf-muted:var(--gd-muted);--sf-line:var(--gd-line-strong);--sf-field:var(--gd-surface-2);--sf-row:var(--gd-surface-2);--sf-row-hover:var(--gd-surface);--sf-accent:var(--gd-accent);--sf-link:var(--gd-ink);font-family:var(--gd-body)}
+body.swat-shared-ui :is(.swat-gc,.swat-itinerary-game,.swat-team-pick-row,.swat-tv-next){border-left-width:1px;box-shadow:none}
+body.swat-shared-ui .swat-gc.is-live{border-color:var(--gd-accent)}
+@media(max-width:899px){
+ body.swat-shared-ui .swat-menu-toggle{display:inline-flex;align-items:center;justify-content:center;order:3}
+ body.swat-shared-ui .swat-primary-nav{position:absolute;top:100%;left:0;right:0;display:none;background:var(--gd-surface);padding:16px;max-height:calc(100dvh - var(--swat-header-height,64px));overflow:auto;border-bottom:1px solid var(--gd-line)}
+ body.swat-shared-ui .swat-primary-nav.is-open{display:block}
+ body.swat-shared-ui .swat-primary-nav .menu{display:block}
+ body.swat-shared-ui .swat-primary-nav :is(.swat-submenu,.sub-menu){display:block;position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;margin-left:12px}
+}
+@media(min-width:900px){body.swat-shared-ui .swat-primary-nav{display:block}body.swat-shared-ui .swat-menu-toggle{display:none}body.swat-shared-ui .swat-primary-nav .menu{display:flex;flex-wrap:wrap}body.swat-shared-ui .swat-menu-parent:focus-within>.swat-submenu{display:block;opacity:1;visibility:visible}}
+@media(prefers-reduced-motion:reduce){body.swat-shared-ui *,body.swat-shared-ui *::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

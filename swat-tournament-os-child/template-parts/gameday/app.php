@@ -108,7 +108,7 @@ $pitch_count_url = $pitch_playbook_slug ? swat_os_pitch_count_url( $pitch_playbo
 $GLOBALS['swat_gameday_pitch_event_slug'] = $pitch_playbook_slug;
 
 ?>
-<script>(function(){try{var mode=localStorage.getItem('swatAppearanceV1');document.body.setAttribute('data-swat-appearance',mode==='light'?'light':'dark');}catch(e){}})();</script>
+
 <div class="swat-gameday swat-hub" data-swat-app data-initial-view="<?php echo esc_attr( $view ); ?>" data-team="<?php echo esc_attr( $team ); ?>" data-field="<?php echo esc_attr( $field ); ?>" data-game="<?php echo esc_attr( $game ? (string) $game : '' ); ?>" data-event="<?php echo esc_attr( $event ); ?>">
 	<?php echo function_exists( 'swat_child_gameday_sponsor_strip' ) ? swat_child_gameday_sponsor_strip( 'header', $current_event ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in helper. ?>
 	<?php get_template_part( 'template-parts/gameday/home-hero', null, array( 'current_event' => $current_event, 'games' => $initial_games, 'is_action' => (bool) $action ) ); ?>

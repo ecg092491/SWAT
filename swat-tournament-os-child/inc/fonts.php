@@ -62,6 +62,11 @@ function swat_child_fonts_ready() {
  * @return void
  */
 function swat_child_enqueue_fonts() {
+	if ( swat_child_shared_surface() ) {
+		wp_dequeue_style( 'swat-fonts' );
+		wp_deregister_style( 'swat-fonts' );
+		return;
+	}
 	if ( ! swat_child_fonts_ready() ) {
 		return;
 	}
@@ -94,6 +99,7 @@ add_action( 'wp_enqueue_scripts', 'swat_child_enqueue_fonts', 100 );
  * @return void
  */
 function swat_child_preload_fonts() {
+	if ( swat_child_shared_surface() ) { return; }
 	if ( ! swat_child_fonts_ready() ) {
 		return;
 	}

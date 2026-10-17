@@ -51,6 +51,7 @@ require_once SWAT_CHILD_DIR . '/inc/registration-status.php';
 require_once SWAT_CHILD_DIR . '/inc/waitlist.php';
 require_once SWAT_CHILD_DIR . '/inc/event-display.php';
 require_once SWAT_CHILD_DIR . '/inc/registration-admin.php';
+require_once SWAT_CHILD_DIR . '/inc/shared-design.php';
 require_once SWAT_CHILD_DIR . '/inc/fonts.php';
 require_once SWAT_CHILD_DIR . '/inc/templates.php';
 require_once SWAT_CHILD_DIR . '/inc/bracket-schedule.php';

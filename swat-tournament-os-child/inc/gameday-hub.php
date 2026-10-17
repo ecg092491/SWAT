@@ -80,8 +80,7 @@ function swat_child_hub_enqueue() {
 			$deps[] = $handle;
 		}
 	}
-	wp_enqueue_style( 'swat-gameday-tokens', SWAT_CHILD_URI . '/assets/css/gameday-tokens.css', array(), SWAT_CHILD_VERSION );
-	$deps[] = 'swat-gameday-tokens';
+	$deps[] = 'swat-shared-components';
 	$hub = SWAT_CHILD_DIR . '/assets/css/swat-gameday-hub.css';
 	wp_enqueue_style( 'swat-gameday-hub', SWAT_CHILD_URI . '/assets/css/swat-gameday-hub.css', $deps, is_readable( $hub ) ? (string) filemtime( $hub ) : SWAT_CHILD_VERSION );
 	$compact = SWAT_CHILD_DIR . '/assets/css/swat-gameday-compact.css';
