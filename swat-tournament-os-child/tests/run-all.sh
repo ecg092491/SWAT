@@ -31,6 +31,10 @@ echo "== asset URL fix (parent assets must resolve to the parent folder under th
 php tests/uri-filter-test.php
 echo "== root and subdirectory routes / tournament menu"
 php tests/routing-menu-test.php
+echo "== Game Day JavaScript syntax and presentation regression tests"
+command -v node >/dev/null 2>&1 || { echo "ERROR: Node 18+ is required for Game Day tests" >&2; exit 127; }
+for f in assets/js/*.js; do node --check "$f"; done
+node --test tests/gameday-*-test.cjs
 echo "== generated files are current (needs the parent theme path in PARENT=)"
 if [ -n "${PARENT:-}" ]; then
   python3 tools/generate-font-overrides.py "${PARENT:-}" | diff -q - assets/css/child-fonts.css && echo "child-fonts.css up to date"

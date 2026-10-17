@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SWAT_CHILD_VERSION', '1.0.33' );
+define( 'SWAT_CHILD_VERSION', '1.0.34-review' );
 define( 'SWAT_CHILD_DIR', __DIR__ );
 
 /**
