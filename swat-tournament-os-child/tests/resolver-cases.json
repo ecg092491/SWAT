@@ -1,0 +1,1234 @@
+[
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "open",
+  "source": "default"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "deadline"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "open",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "deadline"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "open",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "limited",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "deadline"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "date"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "limited",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "sold_out",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "sold_out",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "closed",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "closed",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "complete",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "complete",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "playbook"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": false,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": false,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": false,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": false
+  },
+  "status": "cancelled",
+  "source": "admin"
+ },
+ {
+  "input": {
+   "override": "cancelled",
+   "ended": true,
+   "pb_cancelled": true,
+   "pb_sold_out": true,
+   "deadline_passed": true
+  },
+  "status": "cancelled",
+  "source": "admin"
+ }
+]

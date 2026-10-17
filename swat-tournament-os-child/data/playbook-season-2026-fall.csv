@@ -1,0 +1,564 @@
+Event Name,Event Start Date,Event City,Event State,Id,Game Number,Schedule Date,Schedule Time,End Time,Field,Division,Team 1 Type,Team 1,Team 1 Id,Team 1 Score,Team 2 Type,Team 2,Team 2 Id,Team 2 Score,Game Type,Status
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7271,1,8/7/2026,6:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Triad Yellow,1039,15,Team,Carolina Chaos,1029,1,Pool,published
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7272,2,8/7/2026,7:00 PM,12:00 AM,SW 2,8U Open,Team,Carolina Rebels Baseball,1088,19,Team,Carolina Chaos,1029,2,Pool,published
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7273,3,8/7/2026,8:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Triad Yellow,1039,5,Team,Carolina Rebels Baseball,1088,21,Pool,published
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7274,1,8/7/2026,9:00 PM,12:00 AM,SW 2,8U Open,Team,Carolina Rebels Baseball,1088,11,Team,Canes Triad Yellow,1039,7,Bracket,published
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7268,1,8/7/2026,6:00 PM,12:00 AM,SW 1,11U Open,Team,Carolina Firebirds,814,3,Team,NC Icons 11U,670,18,Pool,published
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7269,2,8/7/2026,7:30 PM,12:00 AM,SW 1,11U Open,Team,Southside Stars,668,18,Team,Carolina Firebirds,814,8,Pool,published
+Friday Night Lights 8/7 - 8U & 11U,8/7/2026,Clemmons,NC,7270,3,8/7/2026,9:00 PM,12:00 AM,SW 1,11U Open,Team,NC Icons 11U,670,11,Team,Southside Stars,668,9,Pool,published
+Saturday Night Lights 8/8 - 10U,8/8/2026,Clemmons,NC,7276,1,8/8/2026,6:00 PM,12:00 AM,SW 4,10U Open,Team,Backwoods Legends,626,1,Team,Carolina Warriors Select,778,18,Pool,published
+Saturday Night Lights 8/8 - 10U,8/8/2026,Clemmons,NC,7277,2,8/8/2026,6:00 PM,12:00 AM,SW 2,10U Open,Team,Hall Hammerheads 10U,996,1,Team,Carolina Wood Ducks,482,10,Pool,published
+Saturday Night Lights 8/8 - 10U,8/8/2026,Clemmons,NC,7278,3,8/8/2026,7:30 PM,12:00 AM,SW 2,10U Open,Team,Carolina Wood Ducks,482,6,Team,Backwoods Legends,626,6,Pool,published
+Saturday Night Lights 8/8 - 10U,8/8/2026,Clemmons,NC,7279,4,8/8/2026,7:30 PM,12:00 AM,SW 4,10U Open,Team,Carolina Warriors Select,778,9,Team,Hall Hammerheads 10U,996,7,Pool,published
+Saturday Night Lights 8/8 - 10U,8/8/2026,Clemmons,NC,7275,1,8/8/2026,9:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Warriors Select,778,15,Team,Carolina Wood Ducks,482,5,Bracket,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7294,1,8/14/2026,6:00 PM,12:00 AM,SW 7,9U Open,Team,9U Canes Triad Gold,652,1,Team,9U Canes Triad Black,519,12,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7295,2,8/14/2026,6:00 PM,12:00 AM,SW 5,9U Open,Team,Cage 2 Stage Athletics,1116,5,Team,Groundwork Sports,851,13,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7296,3,8/14/2026,6:00 PM,12:00 AM,SW 2,9U Open,Team,Lightning Jacks-9U,651,14,Team,GBC Prospects Confer,1104,2,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7297,4,8/14/2026,7:30 PM,12:00 AM,SW 7,9U Open,Team,9U Canes Triad Black,519,18,Team,Cage 2 Stage Athletics,1116,3,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7298,5,8/14/2026,7:30 PM,12:00 AM,SW 2,9U Open,Team,GBC Prospects Confer,1104,9,Team,9U Canes Triad Gold,652,6,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7299,6,8/14/2026,7:30 PM,12:00 AM,SW 5,9U Open,Team,Groundwork Sports,851,4,Team,Lightning Jacks-9U,651,9,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7280,1,8/14/2026,9:00 PM,12:00 AM,SW 2,9U Open,Team,9U Canes Triad Black,519,12,Team,Lightning Jacks-9U,651,4,Bracket,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7300,1,8/14/2026,6:00 PM,12:00 AM,SW 1,12U Open,Team,Virginia Valor,1095,1,Team,Athletes Lab - Red,1106,10,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7301,2,8/14/2026,6:00 PM,12:00 AM,WP 2,12U Open,Team,YC Sluggers,750,6,Team,China Grove Raiders,487,18,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7302,3,8/14/2026,6:00 PM,12:00 AM,SW 3,12U Open,Team,North Star Athletes Blue,1078,16,Team,NC Carolina Vipers,1076,4,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7303,4,8/14/2026,6:00 PM,12:00 AM,SW 4,12U Open,Team,NC Icons 12U,669,1,Team,Athletes Lab Gray 12U,48,18,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7304,5,8/14/2026,7:30 PM,12:00 AM,SW 1,12U Open,Team,Athletes Lab Gray 12U,48,11,Team,Virginia Valor,1095,5,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7305,6,8/14/2026,7:30 PM,12:00 AM,SW 4,12U Open,Team,Athletes Lab - Red,1106,11,Team,NC Icons 12U,669,0,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7306,7,8/14/2026,7:30 PM,12:00 AM,SW 3,12U Open,Team,NC Carolina Vipers,1076,1,Team,YC Sluggers,750,19,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7307,8,8/14/2026,7:30 PM,12:00 AM,WP 2,12U Open,Team,China Grove Raiders,487,17,Team,North Star Athletes Blue,1078,6,Pool,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7281,1,8/14/2026,9:00 PM,12:00 AM,SW 4,12U Open,Team,Athletes Lab - Red,1106,2,Team,Athletes Lab Gray 12U,48,6,Bracket,published
+Friday Night Lights 8/14 - 9U & 12U,8/14/2026,Clemmons,NC,7282,2,8/14/2026,9:00 PM,12:00 AM,SW 1,12U Open,Team,China Grove Raiders,487,1,Team,YC Sluggers,750,7,Bracket,published
+Back to School Bash,8/15/2026,Clemmons,NC,7285,1,8/15/2026,12:00 PM,12:00 AM,SW 2,10U Open,Team,Powerhouse GunDawgs,316,3,Team,Piedmont Cluckers Elite,1034,11,Pool,published
+Back to School Bash,8/15/2026,Clemmons,NC,7286,2,8/15/2026,12:00 PM,12:00 AM,SW 3,10U Open,Team,NC Admirals Warship,1123,4,Team,Backwoods Legends,626,20,Pool,published
+Back to School Bash,8/15/2026,Clemmons,NC,7287,3,8/15/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,Backwoods Legends,626,7,Team,Powerhouse GunDawgs,316,14,Pool,published
+Back to School Bash,8/15/2026,Clemmons,NC,7288,4,8/15/2026,2:00 PM,12:00 AM,SW 3,10U Open,Team,VSA NC,1119,17,Team,NC Admirals Warship,1123,1,Pool,published
+Back to School Bash,8/15/2026,Clemmons,NC,7289,5,8/15/2026,4:00 PM,12:00 AM,SW 2,10U Open,Team,Piedmont Cluckers Elite,1034,5,Team,VSA NC,1119,16,Pool,published
+Back to School Bash,8/15/2026,Clemmons,NC,7290,1,8/16/2026,10:00 AM,12:00 AM,SW 3,10U Open,Team,Piedmont Cluckers Elite,1034,18,Team,NC Admirals Warship,1123,3,Bracket,published
+Back to School Bash,8/15/2026,Clemmons,NC,7292,2,8/16/2026,10:00 AM,12:00 AM,SW 2,10U Open,Team,Backwoods Legends,626,7,Team,Powerhouse GunDawgs,316,6,Bracket,published
+Back to School Bash,8/15/2026,Clemmons,NC,7291,3,8/16/2026,12:00 PM,12:00 AM,SW 3,10U Open,Team,VSA NC,1119,14,Team,Piedmont Cluckers Elite,1034,2,Bracket,published
+Back to School Bash,8/15/2026,Clemmons,NC,7293,4,8/16/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,VSA NC,1119,9,Team,Backwoods Legends,626,1,Bracket,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7308,1,8/15/2026,4:30 PM,12:00 AM,SW 4,11U Open,Team,NWNC Elite 11U Gold,281,13,Team,Dirtbags Honeychuck 11U,1056,5,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7309,2,8/15/2026,4:30 PM,12:00 AM,SW 3,11U Open,Team,Carolina Young Guns,479,15,Team,Flying Pigs 11U,1103,0,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7310,3,8/15/2026,4:30 PM,12:00 AM,SW 1,11U Open,Team,NCBA Golden Spikes 2034 - Sims,937,9,Team,New Market 11U,1057,13,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7311,4,8/15/2026,6:00 PM,12:00 AM,WP 2,11U Open,Team,Canes Triad Brailey,481,8,Team,NC Icons 11U,670,2,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7312,5,8/15/2026,6:00 PM,12:00 AM,SW 1,11U Open,Team,P413 Vestal,1042,6,Team,NWNC Elite 11U Gold,281,7,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7313,6,8/15/2026,6:00 PM,12:00 AM,SW 4,11U Open,Team,Canes Black Humphrey 11u,1045,3,Team,Dirtbags Honeychuck 11U,1056,1,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7314,7,8/15/2026,6:00 PM,12:00 AM,SW 3,11U Open,Team,HiToms,317,3,Team,Carolina Young Guns,479,4,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7315,8,8/15/2026,7:30 PM,12:00 AM,SW 4,11U Open,Team,P413 Vestal,1042,3,Team,Canes Black Humphrey 11u,1045,11,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7316,9,8/15/2026,7:30 PM,12:00 AM,SW 3,11U Open,Team,Canes Triad Brailey,481,14,Team,Flying Pigs 11U,1103,0,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7317,10,8/15/2026,7:30 PM,12:00 AM,WP 2,11U Open,Team,NC Icons 11U,670,10,Team,NCBA Golden Spikes 2034 - Sims,937,1,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7318,11,8/15/2026,7:30 PM,12:00 AM,SW 1,11U Open,Team,HiToms,317,13,Team,New Market 11U,1057,6,Pool,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7283,1,8/15/2026,9:00 PM,12:00 AM,SW 3,11U Open,Team,Canes Triad Brailey,481,9,Team,Carolina Young Guns,479,5,Bracket,published
+Saturday Night Lights 8/15 - 11U,8/15/2026,Clemmons,NC,7284,2,8/15/2026,9:00 PM,12:00 AM,SW 1,11U Open,Team,Canes Black Humphrey 11u,1045,14,Team,NWNC Elite 11U Gold,281,1,Bracket,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7329,1,8/21/2026,6:00 PM,12:00 AM,SW 7,8U Open,Team,Stokes Swarm 8u,110,8,Team,Carolina Wolfpack 8u,1064,3,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7331,2,8/21/2026,6:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Triad 8u Black,1051,17,Team,Carolina Smoke,1092,2,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7333,3,8/21/2026,6:00 PM,12:00 AM,SW 3,8U Open,Team,NC Made 8U Green,1055,3,Team,Canes Atlantic 8u,1004,14,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7328,4,8/21/2026,7:00 PM,12:00 AM,SW 3,8U Open,Team,Canes Atlantic 8u,1004,16,Team,Flying Pigs,919,10,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7332,5,8/21/2026,7:00 PM,12:00 AM,SW 5,8U Open,Team,East Wilkes Havoc 8U,1007,5,Team,Davidson Force,968,7,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7335,6,8/21/2026,7:00 PM,12:00 AM,SW 7,8U Open,Team,Carolina Wolfpack 8u,1064,12,Team,Carolina Clippers 8U,1109,7,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7336,7,8/21/2026,7:00 PM,12:00 AM,SW 2,8U Open,Team,NWNC Elite 8u,917,0,Team,Canes Triad 8u Black,1051,11,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7326,8,8/21/2026,8:00 PM,12:00 AM,SW 7,8U Open,Team,Carolina Smoke,1092,17,Team,East Wilkes Havoc 8U,1007,1,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7327,9,8/21/2026,8:00 PM,12:00 AM,SW 5,8U Open,Team,Davidson Force,968,8,Team,NC Made 8U Green,1055,7,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7330,10,8/21/2026,8:00 PM,12:00 AM,SW 2,8U Open,Team,Carolina Clippers 8U,1109,14,Team,NWNC Elite 8u,917,15,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7334,11,8/21/2026,8:00 PM,12:00 AM,SW 3,8U Open,Team,Flying Pigs,919,2,Team,Stokes Swarm 8u,110,17,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7319,1,8/21/2026,9:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Triad 8u Black,1051,13,Team,Stokes Swarm 8u,110,7,Bracket,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7320,2,8/21/2026,9:00 PM,12:00 AM,SW 7,8U Open,Team,Davidson Force,968,8,Team,Canes Atlantic 8u,1004,15,Bracket,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7322,1,8/21/2026,6:00 PM,12:00 AM,SW 4,10U Open,Team,East Rowan,650,8,Team,Dirtbags Youth Black,98,5,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7323,2,8/21/2026,6:00 PM,12:00 AM,SW 1,10U Open,Team,NWNC Elite,148,11,Team,Carolina Wood Ducks,482,12,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7324,3,8/21/2026,7:30 PM,12:00 AM,SW 1,10U Open,Team,East Rowan,650,10,Team,Carolina Wood Ducks,482,2,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7325,4,8/21/2026,7:30 PM,12:00 AM,SW 4,10U Open,Team,Dirtbags Youth Black,98,11,Team,NWNC Elite,148,1,Pool,published
+Friday Night Lights 8/21 - 8U & 10U,8/21/2026,Clemmons,NC,7321,1,8/21/2026,9:00 PM,12:00 AM,SW 1,10U Open,Team,East Rowan,650,5,Team,Dirtbags Youth Black,98,3,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7341,1,8/22/2026,9:00 AM,12:00 AM,SW 7,7U Open,Team,NC Made 7U,1097,0,Team,Canes Triad 7U Black,887,15,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7342,2,8/22/2026,10:15 AM,12:00 AM,SW 7,7U Open,Team,Davidson Force,1120,11,Team,NC Made 7U,1097,3,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7343,3,8/22/2026,11:30 AM,12:00 AM,SW 7,7U Open,Team,Canes Triad 7U Black,887,21,Team,Flying Pigs,1049,4,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7344,4,8/22/2026,12:45 PM,12:00 AM,SW 7,7U Open,Team,Carolina Rapid Fire Fall 7u,1044,12,Team,Davidson Force,1120,13,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7345,5,8/22/2026,2:00 PM,12:00 AM,SW 7,7U Open,Team,Flying Pigs,1049,7,Team,Carolina Rapid Fire Fall 7u,1044,17,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7373,1,8/23/2026,9:00 AM,12:00 AM,SW 7,7U Open,Team,NC Made 7U,1097,6,Team,Flying Pigs,1049,19,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7375,2,8/23/2026,10:15 AM,12:00 AM,SW 7,7U Open,Team,Davidson Force,1120,3,Team,Carolina Rapid Fire Fall 7u,1044,12,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7374,3,8/23/2026,11:30 AM,12:00 AM,SW 7,7U Open,Team,Canes Triad 7U Black,887,18,Team,Flying Pigs,1049,1,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7376,4,8/23/2026,12:45 PM,12:00 AM,SW 7,7U Open,Team,Canes Triad 7U Black,887,17,Team,Carolina Rapid Fire Fall 7u,1044,2,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7402,1,8/22/2026,3:15 PM,12:00 AM,SW 7,8U Open,Team,Pro-Fit Spartans 8u,1132,8,Team,Lightning Jacks,892,4,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7403,2,8/22/2026,4:30 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad Yellow,1039,9,Team,Pro-Fit Spartans 8u,1132,4,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7404,3,8/22/2026,5:45 PM,12:00 AM,SW 7,8U Open,Team,Lightning Jacks,892,12,Team,King Kryptonite -,916,15,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7405,4,8/22/2026,7:00 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,13,Team,Canes Triad Yellow,1039,17,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7377,1,8/23/2026,2:00 PM,12:00 AM,SW 7,8U Open,Team,Pro-Fit Spartans 8u,1132,0,Team,King Kryptonite -,916,18,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7378,2,8/23/2026,3:15 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad Yellow,1039,11,Team,Lightning Jacks,892,8,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7379,3,8/23/2026,4:30 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,10,Team,Canes Triad Yellow,1039,3,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7346,1,8/22/2026,9:00 AM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Gold,652,18,Team,Carolina Firebirds-Orange,959,12,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7347,2,8/22/2026,11:00 AM,12:00 AM,SW 5,9U Open,Team,Groundwork Sports,851,11,Team,9U Canes Triad Gold,652,8,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7348,3,8/22/2026,1:00 PM,12:00 AM,SW 5,9U Open,Team,Carolina Firebirds-Orange,959,15,Team,Dc Yard Goats 9U,890,5,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7349,4,8/22/2026,3:00 PM,12:00 AM,SW 5,9U Open,Team,NC Made Green,830,8,Team,Groundwork Sports,851,15,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7350,5,8/22/2026,5:00 PM,12:00 AM,SW 5,9U Open,Team,Dc Yard Goats 9U,890,5,Team,NC Made Green,830,16,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7380,1,8/23/2026,9:00 AM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Gold,652,15,Team,Dc Yard Goats 9U,890,0,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7382,2,8/23/2026,11:00 AM,12:00 AM,SW 5,9U Open,Team,NC Made Green,830,5,Team,Carolina Firebirds-Orange,959,7,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7381,3,8/23/2026,1:00 PM,12:00 AM,SW 5,9U Open,Team,Groundwork Sports,851,8,Team,9U Canes Triad Gold,652,0,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7383,4,8/23/2026,3:00 PM,12:00 AM,SW 5,9U Open,Team,Groundwork Sports,851,10,Team,Carolina Firebirds-Orange,959,8,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7351,1,8/22/2026,8:00 AM,12:00 AM,SW 2,10U Open,Team,Canes Triad 10u Black,503,16,Team,Carolina warriors select Gold,762,8,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7352,2,8/22/2026,10:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,20,Team,Camel City,1075,4,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7353,3,8/22/2026,12:00 PM,12:00 AM,SW 2,10U Open,Team,Dirtbags 10u Platinum,1112,15,Team,Canes Triad 10u Black,503,0,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7354,4,8/22/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,Camel City,1075,2,Team,Summerfield Stars,756,8,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7355,5,8/22/2026,4:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Firebirds,951,1,Team,Dirtbags 10u Platinum,1112,10,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7356,6,8/22/2026,6:00 PM,12:00 AM,SW 2,10U Open,Team,Summerfield Stars,756,2,Team,Carolina Firebirds,951,10,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7384,1,8/23/2026,9:00 AM,12:00 AM,SW 2,10U Open,Team,Summerfield Stars,756,10,Team,Camel City,1075,2,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7385,2,8/23/2026,11:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,3,Team,Canes Triad 10u Black,503,16,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7386,3,8/23/2026,1:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Firebirds,951,11,Team,Summerfield Stars,756,0,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7387,4,8/23/2026,3:00 PM,12:00 AM,SW 2,10U Open,Team,Canes Triad 10u Black,503,10,Team,Dirtbags 10u Platinum,1112,11,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7388,5,8/23/2026,5:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Firebirds,951,13,Team,Dirtbags 10u Platinum,1112,4,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7357,1,8/22/2026,9:00 AM,12:00 AM,SW 1,11U Major,Team,FS Bulldogs 11U Black,506,13,Team,Canes Black Humphrey 11u,1045,7,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7411,2,8/22/2026,11:00 AM,12:00 AM,SW 1,11U Major,Team,Canes Black Humphrey 11u,1045,0,Team,SBA Los Rayos,636,13,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7359,3,8/22/2026,1:00 PM,12:00 AM,SW 1,11U Major,Team,Canes Triad 11U Scout,28,11,Team,FS Bulldogs 11U Black,506,3,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7412,4,8/22/2026,3:00 PM,12:00 AM,SW 1,11U Major,Team,SBA Los Rayos,636,1,Team,Canes Triad 11U Scout,28,9,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7413,1,8/23/2026,11:00 AM,12:00 AM,SW 3,11U Major,Team,SBA Los Rayos,636,9,Team,FS Bulldogs 11U Black,506,11,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7414,2,8/23/2026,1:00 PM,12:00 AM,SW 3,11U Major,Team,Canes Triad 11U Scout,28,15,Team,Canes Black Humphrey 11u,1045,2,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7415,3,8/23/2026,3:00 PM,12:00 AM,SW 3,11U Major,Team,FS Bulldogs 11U Black,506,5,Team,Canes Triad 11U Scout,28,13,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7362,1,8/22/2026,9:00 AM,12:00 AM,SW 3,11U Open,Team,HiToms,317,9,Team,Thunder Stixx,577,1,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7366,5,8/22/2026,10:00 AM,12:00 AM,WP 2,11U Open,Team,New Market 11U,1057,12,Team,NC Admirals Armada,1131,6,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7363,2,8/22/2026,11:00 AM,12:00 AM,SW 3,11U Open,Team,NCBA Golden Spikes  - Sims,937,3,Team,HiToms,317,13,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7367,6,8/22/2026,12:00 PM,12:00 AM,WP 2,11U Open,Team,NC Admirals Armada,1131,0,Team,Canes Atlantic 11U Barrier,1124,15,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7364,3,8/22/2026,1:00 PM,12:00 AM,SW 3,11U Open,Team,NRV Tigers 11U Largen,1107,4,Team,Thunder Stixx,577,5,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7368,7,8/22/2026,2:00 PM,12:00 AM,WP 2,11U Open,Team,Carolina Firebirds,814,10,Team,New Market 11U,1057,4,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7365,4,8/22/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,NCBA Golden Spikes  - Sims,937,4,Team,NRV Tigers 11U Largen,1107,12,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7416,8,8/22/2026,4:00 PM,12:00 AM,WP 2,11U Open,Team,Canes Atlantic 11U Barrier,1124,9,Team,Carolina Firebirds,814,10,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7417,4,8/23/2026,10:00 AM,12:00 AM,WP 2,11U Open,Team,NCBA Golden Spikes  - Sims,937,2,Team,New Market 11U,1057,10,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7420,1,8/23/2026,10:00 AM,12:00 AM,SW 1,11U Open,Team,Carolina Firebirds,814,3,Team,NRV Tigers 11U Largen,1107,12,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7418,5,8/23/2026,12:00 PM,12:00 AM,WP 2,11U Open,Team,Thunder Stixx,577,14,Team,NC Admirals Armada,1131,3,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7421,2,8/23/2026,12:00 PM,12:00 AM,SW 1,11U Open,Team,HiToms,317,12,Team,Canes Atlantic 11U Barrier,1124,8,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7419,6,8/23/2026,2:00 PM,12:00 AM,WP 2,11U Open,Team,New Market 11U,1057,4,Team,Thunder Stixx,577,8,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7422,3,8/23/2026,2:00 PM,12:00 AM,SW 1,11U Open,Team,NRV Tigers 11U Largen,1107,10,Team,HiToms,317,2,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7369,1,8/22/2026,8:30 AM,12:00 AM,SW 4,12U Open,Team,Camel City,501,7,Team,King Kryptonite,92,8,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7370,2,8/22/2026,10:30 AM,12:00 AM,SW 4,12U Open,Team,NC Carolina Vipers,1076,0,Team,Camel City,501,17,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7371,3,8/22/2026,12:30 PM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,5,Team,Carolina Ghost 12U Scout,554,10,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7372,4,8/22/2026,2:30 PM,12:00 AM,SW 4,12U Open,Team,NC Carolina Vipers,1076,3,Team,Carolina Ghost 12U Scout,554,18,Pool,published
+August Heat Championship,8/22/2026,Clemmons,NC,7399,1,8/23/2026,9:00 AM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,5,Team,Camel City,501,10,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7400,2,8/23/2026,11:00 AM,12:00 AM,SW 4,12U Open,Team,Carolina Ghost 12U Scout,554,22,Team,NC Carolina Vipers,1076,2,Bracket,published
+August Heat Championship,8/22/2026,Clemmons,NC,7401,3,8/23/2026,1:00 PM,12:00 AM,SW 4,12U Open,Team,Camel City,501,23,Team,Carolina Ghost 12U Scout,554,21,Bracket,published
+Saturday Night Lights 8/22 - 12U,8/22/2026,Clemmons,NC,7338,1,8/22/2026,4:30 PM,12:00 AM,SW 4,12U Open,Team,YC Mudcats,99,5,Team,China Grove Raiders,487,7,Pool,published
+Saturday Night Lights 8/22 - 12U,8/22/2026,Clemmons,NC,7339,2,8/22/2026,6:00 PM,12:00 AM,SW 4,12U Open,Team,China Grove Raiders,487,15,Team,NC Icons 12U,669,4,Pool,published
+Saturday Night Lights 8/22 - 12U,8/22/2026,Clemmons,NC,7340,3,8/22/2026,7:30 PM,12:00 AM,SW 4,12U Open,Team,YC Mudcats,99,8,Team,NC Icons 12U,669,7,Pool,published
+Saturday Night Lights 8/22 - 12U,8/22/2026,Clemmons,NC,7337,1,8/22/2026,9:00 PM,12:00 AM,SW 4,12U Open,Team,China Grove Raiders,487,0,Team,YC Mudcats,99,0,Bracket,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7489,1,8/28/2026,6:00 PM,12:00 AM,SW 5,9U Open,Team,Cage 2 Stage Athletics,1116,5,Team,Athletes Lab 9U Navy,624,12,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7490,2,8/28/2026,6:00 PM,12:00 AM,SW 3,9U Open,Team,Concord Athletics 9U,1110,0,Team,The Legacy,760,23,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7491,3,8/28/2026,6:00 PM,12:00 AM,SW 2,9U Open,Team,Groundwork Sports,851,10,Team,9U Canes Triad Gold,652,3,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7492,4,8/28/2026,6:00 PM,12:00 AM,SW 7,9U Open,Team,DYBA Force 9U,1072,13,Team,AC Havoc,1024,4,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7493,5,8/28/2026,7:30 PM,12:00 AM,SW 5,9U Open,Team,Cage 2 Stage Athletics,1116,19,Team,AC Havoc,1024,4,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7494,6,8/28/2026,7:30 PM,12:00 AM,SW 7,9U Open,Team,Athletes Lab 9U Navy,624,8,Team,DYBA Force 9U,1072,4,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7495,7,8/28/2026,7:30 PM,12:00 AM,SW 2,9U Open,Team,Concord Athletics 9U,1110,3,Team,9U Canes Triad Gold,652,18,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7496,8,8/28/2026,7:30 PM,12:00 AM,SW 3,9U Open,Team,The Legacy,760,9,Team,Groundwork Sports,851,6,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7423,2,8/28/2026,9:00 PM,12:00 AM,SW 7,9U Open,Team,DYBA Force 9U,1072,8,Team,Groundwork Sports,851,7,Bracket,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7424,1,8/28/2026,9:00 PM,12:00 AM,SW 2,9U Open,Team,The Legacy,760,6,Team,Athletes Lab 9U Navy,624,12,Bracket,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7497,1,8/28/2026,6:00 PM,12:00 AM,SW 4,10U Open,Team,NC Icons 10U,1047,6,Team,Carolina Scouts-Select,902,7,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7498,2,8/28/2026,6:00 PM,12:00 AM,WP 2,10U Open,Team,FS Bulldogs 10u (Black-RH),798,12,Team,Triad Troublemakers,1073,5,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7499,3,8/28/2026,6:00 PM,12:00 AM,SW 1,10U Open,Team,NWNC Elite,148,17,Team,Rowan Rangers 10u,1084,0,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7500,4,8/28/2026,7:30 PM,12:00 AM,SW 4,10U Open,Team,NC Icons 10U,1047,7,Team,NWNC Elite,148,15,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7501,5,8/28/2026,7:30 PM,12:00 AM,WP 2,10U Open,Team,Carolina Scouts-Select,902,21,Team,Triad Troublemakers,1073,15,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7502,6,8/28/2026,7:30 PM,12:00 AM,SW 1,10U Open,Team,FS Bulldogs 10u (Black-RH),798,14,Team,Rowan Rangers 10u,1084,1,Pool,published
+Friday Night Lights 8/28 - 9U & 10U,8/28/2026,Clemmons,NC,7425,1,8/28/2026,9:00 PM,12:00 AM,SW 1,10U Open,Team,FS Bulldogs 10u (Black-RH),798,7,Team,NWNC Elite,148,3,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7464,1,8/29/2026,3:15 PM,12:00 AM,SW 7,8U Open,Team,Dirtbags 8U Clark,1108,5,Team,King Kryptonite -,916,20,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7465,2,8/29/2026,4:30 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,26,Team,Carolina Firebirds,1101,9,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7466,3,8/29/2026,5:45 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad 8u Black,1051,17,Team,Dirtbags 8U Clark,1108,0,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7467,4,8/29/2026,7:00 PM,12:00 AM,SW 7,8U Open,Team,Carolina Firebirds,1101,0,Team,Canes Triad 8u Black,1051,20,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7427,1,8/30/2026,2:00 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,9,Team,Dirtbags 8U Clark,1108,5,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7428,2,8/30/2026,3:15 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad 8u Black,1051,12,Team,Carolina Firebirds,1101,0,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7429,3,8/30/2026,4:30 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,4,Team,Canes Triad 8u Black,1051,12,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7468,1,8/29/2026,9:00 AM,12:00 AM,SW 7,9U Open,Team,Camel City,1118,2,Team,NC Made 9U Blue,579,21,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7469,2,8/29/2026,11:00 AM,12:00 AM,SW 7,9U Open,Team,Copperheads 9U,883,15,Team,Camel City,1118,5,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7470,3,8/29/2026,1:00 PM,12:00 AM,SW 7,9U Open,Team,NC Made 9U Blue,579,7,Team,Copperheads 9U,883,2,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7471,4,8/29/2026,1:00 PM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Black,519,12,Team,FS Bulldogs 9U (Cockrell),609,4,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7472,5,8/29/2026,3:00 PM,12:00 AM,SW 5,9U Open,Team,GBC Prospects Confer,1104,1,Team,9U Canes Triad Black,519,9,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7473,6,8/29/2026,5:00 PM,12:00 AM,SW 5,9U Open,Team,Carolina Firebirds-Red,662,9,Team,FS Bulldogs 9U (Cockrell),609,0,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7474,7,8/29/2026,7:00 PM,12:00 AM,SW 5,9U Open,Team,GBC Prospects Confer,1104,0,Team,Carolina Firebirds-Red,662,15,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7430,1,8/30/2026,10:00 AM,12:00 AM,SW 7,9U Open,Team,GBC Prospects Confer,1104,8,Team,Camel City,1118,2,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7432,3,8/30/2026,10:00 AM,12:00 AM,SW 5,9U Open,Team,NC Made 9U Blue,579,3,Team,9U Canes Triad Black,519,12,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7431,2,8/30/2026,12:00 PM,12:00 AM,SW 7,9U Open,Team,FS Bulldogs 9U (Cockrell),609,9,Team,GBC Prospects Confer,1104,0,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7433,4,8/30/2026,12:00 PM,12:00 AM,SW 5,9U Open,Team,Carolina Firebirds-Red,662,11,Team,Copperheads 9U,883,6,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7434,5,8/30/2026,2:00 PM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Black,519,14,Team,Carolina Firebirds-Red,662,6,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7475,1,8/29/2026,8:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,6,Team,Summerfield Stars,756,10,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7476,2,8/29/2026,10:00 AM,12:00 AM,SW 2,10U Open,Team,Summerfield Stars,756,8,Team,Dirtbags Youth Black,98,11,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7477,3,8/29/2026,12:00 PM,12:00 AM,SW 2,10U Open,Team,Dirtbags Youth Black,98,8,Team,Carolina warriors select Gold,762,9,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7478,4,8/29/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,GBC 10U-Rembach,900,1,Team,FS Bulldogs 10u (Black-RH),798,13,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7479,5,8/29/2026,4:00 PM,12:00 AM,SW 2,10U Open,Team,Southside Stars,586,9,Team,GBC 10U-Rembach,900,4,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7480,6,8/29/2026,6:00 PM,12:00 AM,SW 2,10U Open,Team,FS Bulldogs 10u (Black-RH),798,10,Team,Southside Stars,586,10,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7435,1,8/30/2026,9:00 AM,12:00 AM,SW 2,10U Open,Team,Dirtbags Youth Black,98,11,Team,GBC 10U-Rembach,900,1,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7436,2,8/30/2026,11:00 AM,12:00 AM,SW 2,10U Open,Team,Summerfield Stars,756,12,Team,Carolina warriors select Gold,762,10,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7437,3,8/30/2026,1:00 PM,12:00 AM,SW 2,10U Open,Team,Southside Stars,586,11,Team,Dirtbags Youth Black,98,17,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7438,4,8/30/2026,3:00 PM,12:00 AM,SW 2,10U Open,Team,Summerfield Stars,756,2,Team,FS Bulldogs 10u (Black-RH),798,10,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7439,5,8/30/2026,5:00 PM,12:00 AM,SW 2,10U Open,Team,Dirtbags Youth Black,98,6,Team,FS Bulldogs 10u (Black-RH),798,10,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7481,1,8/29/2026,9:00 AM,12:00 AM,SW 3,11U Open,Team,King Kryptonite,42,5,Team,NCBA Golden Spikes - Steadham,862,11,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7485,5,8/29/2026,9:00 AM,12:00 AM,SW 1,11U Open,Team,Nc Prospects 11U,291,3,Team,Lightning Jacks- Litaker,516,10,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7482,2,8/29/2026,11:00 AM,12:00 AM,SW 3,11U Open,Team,NWNC Elite 11U Gold,281,4,Team,King Kryptonite,42,9,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7486,6,8/29/2026,11:00 AM,12:00 AM,SW 1,11U Open,Team,Southside Stars,668,20,Team,Nc Prospects 11U,291,7,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7483,3,8/29/2026,1:00 PM,12:00 AM,SW 3,11U Open,Team,NCBA Golden Spikes - Steadham,862,11,Team,DC Yard Goats,888,3,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7487,7,8/29/2026,1:00 PM,12:00 AM,SW 1,11U Open,Team,Camel City Baseball,277,2,Team,Lightning Jacks- Litaker,516,10,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7484,4,8/29/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,DC Yard Goats,888,5,Team,NWNC Elite 11U Gold,281,12,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7488,8,8/29/2026,3:00 PM,12:00 AM,SW 1,11U Open,Team,Southside Stars,668,12,Team,Camel City Baseball,277,6,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7440,1,8/30/2026,10:00 AM,12:00 AM,SW 3,11U Open,Team,Camel City Baseball,277,11,Team,DC Yard Goats,888,3,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7443,4,8/30/2026,10:00 AM,12:00 AM,SW 1,11U Open,Team,NCBA Golden Spikes - Steadham,862,9,Team,Southside Stars,668,8,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7441,2,8/30/2026,12:00 PM,12:00 AM,SW 3,11U Open,Team,NWNC Elite 11U Gold,281,7,Team,Nc Prospects 11U,291,6,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7444,5,8/30/2026,12:00 PM,12:00 AM,SW 1,11U Open,Team,Lightning Jacks- Litaker,516,2,Team,King Kryptonite,42,5,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7442,3,8/30/2026,2:00 PM,12:00 AM,SW 3,11U Open,Team,Camel City Baseball,277,11,Team,NWNC Elite 11U Gold,281,3,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7445,6,8/30/2026,2:00 PM,12:00 AM,SW 1,11U Open,Team,NCBA Golden Spikes - Steadham,862,9,Team,King Kryptonite,42,4,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7454,1,8/29/2026,8:00 AM,12:00 AM,WP 2,12U Open,Team,Canes Triad 12U Vernon,466,8,Team,GBC 12U-Rembach,31,3,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7460,7,8/29/2026,9:00 AM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,4,Team,FS Bulldogs 12u (Black/Kane),983,8,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7455,2,8/29/2026,10:00 AM,12:00 AM,WP 2,12U Open,Team,GBC 12U-Rembach,31,8,Team,North Star Athletes White,1079,4,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7461,8,8/29/2026,11:00 AM,12:00 AM,SW 4,12U Open,Team,Extreme Performance 2033,1043,4,Team,King Kryptonite,92,19,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7456,3,8/29/2026,12:00 PM,12:00 AM,WP 2,12U Open,Team,North Star Athletes White,1079,0,Team,Canes Triad 12U Vernon,466,15,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7462,9,8/29/2026,1:00 PM,12:00 AM,SW 4,12U Open,Team,FS Bulldogs 12u (Black/Kane),983,8,Team,Va Squires 2033,584,7,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7457,4,8/29/2026,2:00 PM,12:00 AM,WP 2,12U Open,Team,GF Sandlot Braswell,19,11,Team,Summerfield Stars 12U,109,12,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7463,10,8/29/2026,3:00 PM,12:00 AM,SW 4,12U Open,Team,Va Squires 2033,584,11,Team,Extreme Performance 2033,1043,5,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7458,5,8/29/2026,4:00 PM,12:00 AM,WP 2,12U Open,Team,Dirtbags Baseball 12U-Southern,795,10,Team,GF Sandlot Braswell,19,11,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7459,6,8/29/2026,6:00 PM,12:00 AM,WP 2,12U Open,Team,Summerfield Stars 12U,109,14,Team,Dirtbags Baseball 12U-Southern,795,5,Pool,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7449,4,8/30/2026,9:00 AM,12:00 AM,SW 4,12U Open,Team,Summerfield Stars 12U,109,12,Team,Va Squires 2033,584,11,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7446,1,8/30/2026,10:00 AM,12:00 AM,WP 2,12U Open,Team,North Star Athletes White,1079,6,Team,Dirtbags Baseball 12U-Southern,795,10,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7450,5,8/30/2026,11:00 AM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,4,Team,GBC 12U-Rembach,31,6,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7447,2,8/30/2026,12:00 PM,12:00 AM,WP 2,12U Open,Team,GF Sandlot Braswell,19,15,Team,Extreme Performance 2033,1043,0,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7451,6,8/30/2026,1:00 PM,12:00 AM,SW 4,12U Open,Team,FS Bulldogs 12u (Black/Kane),983,2,Team,Summerfield Stars 12U,109,4,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7448,3,8/30/2026,2:00 PM,12:00 AM,WP 2,12U Open,Team,Dirtbags Baseball 12U-Southern,795,6,Team,GF Sandlot Braswell,19,5,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7452,7,8/30/2026,3:00 PM,12:00 AM,SW 4,12U Open,Team,GBC 12U-Rembach,31,1,Team,Canes Triad 12U Vernon,466,9,Bracket,published
+Beat the Heat Classic,8/29/2026,Clemmons,NC,7453,8,8/30/2026,5:00 PM,12:00 AM,SW 4,12U Open,Team,Summerfield Stars 12U,109,8,Team,Canes Triad 12U Vernon,466,11,Bracket,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7503,1,8/29/2026,6:00 PM,12:00 AM,SW 1,11U Open,Team,Five Star Flying Pigs 11U,270,9,Team,HiToms,317,8,Pool,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7504,2,8/29/2026,6:00 PM,12:00 AM,SW 4,11U Open,Team,P413 Vestal,1042,6,Team,Diamond Dawgs,942,7,Pool,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7505,3,8/29/2026,6:00 PM,12:00 AM,SW 3,11U Open,Team,East Rowan 11U,63,3,Team,Carolina Young Guns,479,2,Pool,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7506,4,8/29/2026,7:30 PM,12:00 AM,SW 1,11U Open,Team,Five Star Flying Pigs 11U,270,1,Team,East Rowan 11U,63,16,Pool,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7507,5,8/29/2026,7:30 PM,12:00 AM,SW 4,11U Open,Team,HiToms,317,18,Team,Diamond Dawgs,942,4,Pool,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7508,6,8/29/2026,7:30 PM,12:00 AM,SW 3,11U Open,Team,P413 Vestal,1042,3,Team,Carolina Young Guns,479,14,Pool,published
+Saturday Night Lights 8/29 - 11U,8/29/2026,Clemmons,NC,7426,1,8/29/2026,9:00 PM,12:00 AM,SW 1,11U Open,Team,East Rowan 11U,63,8,Team,Carolina Young Guns,479,4,Bracket,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7513,1,9/4/2026,7:00 PM,12:00 AM,SW 2,7U Open,Team,Flying Pigs,1049,2,Team,Canes Triad 7U Black,887,6,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7514,2,9/4/2026,7:00 PM,12:00 AM,SW 7,7U Open,Team,East Wilkes Havoc 7U,1130,3,Team,Carolina Rapid Fire Fall 7u,1044,12,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7515,3,9/4/2026,8:00 PM,12:00 AM,SW 7,7U Open,Team,East Wilkes Havoc 7U,1130,0,Team,Flying Pigs,1049,17,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7516,4,9/4/2026,8:00 PM,12:00 AM,SW 2,7U Open,Team,Canes Triad 7U Black,887,15,Team,Carolina Rapid Fire Fall 7u,1044,9,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7509,1,9/4/2026,9:00 PM,12:00 AM,SW 2,7U Open,Team,Canes Triad 7U Black,887,11,Team,Flying Pigs,1049,1,Bracket,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7517,1,9/4/2026,6:00 PM,12:00 AM,SW 1,12U Open,Team,NC Made 12U Green,828,9,Team,YC Mudcats,99,2,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7518,2,9/4/2026,6:00 PM,12:00 AM,SW 4,12U Open,Team,Triad Hornets,657,9,Team,Flying Pigs 12U,1136,3,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7519,3,9/4/2026,6:00 PM,12:00 AM,SW 3,12U Open,Team,Canes Triad 11U Scout,28,11,Team,YC Sluggers,750,0,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7520,4,9/4/2026,6:00 PM,12:00 AM,WP 2,12U Open,Team,Venom Stars,1069,4,Team,Canes Triad Black 12U (Carte),494,10,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7521,5,9/4/2026,7:30 PM,12:00 AM,SW 1,12U Open,Team,Canes Triad Black 12U (Carte),494,16,Team,NC Made 12U Green,828,0,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7522,6,9/4/2026,7:30 PM,12:00 AM,WP 2,12U Open,Team,YC Mudcats,99,2,Team,Venom Stars,1069,8,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7523,7,9/4/2026,7:30 PM,12:00 AM,SW 4,12U Open,Team,YC Sluggers,750,4,Team,Triad Hornets,657,10,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7524,8,9/4/2026,7:30 PM,12:00 AM,SW 3,12U Open,Team,Flying Pigs 12U,1136,1,Team,Canes Triad 11U Scout,28,17,Pool,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7510,1,9/4/2026,9:00 PM,12:00 AM,SW 4,12U Open,Team,Canes Triad 11U Scout,28,1,Team,Canes Triad Black 12U (Carte),494,9,Bracket,published
+Friday Night Lights 9/4 - 7U & 12U,9/4/2026,Clemmons,NC,7511,2,9/4/2026,9:00 PM,12:00 AM,SW 1,12U Open,Team,Triad Hornets,657,4,Team,Venom Stars,1069,6,Bracket,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7525,1,9/5/2026,4:30 PM,12:00 AM,SW 3,9U Open,Team,Mission Scout 9U,1129,16,Team,Mt Airy MudCats,1036,1,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7526,2,9/5/2026,6:00 PM,12:00 AM,SW 2,9U Open,Team,DYBA Force 9U,1072,7,Team,Athletes Lab 9U Navy,624,8,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7527,3,9/5/2026,6:00 PM,12:00 AM,SW 7,9U Open,Team,Dc Yard Goats 9U,890,4,Team,M&M Baseball 9U,815,14,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7528,4,9/5/2026,6:00 PM,12:00 AM,SW 3,9U Open,Team,Crushers 9u - Franklin,849,10,Team,Mission Scout 9U,1129,1,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7529,5,9/5/2026,7:30 PM,12:00 AM,SW 7,9U Open,Team,Mt Airy MudCats,1036,2,Team,M&M Baseball 9U,815,14,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7530,6,9/5/2026,7:30 PM,12:00 AM,SW 2,9U Open,Team,DYBA Force 9U,1072,10,Team,Dc Yard Goats 9U,890,2,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7531,7,9/5/2026,7:30 PM,12:00 AM,SW 3,9U Open,Team,Athletes Lab 9U Navy,624,8,Team,Crushers 9u - Franklin,849,9,Pool,published
+Saturday Night Lights 9/5 - 9U,9/5/2026,Clemmons,NC,7512,1,9/5/2026,9:00 PM,12:00 AM,SW 2,9U Open,Team,M&M Baseball 9U,815,9,Team,Crushers 9u - Franklin,849,1,Bracket,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7577,1,9/11/2026,6:00 PM,12:00 AM,SW 3,10U Open,Team,Carolina warriors select Gold,762,12,Team,Carolina Wood Ducks,482,9,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7578,2,9/11/2026,6:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Firebirds,951,13,Team,North Star Athletes,1080,7,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7579,3,9/11/2026,6:00 PM,12:00 AM,WP 2,10U Open,Team,Dirtbags 10u - Kanipe,1133,3,Team,FS Bulldogs 10u (Red),928,18,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7580,4,9/11/2026,6:00 PM,12:00 AM,SW 4,10U Open,Team,Davidson Force 10U,1127,5,Team,Carolina Ghost 10u,1125,7,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7581,5,9/11/2026,7:30 PM,12:00 AM,SW 4,10U Open,Team,Carolina warriors select Gold,762,13,Team,Carolina Ghost 10u,1125,3,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7582,6,9/11/2026,7:30 PM,12:00 AM,SW 3,10U Open,Team,Carolina Wood Ducks,482,10,Team,Davidson Force 10U,1127,9,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7583,7,9/11/2026,7:30 PM,12:00 AM,WP 2,10U Open,Team,Carolina Firebirds,951,23,Team,FS Bulldogs 10u (Red),928,8,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7584,8,9/11/2026,7:30 PM,12:00 AM,SW 2,10U Open,Team,North Star Athletes,1080,11,Team,Dirtbags 10u - Kanipe,1133,3,Pool,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7532,1,9/11/2026,9:00 PM,12:00 AM,SW 3,10U Open,Team,Carolina warriors select Gold,762,3,Team,Carolina Firebirds,951,11,Bracket,published
+Strike Out Cancer Friday Night Lights - 10U,9/11/2026,Clemmons,NC,7533,2,9/11/2026,9:00 PM,12:00 AM,SW 2,10U Open,Team,North Star Athletes,1080,8,Team,Carolina Ghost 10u,1125,7,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7602,1,9/12/2026,8:00 AM,12:00 AM,SW 7,8U Open,Team,Canes Triad 8u Black,1051,21,Team,Carolina Strutterz 8U,1146,1,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7603,2,9/12/2026,9:15 AM,12:00 AM,SW 7,8U Open,Team,Carolina Strutterz 8U,1146,3,Team,Canes Triad 7U Black,887,11,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7604,3,9/12/2026,10:30 AM,12:00 AM,SW 7,8U Open,Team,Next Level Bulldogs 8U,1138,1,Team,Canes Triad 8u Black,1051,19,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7605,4,9/12/2026,11:45 AM,12:00 AM,SW 7,8U Open,Team,Canes Triad 7U Black,887,2,Team,Lightning Jacks,892,11,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7606,5,9/12/2026,1:00 PM,12:00 AM,SW 7,8U Open,Team,FS Bulldogs 8U (Brooks),653,13,Team,Next Level Bulldogs 8U,1138,0,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7607,6,9/12/2026,2:15 PM,12:00 AM,SW 7,8U Open,Team,Lightning Jacks,892,1,Team,FS Bulldogs 8U (Brooks),653,14,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7608,7,9/12/2026,3:30 PM,12:00 AM,SW 7,8U Open,Team,Wow Factor Carolina,820,25,Team,Flying Pigs,919,4,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7609,8,9/12/2026,4:45 PM,12:00 AM,SW 7,8U Open,Team,Flying Pigs,919,2,Team,Canes Triad Yellow,1039,10,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7610,9,9/12/2026,6:00 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad Yellow,1039,6,Team,Wow Factor Carolina,820,17,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7631,1,9/13/2026,9:00 AM,12:00 AM,SW 7,8U Open,Team,Carolina Strutterz 8U,1146,15,Team,Next Level Bulldogs 8U,1138,6,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7632,2,9/13/2026,10:15 AM,12:00 AM,SW 7,8U Open,Team,Canes Triad Yellow,1039,13,Team,Flying Pigs,919,2,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7633,3,9/13/2026,11:30 AM,12:00 AM,SW 7,8U Open,Team,Carolina Strutterz 8U,1146,6,Team,Canes Triad Yellow,1039,15,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7634,4,9/13/2026,12:45 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad 7U Black,887,9,Team,Lightning Jacks,892,7,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7636,5,9/13/2026,2:00 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad 8u Black,1051,10,Team,Wow Factor Carolina,820,0,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7635,6,9/13/2026,3:15 PM,12:00 AM,SW 7,8U Open,Team,FS Bulldogs 8U (Brooks),653,10,Team,Canes Triad 7U Black,887,0,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7637,7,9/13/2026,4:30 PM,12:00 AM,SW 7,8U Open,Team,FS Bulldogs 8U (Brooks),653,2,Team,Canes Triad 8u Black,1051,11,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7540,1,9/12/2026,8:00 AM,12:00 AM,SW 5,9U Open,Team,Pfafftown Raiders 9u,1114,12,Team,High Point Hurricanes-Bullins,1134,5,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7541,2,9/12/2026,9:45 AM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Black,519,16,Team,Pfafftown Raiders 9u,1114,1,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7542,3,9/12/2026,11:30 AM,12:00 AM,SW 5,9U Open,Team,High Point Hurricanes-Bullins,1134,0,Team,9U Canes Triad Black,519,20,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7543,4,9/12/2026,1:15 PM,12:00 AM,SW 5,9U Open,Team,Red Clay Athletics 9u,1144,6,Team,Carolina Firebirds-Red,662,23,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7544,5,9/12/2026,3:00 PM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Gold,652,2,Team,Red Clay Athletics 9u,1144,11,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7545,6,9/12/2026,4:45 PM,12:00 AM,SW 5,9U Open,Team,Carolina Firebirds-Red,662,3,Team,NC Made 9U Blue,579,5,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7546,7,9/12/2026,6:30 PM,12:00 AM,SW 5,9U Open,Team,NC Made 9U Blue,579,0,Team,9U Canes Triad Gold,652,0,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7567,1,9/13/2026,9:00 AM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Gold,652,16,Team,High Point Hurricanes-Bullins,1134,1,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7568,2,9/13/2026,11:00 AM,12:00 AM,SW 5,9U Open,Team,Red Clay Athletics 9u,1144,12,Team,9U Canes Triad Gold,652,14,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7569,3,9/13/2026,1:00 PM,12:00 AM,SW 5,9U Open,Team,NC Made 9U Blue,579,9,Team,Carolina Firebirds-Red,662,8,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7570,4,9/13/2026,3:00 PM,12:00 AM,SW 5,9U Open,Team,9U Canes Triad Black,519,16,Team,Pfafftown Raiders 9u,1114,1,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7571,5,9/13/2026,5:00 PM,12:00 AM,SW 5,9U Open,Team,NC Made 9U Blue,579,5,Team,9U Canes Triad Black,519,13,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7611,1,9/12/2026,8:00 AM,12:00 AM,SW 2,10U Open,Team,NCBA Golden Spikes - Savoy,1135,8,Team,Canes Triad Holby,772,3,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7612,2,9/12/2026,8:00 AM,12:00 AM,SW 3,10U Open,Team,Carolina Warriors Select,778,8,Team,LKN Kingdom 10U,833,7,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7613,3,9/12/2026,9:45 AM,12:00 AM,SW 2,10U Open,Team,Canes Triad Holby,772,5,Team,Carolina Warriors Select,778,15,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7614,4,9/12/2026,11:30 AM,12:00 AM,SW 2,10U Open,Team,LKN Kingdom 10U,833,4,Team,NCBA Golden Spikes - Savoy,1135,13,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7615,5,9/12/2026,1:15 PM,12:00 AM,SW 2,10U Open,Team,Red Clay Athletics Latimer 10U,612,1,Team,Pfafftown Raiders 10U,641,9,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7616,6,9/12/2026,3:00 PM,12:00 AM,SW 2,10U Open,Team,Canes Triad 10u Black,503,11,Team,Red Clay Athletics Latimer 10U,612,7,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7617,7,9/12/2026,4:45 PM,12:00 AM,SW 2,10U Open,Team,Dirtbags Youth Black,98,8,Team,Pfafftown Raiders 10U,641,9,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7618,8,9/12/2026,6:30 PM,12:00 AM,SW 2,10U Open,Team,Canes Triad 10u Black,503,5,Team,Dirtbags Youth Black,98,6,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7654,1,9/13/2026,9:00 AM,12:00 AM,WP 2,10U Open,Team,Red Clay Athletics Latimer 10U,612,13,Team,LKN Kingdom 10U,833,2,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7655,2,9/13/2026,9:00 AM,12:00 AM,SW 2,10U Open,Team,Canes Triad 10u Black,503,9,Team,Canes Triad Holby,772,6,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7656,3,9/13/2026,11:00 AM,12:00 AM,SW 2,10U Open,Team,Red Clay Athletics Latimer 10U,612,1,Team,Canes Triad 10u Black,503,3,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7657,4,9/13/2026,1:00 PM,12:00 AM,SW 2,10U Open,Team,Pfafftown Raiders 10U,641,3,Team,Carolina Warriors Select,778,7,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7658,5,9/13/2026,3:00 PM,12:00 AM,SW 2,10U Open,Team,NCBA Golden Spikes - Savoy,1135,15,Team,Dirtbags Youth Black,98,8,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7659,6,9/13/2026,5:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Warriors Select,778,12,Team,NCBA Golden Spikes - Savoy,1135,3,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7593,1,9/12/2026,9:45 AM,12:00 AM,SW 3,11U Open,Team,Next Level Bulldogs 11U,1137,4,Team,Five Star Flying Pigs 11U,270,6,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7594,2,9/12/2026,11:30 AM,12:00 AM,SW 3,11U Open,Team,Carolina Chaos,840,15,Team,Next Level Bulldogs 11U,1137,0,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7595,3,9/12/2026,1:15 PM,12:00 AM,SW 3,11U Open,Team,Canes Triad Brailey,481,10,Team,Five Star Flying Pigs 11U,270,18,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7599,7,9/12/2026,2:15 PM,12:00 AM,SW 4,11U Open,Team,Canes Black Humphrey 11u,1045,12,Team,Diamond Dawgs,942,6,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7596,4,9/12/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,Carolina Chaos,840,12,Team,5 Star Carolina Grit,102,6,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7600,8,9/12/2026,4:00 PM,12:00 AM,SW 4,11U Open,Team,Diamond Dawgs,942,9,Team,Carolina Ghost 11u,1126,10,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7597,5,9/12/2026,4:45 PM,12:00 AM,SW 3,11U Open,Team,NCBA Golden Spikes - Steadham,862,1,Team,Canes Triad Brailey,481,12,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7601,9,9/12/2026,5:45 PM,12:00 AM,SW 4,11U Open,Team,Canes Black Humphrey 11u,1045,6,Team,Carolina Ghost 11u,1126,4,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7598,6,9/12/2026,6:30 PM,12:00 AM,SW 3,11U Open,Team,5 Star Carolina Grit,102,7,Team,NCBA Golden Spikes - Steadham,862,5,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7660,1,9/13/2026,11:00 AM,12:00 AM,WP 2,11U Open,Team,Carolina Ghost 11u,1126,8,Team,5 Star Carolina Grit,102,19,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7664,5,9/13/2026,11:00 AM,12:00 AM,SW 3,11U Open,Team,NCBA Golden Spikes - Steadham,862,4,Team,Next Level Bulldogs 11U,1137,2,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7662,2,9/13/2026,1:00 PM,12:00 AM,WP 2,11U Open,Team,Canes Black Humphrey 11u,1045,9,Team,Five Star Flying Pigs 11U,270,0,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7665,6,9/13/2026,1:00 PM,12:00 AM,SW 3,11U Open,Team,Canes Triad Brailey,481,11,Team,Diamond Dawgs,942,10,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7661,3,9/13/2026,3:00 PM,12:00 AM,WP 2,11U Open,Team,Carolina Chaos,840,3,Team,5 Star Carolina Grit,102,11,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7666,7,9/13/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,NCBA Golden Spikes - Steadham,862,10,Team,Canes Triad Brailey,481,11,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7663,4,9/13/2026,5:00 PM,12:00 AM,WP 2,11U Open,Team,5 Star Carolina Grit,102,4,Team,Canes Black Humphrey 11u,1045,8,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7585,1,9/12/2026,9:00 AM,12:00 AM,SW 4,12U Open,Team,Summerfield Stars 12U,109,13,Team,YC Mudcats,99,2,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7588,4,9/12/2026,9:00 AM,12:00 AM,WP 2,12U Open,Team,Pfafftown Raiders,533,13,Team,Dirtbags Baseball 12U-Southern,795,6,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7586,2,9/12/2026,10:45 AM,12:00 AM,SW 4,12U Open,Team,YC Mudcats,99,3,Team,North Star Athletes White,1079,7,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7589,5,9/12/2026,10:45 AM,12:00 AM,WP 2,12U Open,Team,Dirtbags Baseball 12U-Southern,795,5,Team,Mebane Outlaws,296,4,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7587,3,9/12/2026,12:30 PM,12:00 AM,SW 4,12U Open,Team,Summerfield Stars 12U,109,12,Team,North Star Athletes White,1079,4,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7590,6,9/12/2026,12:30 PM,12:00 AM,WP 2,12U Open,Team,Pfafftown Raiders,533,6,Team,Alexander Outlaws,1065,10,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7591,7,9/12/2026,2:15 PM,12:00 AM,WP 2,12U Open,Team,Mebane Outlaws,296,3,Team,Canes Triad 12U Vernon,466,15,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7592,8,9/12/2026,4:00 PM,12:00 AM,WP 2,12U Open,Team,Canes Triad 12U Vernon,466,12,Team,Alexander Outlaws,1065,4,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7648,1,9/13/2026,9:00 AM,12:00 AM,SW 3,12U Open,Team,Alexander Outlaws,1065,3,Team,Mebane Outlaws,296,7,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7649,2,9/13/2026,9:00 AM,12:00 AM,SW 4,12U Open,Team,Dirtbags Baseball 12U-Southern,795,4,Team,YC Mudcats,99,1,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7650,3,9/13/2026,11:00 AM,12:00 AM,SW 4,12U Open,Team,Mebane Outlaws,296,4,Team,Dirtbags Baseball 12U-Southern,795,8,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7651,4,9/13/2026,1:00 PM,12:00 AM,SW 4,12U Open,Team,Canes Triad 12U Vernon,466,10,Team,North Star Athletes White,1079,1,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7652,5,9/13/2026,3:00 PM,12:00 AM,SW 4,12U Open,Team,Summerfield Stars 12U,109,8,Team,Pfafftown Raiders,533,0,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7653,6,9/13/2026,5:00 PM,12:00 AM,SW 4,12U Open,Team,Canes Triad 12U Vernon,466,10,Team,Summerfield Stars 12U,109,5,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7555,1,9/12/2026,8:00 AM,12:00 AM,SW 1,13U 54/80 Open,Team,Lightning Jacks Stover,43,9,Team,P413 Ayres,797,2,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7556,2,9/12/2026,9:45 AM,12:00 AM,SW 1,13U 54/80 Open,Team,P413 Ayres,797,9,Team,Concord Tigers,1099,8,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7557,3,9/12/2026,11:30 AM,12:00 AM,SW 1,13U 54/80 Open,Team,Concord Tigers,1099,0,Team,Lightning Jacks Stover,43,12,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7558,4,9/12/2026,1:15 PM,12:00 AM,SW 1,13U 54/80 Open,Team,New Market Elite,526,4,Team,Appomattox Renegades 13U,1139,11,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7559,5,9/12/2026,3:00 PM,12:00 AM,SW 1,13U 54/80 Open,Team,Appomattox Renegades 13U,1139,3,Team,Canes Triad Black 13U,768,2,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7560,6,9/12/2026,4:45 PM,12:00 AM,SW 1,13U 54/80 Open,Team,GATA Baseball Academy,930,2,Team,New Market Elite,526,3,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7561,7,9/12/2026,6:30 PM,12:00 AM,SW 1,13U 54/80 Open,Team,Canes Triad Black 13U,768,5,Team,GATA Baseball Academy,930,5,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7565,1,9/13/2026,9:00 AM,12:00 AM,SW 1,13U 54/80 Open,Team,Canes Triad Black 13U,768,15,Team,Concord Tigers,1099,0,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7566,2,9/13/2026,11:00 AM,12:00 AM,SW 1,13U 54/80 Open,Team,GATA Baseball Academy,930,1,Team,Canes Triad Black 13U,768,5,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7562,3,9/13/2026,1:00 PM,12:00 AM,SW 1,13U 54/80 Open,Team,Appomattox Renegades 13U,1139,9,Team,New Market Elite,526,1,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7563,4,9/13/2026,3:00 PM,12:00 AM,SW 1,13U 54/80 Open,Team,Lightning Jacks Stover,43,14,Team,P413 Ayres,797,2,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7564,5,9/13/2026,5:00 PM,12:00 AM,SW 1,13U 54/80 Open,Team,Appomattox Renegades 13U,1139,3,Team,Lightning Jacks Stover,43,10,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7619,1,9/12/2026,8:00 AM,12:00 AM,WP 1,13U 60/90 Open,Team,Flying Pigs - Hayes 13U,130,9,Team,Carolina Ghost Elite,724,5,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7620,2,9/12/2026,9:45 AM,12:00 AM,WP 1,13U 60/90 Open,Team,Carolina Ghost Elite,724,15,Team,Canes Triad Gold 13U,1050,3,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7621,3,9/12/2026,11:30 AM,12:00 AM,WP 1,13U 60/90 Open,Team,Flying Pigs - Hayes 13U,130,11,Team,Canes Triad Gold 13U,1050,1,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7622,4,9/12/2026,1:15 PM,12:00 AM,WP 1,13U 60/90 Open,Team,East Rowan 13U Earnhardt,1017,8,Team,Carolina Evo,4,7,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7623,5,9/12/2026,3:00 PM,12:00 AM,WP 1,13U 60/90 Open,Team,Carolina Evo,4,7,Team,Carolina Ghost 13U Gold,555,2,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7624,6,9/12/2026,4:45 PM,12:00 AM,WP 1,13U 60/90 Open,Team,Carolina Ghost 13U Gold,555,1,Team,East Rowan 13U Earnhardt,1017,16,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7643,1,9/13/2026,10:00 AM,12:00 AM,WP 1,13U 60/90 Open,Team,Carolina Evo,4,9,Team,Canes Triad Gold 13U,1050,8,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7644,2,9/13/2026,11:45 AM,12:00 AM,WP 1,13U 60/90 Open,Team,Carolina Ghost Elite,724,8,Team,Carolina Ghost 13U Gold,555,0,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7645,3,9/13/2026,1:30 PM,12:00 AM,WP 1,13U 60/90 Open,Team,East Rowan 13U Earnhardt,1017,9,Team,Carolina Evo,4,1,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7646,4,9/13/2026,3:15 PM,12:00 AM,WP 1,13U 60/90 Open,Team,Carolina Ghost Elite,724,2,Team,Flying Pigs - Hayes 13U,130,5,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7647,5,9/13/2026,5:00 PM,12:00 AM,WP 1,13U 60/90 Open,Team,East Rowan 13U Earnhardt,1017,2,Team,Flying Pigs - Hayes 13U,130,7,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7625,1,9/12/2026,8:00 AM,12:00 AM,WFHS,14U Open,Team,Canes Triad 14U Pinelli,1111,4,Team,WarDogs,1063,10,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7626,2,9/12/2026,9:45 AM,12:00 AM,WFHS,14U Open,Team,Alamance Warhawks 14U,1016,6,Team,Canes Triad 14U Pinelli,1111,6,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7627,3,9/12/2026,11:30 AM,12:00 AM,WFHS,14U Open,Team,WarDogs,1063,12,Team,Alamance Warhawks 14U,1016,2,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7628,4,9/12/2026,1:15 PM,12:00 AM,WFHS,14U Open,Team,NC Rogue Sibbett,55,5,Team,Carolina Wolfpack - Royal,731,4,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7629,5,9/12/2026,3:00 PM,12:00 AM,WFHS,14U Open,Team,Carolina Wolfpack - Royal,731,10,Team,Canes Triad 14U Combs,819,2,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7630,6,9/12/2026,4:45 PM,12:00 AM,WFHS,14U Open,Team,NC Rogue Sibbett,55,5,Team,Canes Triad 14U Combs,819,5,Pool,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7572,1,9/13/2026,9:00 AM,12:00 AM,WFHS,14U Open,Team,Carolina Wolfpack - Royal,731,7,Team,Alamance Warhawks 14U,1016,6,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7573,2,9/13/2026,10:45 AM,12:00 AM,WFHS,14U Open,Team,Canes Triad 14U Combs,819,8,Team,Canes Triad 14U Pinelli,1111,2,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7574,3,9/13/2026,12:30 PM,12:00 AM,WFHS,14U Open,Team,NC Rogue Sibbett,55,6,Team,Carolina Wolfpack - Royal,731,4,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7575,4,9/13/2026,2:15 PM,12:00 AM,WFHS,14U Open,Team,Canes Triad 14U Combs,819,6,Team,WarDogs,1063,2,Bracket,published
+Strike Out Cancer: Jonah Hammett Memorial Tournament,9/12/2026,Clemmons,NC,7576,5,9/13/2026,4:00 PM,12:00 AM,WFHS,14U Open,Team,NC Rogue Sibbett,55,5,Team,Canes Triad 14U Combs,819,3,Bracket,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7708,1,9/18/2026,6:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Atlantic 8u,1004,6,Team,Canes Triad Yellow,1039,10,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7709,2,9/18/2026,6:00 PM,12:00 AM,WP 2,8U Open,Team,Canes Triad 8u Black,1051,14,Team,Carolina Wolfpack 8u,1064,3,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7711,3,9/18/2026,6:00 PM,12:00 AM,SW 3,8U Open,Team,EP Indians 8U,1086,13,Team,Carolina Smoke,1092,14,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7719,4,9/18/2026,6:00 PM,12:00 AM,SW 7,8U Open,Team,NC Made 8U Blue,829,6,Team,King Kryptonite -,916,5,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7712,5,9/18/2026,7:00 PM,12:00 AM,SW 7,8U Open,Team,Carolina Clippers 8U,1109,3,Team,NC Made 8U Blue,829,11,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7713,6,9/18/2026,7:00 PM,12:00 AM,SW 5,8U Open,Team,King Kryptonite -,916,14,Team,Fc BombSquad,813,5,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7714,7,9/18/2026,7:00 PM,12:00 AM,SW 2,8U Open,Team,Red Clay 8U,1052,10,Team,Canes Atlantic 8u,1004,12,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7716,8,9/18/2026,7:00 PM,12:00 AM,WP 2,8U Open,Team,Carolina Wolfpack 8u,1064,7,Team,East Wilkes Havoc 8U,1007,10,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7717,9,9/18/2026,7:00 PM,12:00 AM,SW 3,8U Open,Team,Davidson Force,968,3,Team,EP Indians 8U,1086,10,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7710,10,9/18/2026,8:00 PM,12:00 AM,SW 3,8U Open,Team,East Wilkes Havoc 8U,1007,8,Team,Davidson Force,968,11,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7715,11,9/18/2026,8:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Triad Yellow,1039,4,Team,Canes Triad 8u Black,1051,9,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7718,12,9/18/2026,8:00 PM,12:00 AM,SW 7,8U Open,Team,Carolina Smoke,1092,6,Team,Carolina Clippers 8U,1109,0,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7720,13,9/18/2026,8:00 PM,12:00 AM,SW 5,8U Open,Team,Fc BombSquad,813,4,Team,Red Clay 8U,1052,16,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7668,2,9/18/2026,9:00 PM,12:00 AM,SW 2,8U Open,Team,Canes Triad 8u Black,1051,21,Team,NC Made 8U Blue,829,8,Bracket,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7669,1,9/18/2026,9:00 PM,12:00 AM,SW 7,8U Open,Team,Carolina Smoke,1092,3,Team,King Kryptonite -,916,18,Bracket,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7721,1,9/18/2026,6:00 PM,12:00 AM,SW 4,12U Open,Team,Venom Stars,1069,4,Team,Fc BombSquad,775,3,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7722,2,9/18/2026,6:00 PM,12:00 AM,SW 1,12U Open,Team,Canes Triad Black 12U (Carte),494,10,Team,NWNC Elite Gold 12u,708,5,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7723,3,9/18/2026,7:30 PM,12:00 AM,SW 1,12U Open,Team,Venom Stars,1069,3,Team,NWNC Elite Gold 12u,708,5,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7724,4,9/18/2026,7:30 PM,12:00 AM,SW 4,12U Open,Team,Fc BombSquad,775,3,Team,Canes Triad Black 12U (Carte),494,12,Pool,published
+Friday Night Lights 9/18 - 8U & 12U,9/18/2026,Clemmons,NC,7667,1,9/18/2026,9:00 PM,12:00 AM,SW 4,12U Open,Team,Canes Triad Black 12U (Carte),494,8,Team,NWNC Elite Gold 12u,708,6,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7672,1,9/19/2026,9:00 AM,12:00 AM,SW 7,9U Open,Team,NWNC Elite 9U Gold,725,18,Team,Flying Pigs 9U,1060,3,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7673,2,9/19/2026,11:00 AM,12:00 AM,SW 7,9U Open,Team,GBC Prospects Confer,1104,3,Team,NWNC Elite 9U Gold,725,11,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7674,3,9/19/2026,1:00 PM,12:00 AM,SW 7,9U Open,Team,Flying Pigs 9U,1060,5,Team,Carolina Firebirds-Orange,959,15,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7675,4,9/19/2026,3:00 PM,12:00 AM,SW 7,9U Open,Team,Carolina Firebirds-Orange,959,13,Team,GBC Prospects Confer,1104,11,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7693,1,9/20/2026,10:00 AM,12:00 AM,SW 7,9U Open,Team,Carolina Firebirds-Orange,959,2,Team,GBC Prospects Confer,1104,7,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7694,2,9/20/2026,12:00 PM,12:00 AM,SW 7,9U Open,Team,NWNC Elite 9U Gold,725,18,Team,Flying Pigs 9U,1060,3,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7695,3,9/20/2026,2:00 PM,12:00 AM,SW 7,9U Open,Team,GBC Prospects Confer,1104,0,Team,NWNC Elite 9U Gold,725,15,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7676,1,9/19/2026,10:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,10,Team,NC Prospects 10u,706,8,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7677,2,9/19/2026,12:00 PM,12:00 AM,SW 2,10U Open,Team,Mud Dauberz Baseball Organization,1149,1,Team,Carolina warriors select Gold,762,9,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7678,3,9/19/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,NC Prospects 10u,706,10,Team,Carolina Ghost 10u,1125,8,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7679,4,9/19/2026,4:00 PM,12:00 AM,SW 2,10U Open,Team,NWNC ELITE - WOODRUFF,1143,14,Team,Mud Dauberz Baseball Organization,1149,13,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7680,5,9/19/2026,6:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina Ghost 10u,1125,19,Team,NWNC ELITE - WOODRUFF,1143,0,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7696,1,9/20/2026,9:00 AM,12:00 AM,SW 2,10U Open,Team,NWNC ELITE - WOODRUFF,1143,0,Team,Mud Dauberz Baseball Organization,1149,6,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7698,2,9/20/2026,9:00 AM,12:00 AM,SW 3,10U Open,Team,Carolina Ghost 10u,1125,10,Team,NC Prospects 10u,706,11,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7697,3,9/20/2026,11:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,12,Team,Mud Dauberz Baseball Organization,1149,4,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7699,4,9/20/2026,1:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,11,Team,NC Prospects 10u,706,3,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7685,1,9/19/2026,9:00 AM,12:00 AM,SW 1,11U Open,Team,Five Star Flying Pigs 11U,270,3,Team,Carolina Chaos,840,11,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7686,2,9/19/2026,9:00 AM,12:00 AM,SW 3,11U Open,Team,Nc Prospects 11U,291,11,Team,5 Star Carolina Grit,102,21,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7687,3,9/19/2026,11:00 AM,12:00 AM,SW 1,11U Open,Team,Five Star Flying Pigs 11U,270,2,Team,NCBA Golden Spikes - Steadham,862,3,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7688,4,9/19/2026,11:00 AM,12:00 AM,SW 3,11U Open,Team,Nc Prospects 11U,291,6,Team,HiToms,317,11,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7689,5,9/19/2026,1:00 PM,12:00 AM,SW 1,11U Open,Team,Carolina Chaos,840,13,Team,Venom stars,893,4,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7690,6,9/19/2026,1:00 PM,12:00 AM,SW 3,11U Open,Team,Copperheads White,978,8,Team,5 Star Carolina Grit,102,7,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7691,7,9/19/2026,3:00 PM,12:00 AM,SW 1,11U Open,Team,Venom stars,893,5,Team,NCBA Golden Spikes - Steadham,862,9,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7692,8,9/19/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,Copperheads White,978,13,Team,HiToms,317,7,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7705,3,9/20/2026,9:00 AM,12:00 AM,SW 4,11U Open,Team,NCBA Golden Spikes - Steadham,862,10,Team,Copperheads White,978,0,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7706,4,9/20/2026,9:00 AM,12:00 AM,SW 1,11U Open,Team,Carolina Chaos,840,7,Team,5 Star Carolina Grit,102,6,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7707,5,9/20/2026,11:00 AM,12:00 AM,SW 1,11U Open,Team,NCBA Golden Spikes - Steadham,862,7,Team,Carolina Chaos,840,8,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7734,6,9/20/2026,11:00 AM,12:00 AM,SW 3,11U Open,Team,Five Star Flying Pigs 11U,270,14,Team,Venom stars,893,13,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7735,7,9/20/2026,1:00 PM,12:00 AM,SW 3,11U Open,Team,HiToms,317,7,Team,Nc Prospects 11U,291,8,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7736,8,9/20/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,Five Star Flying Pigs 11U,270,9,Team,Nc Prospects 11U,291,6,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7681,1,9/19/2026,10:00 AM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,7,Team,Alamance Dirtbags,1082,7,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7682,2,9/19/2026,12:00 PM,12:00 AM,SW 4,12U Open,Team,Alamance Dirtbags,1082,15,Team,Extreme Performance 2033,1043,7,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7683,3,9/19/2026,2:00 PM,12:00 AM,SW 4,12U Open,Team,Copperheads Red,219,5,Team,King Kryptonite,92,9,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7684,4,9/19/2026,4:00 PM,12:00 AM,SW 4,12U Open,Team,Extreme Performance 2033,1043,4,Team,Copperheads Red,219,13,Pool,published
+September Slugfest,9/19/2026,Clemmons,NC,7700,1,9/20/2026,11:00 AM,12:00 AM,SW 4,12U Open,Team,Alamance Dirtbags,1082,7,Team,Copperheads Red,219,4,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7701,2,9/20/2026,1:00 PM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,4,Team,Extreme Performance 2033,1043,1,Bracket,published
+September Slugfest,9/19/2026,Clemmons,NC,7702,3,9/20/2026,3:00 PM,12:00 AM,SW 4,12U Open,Team,Alamance Dirtbags,1082,5,Team,King Kryptonite,92,9,Bracket,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7725,1,9/19/2026,4:30 PM,12:00 AM,WP 2,11U Open,Team,Carolina Elevate,176,16,Team,Lightning Jacks- Litaker,516,2,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7726,2,9/19/2026,6:00 PM,12:00 AM,SW 1,11U Open,Team,VA BOMBERS,781,14,Team,Canes Triad Brailey,481,10,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7727,3,9/19/2026,6:00 PM,12:00 AM,SW 4,11U Open,Team,NWNC Elite 11U Gold,281,0,Team,Fc BombSquad,812,6,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7728,4,9/19/2026,6:00 PM,12:00 AM,SW 3,11U Open,Team,Canes Black Humphrey 11u,1045,8,Team,NC Icons 11U,670,0,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7729,5,9/19/2026,6:00 PM,12:00 AM,WP 2,11U Open,Team,Purple Reign,1031,0,Team,Carolina Elevate,176,21,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7730,6,9/19/2026,7:30 PM,12:00 AM,SW 1,11U Open,Team,Lightning Jacks- Litaker,516,18,Team,VA BOMBERS,781,2,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7731,7,9/19/2026,7:30 PM,12:00 AM,SW 4,11U Open,Team,Canes Triad Brailey,481,7,Team,NWNC Elite 11U Gold,281,5,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7732,8,9/19/2026,7:30 PM,12:00 AM,SW 3,11U Open,Team,Fc BombSquad,812,4,Team,Canes Black Humphrey 11u,1045,6,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7733,9,9/19/2026,7:30 PM,12:00 AM,WP 2,11U Open,Team,NC Icons 11U,670,20,Team,Purple Reign,1031,0,Pool,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7670,2,9/19/2026,9:00 PM,12:00 AM,SW 1,11U Open,Team,Carolina Elevate,176,13,Team,Canes Black Humphrey 11u,1045,2,Bracket,published
+Saturday Night Lights 9/19 - 11U,9/19/2026,Clemmons,NC,7671,1,9/19/2026,9:00 PM,12:00 AM,SW 3,11U Open,Team,Fc BombSquad,812,8,Team,NC Icons 11U,670,7,Bracket,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7766,3,9/25/2026,6:00 PM,12:00 AM,SW 7,9U Open,Team,Dirtbags Shook,791,11,Team,Athletes Lab 9U Navy,624,7,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7767,1,9/25/2026,6:00 PM,12:00 AM,SW 2,9U Open,Team,DYBA Force 9U,1072,8,Team,Camel City,1118,10,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7768,2,9/25/2026,6:00 PM,12:00 AM,SW 5,9U Open,Team,Copperheads 9U,883,10,Team,The Legacy,760,3,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7769,6,9/25/2026,7:30 PM,12:00 AM,SW 7,9U Open,Team,The Legacy,760,4,Team,Dirtbags Shook,791,11,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7770,4,9/25/2026,7:30 PM,12:00 AM,SW 2,9U Open,Team,Athletes Lab 9U Navy,624,15,Team,DYBA Force 9U,1072,2,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7771,5,9/25/2026,7:30 PM,12:00 AM,SW 5,9U Open,Team,Camel City,1118,3,Team,Copperheads 9U,883,9,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7761,1,9/25/2026,9:00 PM,12:00 AM,SW 2,9U Open,Team,Copperheads 9U,883,9,Team,Dirtbags Shook,791,1,Bracket,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7772,1,9/25/2026,6:00 PM,12:00 AM,SW 3,10U Open,Team,Canes Triad 10u Black,503,12,Team,Rowan Rangers 10u,1084,4,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7773,3,9/25/2026,6:00 PM,12:00 AM,WP 2,10U Open,Team,NC Icons 10U,1047,17,Team,Mud Dauberz Baseball Organization,1149,3,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7774,2,9/25/2026,6:00 PM,12:00 AM,SW 4,10U Open,Team,Camel City,1075,6,Team,Dirtbags 10u - Kanipe,1133,13,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7775,4,9/25/2026,7:30 PM,12:00 AM,SW 3,10U Open,Team,Dirtbags 10u - Kanipe,1133,0,Team,Canes Triad 10u Black,503,12,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7776,6,9/25/2026,7:30 PM,12:00 AM,WP 2,10U Open,Team,Rowan Rangers 10u,1084,27,Team,NC Icons 10U,1047,3,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7777,5,9/25/2026,7:30 PM,12:00 AM,SW 4,10U Open,Team,Mud Dauberz Baseball Organization,1149,0,Team,Camel City,1075,16,Pool,published
+Friday Night Lights 9/25 - 9U & 10U,9/25/2026,Clemmons,NC,7760,1,9/25/2026,9:00 PM,12:00 AM,SW 3,10U Open,Team,Canes Triad 10u Black,503,16,Team,Camel City,1075,1,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7744,1,9/26/2026,11:00 AM,12:00 AM,SW 2,10U Open,Team,Pfafftown Raiders 10U,641,11,Team,Patriots-Murphy,1162,3,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7745,2,9/26/2026,11:00 AM,12:00 AM,SW 3,10U Open,Team,Athletes Lab 10U Grey,988,15,Team,NC Prospects 10u,706,3,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7746,3,9/26/2026,1:00 PM,12:00 AM,SW 2,10U Open,Team,Patriots-Murphy,1162,24,Team,Carolina Strutterz Bryant,1161,2,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7747,4,9/26/2026,1:00 PM,12:00 AM,SW 3,10U Open,Team,NC Prospects 10u,706,5,Team,Carolina Elevate 10U Bolick,1140,13,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7748,5,9/26/2026,3:00 PM,12:00 AM,SW 2,10U Open,Team,Pfafftown Raiders 10U,641,27,Team,Carolina Strutterz Bryant,1161,0,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7749,6,9/26/2026,3:00 PM,12:00 AM,SW 3,10U Open,Team,Athletes Lab 10U Grey,988,4,Team,Carolina Elevate 10U Bolick,1140,9,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7755,1,9/27/2026,10:00 AM,12:00 AM,SW 2,10U Open,Team,Patriots-Murphy,1162,12,Team,NC Prospects 10u,706,1,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7756,2,9/27/2026,10:00 AM,12:00 AM,SW 3,10U Open,Team,Athletes Lab 10U Grey,988,16,Team,Carolina Strutterz Bryant,1161,1,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7757,3,9/27/2026,12:00 PM,12:00 AM,SW 2,10U Open,Team,Pfafftown Raiders 10U,641,6,Team,Patriots-Murphy,1162,3,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7758,4,9/27/2026,12:00 PM,12:00 AM,SW 3,10U Open,Team,Athletes Lab 10U Grey,988,10,Team,Carolina Elevate 10U Bolick,1140,0,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7759,5,9/27/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,Pfafftown Raiders 10U,641,10,Team,Athletes Lab 10U Grey,988,0,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7737,1,9/26/2026,8:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Flying Pigs Johnson,1048,10,Team,NWNC Elite 13U Navy,327,9,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7738,2,9/26/2026,9:45 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Canes Triad Gold 13U,1050,5,Team,Flying Pigs Johnson,1048,4,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7739,3,9/26/2026,11:30 AM,12:00 AM,SW 1,13U 60/90 Open,Team,NWNC Elite 13U Navy,327,0,Team,Canes Triad Gold 13U,1050,8,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7740,4,9/26/2026,1:15 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Carolina Young Guns,598,3,Team,Payton Martin Performance 13U,803,8,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7741,5,9/26/2026,3:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Pfafftown Raiders 2032,203,4,Team,Payton Martin Performance 13U,803,2,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7742,6,9/26/2026,4:45 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Drip Kingz,805,4,Team,Carolina Young Guns,598,10,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7743,7,9/26/2026,6:30 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Pfafftown Raiders 2032,203,5,Team,Drip Kingz,805,4,Pool,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7750,1,9/27/2026,9:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Drip Kingz,805,12,Team,NWNC Elite 13U Navy,327,0,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7751,2,9/27/2026,11:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Flying Pigs Johnson,1048,4,Team,Drip Kingz,805,7,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7752,3,9/27/2026,1:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Pfafftown Raiders 2032,203,7,Team,Payton Martin Performance 13U,803,1,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7753,4,9/27/2026,3:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Canes Triad Gold 13U,1050,11,Team,Carolina Young Guns,598,3,Bracket,published
+Fall Frenzy,9/26/2026,Clemmons,NC,7754,5,9/27/2026,5:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Pfafftown Raiders 2032,203,10,Team,Canes Triad Gold 13U,1050,3,Bracket,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7778,1,9/26/2026,4:00 PM,12:00 AM,SW 5,7U Open,Team,Carolina Rapid Fire Fall 7u,1044,17,Team,Flying Pigs,1049,6,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7779,2,9/26/2026,4:00 PM,12:00 AM,SW 7,7U Open,Team,Canes Triad 7U Black,887,19,Team,NC Made 7U,1097,7,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7780,4,9/26/2026,5:15 PM,12:00 AM,SW 7,7U Open,Team,Flying Pigs,1049,2,Team,Canes Triad 7U Black,887,11,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7781,3,9/26/2026,5:15 PM,12:00 AM,SW 5,7U Open,Team,NC Made 7U,1097,8,Team,Carolina Rapid Fire Fall 7u,1044,17,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7763,1,9/26/2026,6:30 PM,12:00 AM,SW 7,7U Open,Team,Canes Triad 7U Black,887,13,Team,Carolina Rapid Fire Fall 7u,1044,5,Bracket,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7782,2,9/26/2026,4:30 PM,12:00 AM,WP 2,12U Open,Team,Performance Baseball Elite,1157,11,Team,Randolph County Warriors,1003,8,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7783,1,9/26/2026,4:30 PM,12:00 AM,SW 4,12U Open,Team,GBC 12U-Rembach,31,4,Team,Carolina Ghost 12U Scout,554,6,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7784,4,9/26/2026,6:00 PM,12:00 AM,SW 4,12U Open,Team,Stokes Stars 12U,938,4,Team,Alexander Outlaws,1065,6,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7786,3,9/26/2026,6:00 PM,12:00 AM,SW 3,12U Open,Team,Powerhouse Gundawgs,332,1,Team,Performance Baseball Elite,1157,12,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7787,5,9/26/2026,6:00 PM,12:00 AM,WP 2,12U Open,Team,Randolph County Warriors,1003,18,Team,P-413 12u,415,3,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7785,8,9/26/2026,7:30 PM,12:00 AM,WP 2,12U Open,Team,P-413 12u,415,1,Team,Powerhouse Gundawgs,332,14,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7788,6,9/26/2026,7:30 PM,12:00 AM,SW 3,12U Open,Team,Alexander Outlaws,1065,5,Team,GBC 12U-Rembach,31,11,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7789,7,9/26/2026,7:30 PM,12:00 AM,SW 4,12U Open,Team,Carolina Ghost 12U Scout,554,18,Team,Stokes Stars 12U,938,3,Pool,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7764,1,9/26/2026,9:00 PM,12:00 AM,SW 4,12U Open,Team,Carolina Ghost 12U Scout,554,3,Team,Performance Baseball Elite,1157,8,Bracket,published
+Saturday Night Lights 9/26 - 7U & 12U,9/26/2026,Clemmons,NC,7765,2,9/26/2026,9:00 PM,12:00 AM,SW 3,12U Open,Team,GBC 12U-Rembach,31,12,Team,Powerhouse Gundawgs,332,4,Bracket,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7849,1,10/2/2026,7:00 PM,12:00 AM,SW 5,7U Open,Team,Carolina Rapid Fire Fall 7u,1044,7,Team,Carolina Chaos,1029,15,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7850,2,10/2/2026,7:00 PM,12:00 AM,SW 2,7U Open,Team,Flying Pigs,1049,1,Team,Canes Triad 7U Black,887,16,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7851,3,10/2/2026,7:00 PM,12:00 AM,SW 7,7U Open,Team,East Wilkes Havoc 7U,1130,9,Team,NC Made 7U,1097,7,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7852,4,10/2/2026,8:00 PM,12:00 AM,SW 5,7U Open,Team,Carolina Chaos,1029,16,Team,East Wilkes Havoc 7U,1130,1,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7853,5,10/2/2026,8:00 PM,12:00 AM,SW 2,7U Open,Team,Canes Triad 7U Black,887,11,Team,Carolina Rapid Fire Fall 7u,1044,3,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7854,6,10/2/2026,8:00 PM,12:00 AM,SW 7,7U Open,Team,NC Made 7U,1097,0,Team,Flying Pigs,1049,8,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7792,1,10/2/2026,9:00 PM,12:00 AM,SW 2,7U Open,Team,Canes Triad 7U Black,887,19,Team,Carolina Chaos,1029,9,Bracket,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7855,1,10/2/2026,6:00 PM,12:00 AM,SW 3,11U Open,Team,M&M Baseball 11u,245,11,Team,Nc Prospects 11U,291,1,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7856,2,10/2/2026,6:00 PM,12:00 AM,SW 4,11U Open,Team,FS Bulldogs 11U (Houghton),588,2,Team,Dirtbags Honeychuck 11U,1056,18,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7857,3,10/2/2026,6:00 PM,12:00 AM,WP 2,11U Open,Team,King Kryptonite,42,10,Team,P413 Vanhoy,782,5,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7858,4,10/2/2026,6:00 PM,12:00 AM,SW 1,11U Open,Team,P413 Vestal,1042,7,Team,Carolina EVO,1067,8,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7859,5,10/2/2026,7:30 PM,12:00 AM,SW 1,11U Open,Team,M&M Baseball 11u,245,16,Team,Carolina EVO,1067,0,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7860,6,10/2/2026,7:30 PM,12:00 AM,SW 3,11U Open,Team,Nc Prospects 11U,291,21,Team,P413 Vestal,1042,1,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7861,7,10/2/2026,7:30 PM,12:00 AM,SW 4,11U Open,Team,FS Bulldogs 11U (Houghton),588,8,Team,P413 Vanhoy,782,5,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7862,8,10/2/2026,7:30 PM,12:00 AM,WP 2,11U Open,Team,Dirtbags Honeychuck 11U,1056,2,Team,King Kryptonite,42,6,Pool,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7790,1,10/2/2026,9:00 PM,12:00 AM,SW 1,11U Open,Team,M&M Baseball 11u,245,8,Team,King Kryptonite,42,0,Bracket,published
+Friday Night Lights 10/2 7U & 11U,10/2/2026,Clemmons,NC,7791,2,10/2/2026,9:00 PM,12:00 AM,SW 3,11U Open,Team,Dirtbags Honeychuck 11U,1056,6,Team,Nc Prospects 11U,291,3,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7822,1,10/3/2026,2:00 PM,12:00 AM,SW 7,8U Open,Team,Dirtbags 8U Clark,1108,17,Team,NC Made 8U Green,1055,22,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7823,2,10/3/2026,3:15 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad Yellow,1039,18,Team,Dirtbags 8U Clark,1108,17,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7824,3,10/3/2026,4:30 PM,12:00 AM,SW 7,8U Open,Team,NC Made 8U Green,1055,3,Team,King Kryptonite -,916,20,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7825,4,10/3/2026,5:45 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,9,Team,Canes Triad Yellow,1039,17,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7826,1,10/4/2026,1:00 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,15,Team,NC Made 8U Green,1055,2,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7827,2,10/4/2026,2:15 PM,12:00 AM,SW 7,8U Open,Team,Canes Triad Yellow,1039,13,Team,Dirtbags 8U Clark,1108,6,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7828,3,10/4/2026,3:30 PM,12:00 AM,SW 7,8U Open,Team,King Kryptonite -,916,14,Team,Canes Triad Yellow,1039,5,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7871,1,10/3/2026,11:00 AM,12:00 AM,SW 5,9U Open,Team,GBC Prospects Confer,1104,10,Team,Dc Yard Goats 9U,890,2,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7820,2,10/3/2026,1:00 PM,12:00 AM,SW 5,9U Open,Team,Dc Yard Goats 9U,890,7,Team,Carolina Icons,924,12,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7872,3,10/3/2026,3:00 PM,12:00 AM,SW 5,9U Open,Team,Carolina Icons,924,17,Team,GBC Prospects Confer,1104,2,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7829,1,10/3/2026,5:00 PM,12:00 AM,SW 5,9U Open,Team,Carolina Icons,924,10,Team,GBC Prospects Confer,1104,2,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7801,1,10/3/2026,10:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,7,Team,Summerfield Stars,756,3,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7802,2,10/3/2026,12:00 PM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,2,Team,C4 10U - Beasley,1153,10,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7803,3,10/3/2026,12:00 PM,12:00 AM,SW 3,10U Open,Team,Camel City,1075,2,Team,Canes Triad Holby,772,10,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7804,4,10/3/2026,2:00 PM,12:00 AM,SW 2,10U Open,Team,Southside Stars,586,4,Team,Summerfield Stars,756,12,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7805,5,10/3/2026,2:00 PM,12:00 AM,SW 3,10U Open,Team,Carolina Elevate 10U Bolick,1140,13,Team,Camel City,1075,5,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7806,6,10/3/2026,4:00 PM,12:00 AM,SW 2,10U Open,Team,C4 10U - Beasley,1153,7,Team,Southside Stars,586,7,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7807,7,10/3/2026,4:00 PM,12:00 AM,SW 3,10U Open,Team,Canes Triad Holby,772,8,Team,Carolina Elevate 10U Bolick,1140,3,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7830,1,10/4/2026,9:00 AM,12:00 AM,SW 2,10U Open,Team,Southside Stars,586,11,Team,Camel City,1075,0,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7831,2,10/4/2026,11:00 AM,12:00 AM,SW 2,10U Open,Team,Carolina warriors select Gold,762,5,Team,Southside Stars,586,15,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7832,3,10/4/2026,1:00 PM,12:00 AM,SW 2,10U Open,Team,C4 10U - Beasley,1153,10,Team,Summerfield Stars,756,6,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7833,4,10/4/2026,3:00 PM,12:00 AM,SW 2,10U Open,Team,Canes Triad Holby,772,8,Team,Carolina Elevate 10U Bolick,1140,7,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7834,5,10/4/2026,5:00 PM,12:00 AM,SW 2,10U Open,Team,C4 10U - Beasley,1153,6,Team,Canes Triad Holby,772,7,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7808,1,10/3/2026,8:00 AM,12:00 AM,WP 2,11U Open,Team,Carolina Firebirds,814,2,Team,Pfafftown Raiders,151,13,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7809,2,10/3/2026,10:00 AM,12:00 AM,WP 2,11U Open,Team,Carolina Chaos,840,8,Team,Carolina Firebirds,814,0,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7810,3,10/3/2026,12:00 PM,12:00 AM,WP 2,11U Open,Team,Pfafftown Raiders,151,2,Team,SBA Lake Norman - Black,1163,9,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7811,4,10/3/2026,2:00 PM,12:00 AM,WP 2,11U Open,Team,Southside Stars,668,3,Team,Carolina Chaos,840,12,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7812,5,10/3/2026,4:00 PM,12:00 AM,WP 2,11U Open,Team,SBA Lake Norman - Black,1163,0,Team,Southside Stars,668,12,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7835,1,10/4/2026,1:00 PM,12:00 AM,SW 3,11U Open,Team,SBA Lake Norman - Black,1163,11,Team,Carolina Firebirds,814,2,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7836,3,10/4/2026,3:00 PM,12:00 AM,SW 3,11U Open,Team,Carolina Chaos,840,5,Team,SBA Lake Norman - Black,1163,3,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7837,2,10/4/2026,3:00 PM,12:00 AM,SW 4,11U Open,Team,Pfafftown Raiders,151,4,Team,Southside Stars,668,2,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7838,4,10/4/2026,5:00 PM,12:00 AM,SW 4,11U Open,Team,Carolina Chaos,840,5,Team,Pfafftown Raiders,151,3,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7813,1,10/3/2026,8:00 AM,12:00 AM,SW 3,12U Open,Team,Triad Hornets,657,4,Team,Triad Warriors 12U,542,4,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7814,2,10/3/2026,8:00 AM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,7,Team,SBA Los Rayos,636,7,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7815,3,10/3/2026,10:00 AM,12:00 AM,SW 3,12U Open,Team,Randolph County Warriors,1003,8,Team,Triad Hornets,657,11,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7816,4,10/3/2026,10:00 AM,12:00 AM,SW 4,12U Open,Team,Triad Warriors 12U,542,0,Team,King Kryptonite,92,16,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7817,5,10/3/2026,12:00 PM,12:00 AM,SW 4,12U Open,Team,SBA Los Rayos,636,11,Team,Dirtbags Baseball 12U-Southern,795,0,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7818,6,10/3/2026,2:00 PM,12:00 AM,SW 4,12U Open,Team,Dirtbags Baseball 12U-Southern,795,18,Team,Randolph County Warriors,1003,8,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7839,2,10/4/2026,9:00 AM,12:00 AM,SW 4,12U Open,Team,Dirtbags Baseball 12U-Southern,795,5,Team,Triad Warriors 12U,542,4,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7840,1,10/4/2026,9:00 AM,12:00 AM,SW 3,12U Open,Team,Triad Hornets,657,12,Team,Randolph County Warriors,1003,4,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7841,3,10/4/2026,11:00 AM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,10,Team,Dirtbags Baseball 12U-Southern,795,8,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7842,4,10/4/2026,11:00 AM,12:00 AM,SW 3,12U Open,Team,Triad Hornets,657,0,Team,SBA Los Rayos,636,15,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7843,5,10/4/2026,1:00 PM,12:00 AM,SW 4,12U Open,Team,King Kryptonite,92,4,Team,SBA Los Rayos,636,8,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7795,1,10/3/2026,8:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Patriots Baseball 31/32,412,16,Team,P413 Ayres,797,4,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7796,2,10/3/2026,10:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Canes Triad Gold 13U,1050,2,Team,Patriots Baseball 31/32,412,3,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7797,3,10/3/2026,12:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,P413 Ayres,797,5,Team,Canes Triad Gold 13U,1050,7,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7798,4,10/3/2026,2:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Carolina Ghost 13u Scout,665,9,Team,Summerfield Stars 13U,1151,7,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7799,5,10/3/2026,4:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Carolina Clippers Blue,95,13,Team,Carolina Ghost 13u Scout,665,4,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7800,6,10/3/2026,6:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Summerfield Stars 13U,1151,4,Team,Carolina Clippers Blue,95,4,Pool,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7845,1,10/4/2026,9:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Canes Triad Gold 13U,1050,6,Team,P413 Ayres,797,5,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7844,2,10/4/2026,11:00 AM,12:00 AM,SW 1,13U 60/90 Open,Team,Carolina Ghost 13u Scout,665,6,Team,Summerfield Stars 13U,1151,1,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7846,3,10/4/2026,1:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Patriots Baseball 31/32,412,1,Team,Carolina Ghost 13u Scout,665,4,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7847,4,10/4/2026,3:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Canes Triad Gold 13U,1050,1,Team,Carolina Clippers Blue,95,9,Bracket,published
+Autumn Harvest Series,10/3/2026,Clemmons,NC,7848,5,10/4/2026,5:00 PM,12:00 AM,SW 1,13U 60/90 Open,Team,Carolina Ghost 13u Scout,665,5,Team,Carolina Clippers Blue,95,6,Bracket,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7863,1,10/3/2026,6:00 PM,12:00 AM,SW 4,10U Open,Team,Dirtbags Youth Black,98,9,Team,NWNC Elite,148,2,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7864,2,10/3/2026,6:00 PM,12:00 AM,SW 2,10U Open,Team,FS Bulldogs 10u (Red),928,4,Team,Carolina Scouts-Select,902,13,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7865,3,10/3/2026,6:00 PM,12:00 AM,SW 3,10U Open,Team,Canes Triad 10u Black,503,8,Team,Carolina Wood Ducks,482,3,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7866,4,10/3/2026,6:00 PM,12:00 AM,WP 2,10U Open,Team,Lightning Jacks 10U,119,11,Team,M&M Roots 10U,1100,5,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7867,5,10/3/2026,7:30 PM,12:00 AM,WP 2,10U Open,Team,Dirtbags Youth Black,98,16,Team,M&M Roots 10U,1100,2,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7868,6,10/3/2026,7:30 PM,12:00 AM,SW 4,10U Open,Team,NWNC Elite,148,6,Team,Lightning Jacks 10U,119,17,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7869,7,10/3/2026,7:30 PM,12:00 AM,SW 3,10U Open,Team,FS Bulldogs 10u (Red),928,5,Team,Carolina Wood Ducks,482,17,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7870,8,10/3/2026,7:30 PM,12:00 AM,SW 2,10U Open,Team,Carolina Scouts-Select,902,0,Team,Canes Triad 10u Black,503,18,Pool,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7793,1,10/3/2026,9:00 PM,12:00 AM,SW 2,10U Open,Team,Canes Triad 10u Black,503,9,Team,Dirtbags Youth Black,98,4,Bracket,published
+Saturday Night Lights 10/3 - 10U,10/3/2026,Clemmons,NC,7794,2,10/3/2026,9:00 PM,12:00 AM,SW 3,10U Open,Team,Lightning Jacks 10U,119,9,Team,Carolina Wood Ducks,482,2,Bracket,published

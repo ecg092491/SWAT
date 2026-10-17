@@ -1,0 +1,74 @@
+/*
+ * Game Day team view + followed-team strip (child 1.0.19).
+ * Loads after swat-gameday-hub.css / swat-gameday-compact.css and uses the same
+ * --gd-* tokens, so light and dark appearance both work.
+ */
+.swat-hub .swat-context-card:has(.swat-tv){display:block;padding:16px;box-shadow:inset 4px 0 0 var(--gd-accent)}
+.swat-hub .swat-tv{display:grid;gap:14px}
+.swat-hub .swat-tv-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.swat-hub .swat-tv-id{min-width:0}
+body.swat-hub-ui .swat-hub .swat-context-card .swat-tv-id h2{margin:2px 0 0;font:800 26px/1.1 var(--gd-head);overflow-wrap:break-word;color:var(--gd-ink)}
+.swat-hub .swat-tv-sub{margin:4px 0 0;font-size:15px;line-height:1.45;color:var(--gd-muted)}
+.swat-hub .swat-context-card .swat-tv-follow{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border:1.5px solid var(--gd-line-strong);border-radius:999px;background:transparent;color:var(--gd-ink);font:700 15px/1.2 var(--gd-body);cursor:pointer}
+.swat-hub .swat-tv-follow[aria-pressed="true"]{background:var(--gd-accent);border-color:var(--gd-accent);color:var(--gd-accent-ink)}
+
+.swat-hub .swat-tv-next{display:grid;gap:6px;padding:16px;border-radius:var(--gd-radius);background:#0b0d10;color:#fff}
+.swat-hub .swat-tv-next.is-live{box-shadow:inset 0 4px 0 #2fbf71}
+.swat-hub .swat-tv-next.is-delayed{box-shadow:inset 0 4px 0 #f6c515}
+.swat-hub .swat-tv-next p{margin:0}
+.swat-hub .swat-tv-label{font:800 14px/1.3 var(--gd-body);letter-spacing:.1em;color:#f6c515}
+.swat-hub .swat-tv-when{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.swat-hub .swat-tv-day{font:700 18px/1.25 var(--gd-head)}
+.swat-hub .swat-tv-time{font:800 34px/1.05 var(--gd-head);letter-spacing:-.01em;color:#fff}
+.swat-hub .swat-tv-vs{font-size:17px;line-height:1.4;overflow-wrap:break-word}
+.swat-hub .swat-tv-where{font-size:16px;line-height:1.45;color:#dfe3e8}
+.swat-hub .swat-tv-where strong,.swat-hub .swat-tv-vs strong{color:#fff}
+.swat-hub .swat-tv-next .swat-tv-dim{color:#b8c0ca}
+.swat-hub .swat-tv-score{font-weight:700}
+.swat-hub .swat-tv-alert{padding:8px 10px;border-radius:8px;background:#fff1c7;color:#5a3d00;font-size:14px;font-weight:600;line-height:1.4}
+.swat-hub .swat-tv-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:8px;margin-top:6px}
+.swat-hub .swat-tv-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 14px;border:1.5px solid rgba(255,255,255,.6);border-radius:10px;color:#fff;font:800 14px/1.2 var(--gd-body);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;text-align:center}
+.swat-hub .swat-tv-btn.is-primary{background:#f6c515;border-color:#f6c515;color:#0b0d10}
+.swat-hub .swat-tv-btn:focus-visible,.swat-hub .swat-tv-follow:focus-visible,.swat-hub .swat-tv-another:focus-visible{outline:3px solid #f6c515;outline-offset:3px}
+.swat-hub .swat-tv-dim{font-size:14px;color:var(--gd-muted)}
+.swat-hub .swat-tv-empty{padding:14px;border-radius:var(--gd-radius);background:var(--gd-surface);border:1px solid var(--gd-line)}
+.swat-hub .swat-tv-empty strong{display:block;font-size:17px;line-height:1.35}
+.swat-hub .swat-tv-empty p{margin:4px 0 0;color:var(--gd-muted);font-size:15px}
+
+.swat-hub .swat-tv-bracket{border:1px solid var(--gd-line);border-radius:var(--gd-radius);background:var(--gd-bg)}
+.swat-hub .swat-tv-bracket>summary{display:flex;flex-direction:column;gap:2px;min-height:56px;padding:12px 44px 12px 14px;cursor:pointer;list-style:none;position:relative}
+.swat-hub .swat-tv-bracket>summary::-webkit-details-marker{display:none}
+.swat-hub .swat-tv-bracket>summary::after{content:"";position:absolute;right:16px;top:50%;width:10px;height:10px;margin-top:-7px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg);transition:transform .2s}
+.swat-hub .swat-tv-bracket[open]>summary::after{transform:rotate(-135deg);margin-top:-2px}
+.swat-hub .swat-tv-bracket>summary span{font-weight:800;font-size:16px}
+.swat-hub .swat-tv-bracket>summary small{font-size:14px;color:var(--gd-muted)}
+.swat-hub .swat-tv-bracket>p{margin:0 14px 8px}
+.swat-hub .swat-tv-bracket ul{list-style:none;margin:0;padding:0 14px 12px;display:grid;gap:8px}
+.swat-hub .swat-tv-bracket li{display:grid;gap:2px;padding:10px 12px;border-radius:10px;background:var(--gd-surface);border-left:4px dashed var(--gd-line-strong)}
+.swat-hub .swat-tv-bwhen{font-weight:800;font-size:15px}
+.swat-hub .swat-tv-bwhat{font-size:15px}
+.swat-hub .swat-tv-bwhere{font-size:14px;color:var(--gd-muted)}
+body.swat-hub-ui .swat-hub .swat-context-card .swat-tv-listhead{margin:4px 0 -4px;font:800 18px/1.2 var(--gd-head);text-transform:uppercase;letter-spacing:.02em}
+.swat-hub .swat-tv-another{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-weight:700;color:var(--gd-ink);text-decoration:underline;text-underline-offset:4px}
+
+/* Team side highlight and bracket condition on schedule cards */
+.swat-hub .swat-gc-team.is-mine .swat-gc-name{font-weight:800}
+.swat-hub .swat-gc-team.is-mine{background:var(--gd-accent-soft);border-radius:8px}
+body[data-swat-appearance="dark"] .swat-hub .swat-gc-team.is-mine{background:#2a2410}
+.swat-hub .swat-gc-cond{margin:4px 0 2px;font-size:14px;font-weight:700;letter-spacing:.02em;color:var(--gd-muted)}
+.swat-hub .swat-gc.is-bracket .swat-gc-name.is-placeholder{font-style:italic}
+
+/* Followed-team strip (same specificity as swat-gameday-compact.css so these win by order, no !important) */
+body.swat-hub-ui .swat-hub .swat-team-strip-row{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:8px 12px;padding:12px;border-radius:10px}
+body.swat-hub-ui .swat-hub .swat-team-strip-row>p{display:flex;flex-direction:column;gap:2px;margin:0;min-width:0;flex:1 1 220px}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-name{font-size:17px;line-height:1.3}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-line{font-size:15px;line-height:1.45;color:var(--gd-muted)}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-line strong{color:var(--gd-ink)}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-status{font-style:normal;font-weight:800;color:var(--gd-danger)}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-actions{display:flex;gap:8px;flex-wrap:wrap}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:110px;padding:8px 14px;border:1.5px solid var(--gd-line-strong);border-radius:10px;background:transparent;color:var(--gd-ink);font-weight:700;font-size:14px;text-decoration:none}
+body.swat-hub-ui .swat-hub .swat-team-strip-row .swat-ts-actions a:first-child{background:var(--gd-accent);border-color:var(--gd-accent);color:var(--gd-accent-ink)}
+
+.swat-hub #swat-schedule .swat-finder{margin-top:12px}
+
+.swat-hub .swat-nowrap{white-space:nowrap}

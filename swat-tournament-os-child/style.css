@@ -1,0 +1,16 @@
+/*
+Theme Name: SWAT Tournament OS Child
+Theme URI: https://swatourneys.com/
+Description: Child theme for SWAT Tournament OS. Adds editable per-tournament registration status and deadlines, local Barlow + Inter typography, and a homepage without the game-time list. Requires the parent theme SWAT Tournament OS (folder: swat-tournament-os-master). Adds scoped Game Day text contrast overrides. 1.0.19: parent-first homepage (Find my team’s schedule) and Game Day team view with next game, directions and bracket slots. 1.0.33: SWAT Operations -> Sponsors for Game Day sponsor banners with view/click stats. Does not modify parent files, Playbook sync, or pitching logic.
+Author: SWAT Tournaments
+Author URI: https://swatourneys.com/
+Template: swat-tournament-os-master
+Version: 1.0.33
+Requires at least: 6.4
+Requires PHP: 8.0
+Text Domain: swat-tournament-os-child
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* All presentation lives in assets/css/. This file only carries the theme header. */

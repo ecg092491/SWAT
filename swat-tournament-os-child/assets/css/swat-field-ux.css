@@ -1,0 +1,555 @@
+/* Load AFTER child.css, child-fonts.css and swat-gameday-redesign.css. */
+body.swat-gameday-mode {
+ --ux-bg:#f5f5f2;--ux-surface:#fff;--ux-text:#17191c;--ux-muted:#50565e;
+ --ux-line:#d8dce0;--ux-gold:#f6c515;--ux-gold-ink:#17191c;--ux-note:#fff2c2;
+ --ux-note-ink:#514000;--ux-live:#12643b;--ux-live-bg:#e4f4ea;
+ --ux-radius:14px;--ux-gap:16px;--ux-small:14px;--ux-body:16px;--ux-large:20px;
+ background:var(--ux-bg)!important;color:var(--ux-text)!important;padding-bottom:0!important;
+}
+body.swat-gameday-mode[data-swat-appearance="dark"] {
+ --ux-bg:#101216;--ux-surface:#191c21;--ux-text:#fafafa;--ux-muted:#c4c8ce;
+ --ux-line:#555b65;--ux-note:#30280d;--ux-note-ink:#ffdf70;--ux-live:#a0efbb;--ux-live-bg:#193524;
+}
+@media(prefers-color-scheme:dark){body.swat-gameday-mode:not([data-swat-appearance="light"]){
+ --ux-bg:#101216;--ux-surface:#191c21;--ux-text:#fafafa;--ux-muted:#c4c8ce;
+ --ux-line:#555b65;--ux-note:#30280d;--ux-note-ink:#ffdf70;--ux-live:#a0efbb;--ux-live-bg:#193524;
+}}
+body.swat-gameday-mode .swat-app-main{background:var(--ux-bg)!important}
+body.swat-gameday-mode .swat-gameday {
+ --gd-bg:var(--ux-bg);--gd-surface:var(--ux-surface);--gd-surface-2:var(--ux-surface);
+ --gd-text:var(--ux-text);--gd-muted:var(--ux-muted);--gd-line:var(--ux-line);
+ --gd-font-body:var(--gd-font-ui);--gd-font-display:var(--gd-font-display-stack);
+ width:100%!important;max-width:640px!important;padding:8px 16px calc(84px + env(safe-area-inset-bottom))!important;
+ color:var(--ux-text)!important;font:400 var(--ux-body)/1.45 var(--gd-font-ui)!important;
+}
+/* Body/UI text uses the UI face; h1-h3 are excluded so the display face (system layer below) can apply. */
+body.swat-gameday-mode .swat-gameday :is(p,small,strong,span,button,a,select,summary,li,td,th,input,textarea){
+ font-family:var(--gd-font-ui)!important;letter-spacing:0!important;text-transform:none!important;
+ -webkit-text-fill-color:currentColor;
+}
+body.swat-gameday-mode .swat-gameday :is(button,select,summary){min-height:44px!important}
+body.swat-gameday-mode .swat-gameday :is(a,button,select,summary):focus-visible{outline:3px solid #2475d0!important;outline-offset:3px!important}
+body.swat-gameday-mode .swat-gameday [hidden]{display:none!important}
+body.swat-gameday-mode .swat-gameday .swat-app-statusbar{padding:0 0 8px!important;flex-wrap:nowrap!important;min-height:52px;gap:8px!important}
+body.swat-gameday-mode .swat-gameday .swat-app-statusbar>div{display:flex!important;gap:7px;flex-wrap:nowrap;min-width:0;border-radius:24px;background:var(--ux-surface);padding:6px 10px}
+body.swat-gameday-mode .swat-gameday .swat-status-pill{font-size:var(--ux-small)!important;font-weight:500!important;padding:0!important;border:0!important;background:transparent!important;color:var(--ux-text)!important;min-height:24px}
+body.swat-gameday-mode .swat-gameday .swat-status-pill::before{background:#776000}
+body.swat-gameday-mode .swat-gameday .swat-status-pill.is-online::before{background:var(--ux-live)}
+body.swat-gameday-mode .swat-gameday .swat-updated{flex-basis:auto!important;font-size:var(--ux-small)!important;color:var(--ux-muted)!important;line-height:1.3;min-width:0}
+body.swat-gameday-mode .swat-gameday .swat-refresh-link{display:grid;place-items:center;flex:0 0 44px;min-width:44px;min-height:44px!important;padding:10px!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;border:0!important}
+body.swat-gameday-mode .swat-gameday svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;flex-shrink:0}
+body.swat-gameday-mode .swat-gameday .swat-home-hero{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px;padding:12px 14px!important;margin:0 0 12px!important;background:#0b0d10!important;color:#fff!important;border:0!important;min-height:0!important}
+body.swat-gameday-mode .swat-gameday .swat-home-hero h1{grid-column:1/-1;font-size:22px!important;line-height:1.2!important;font-weight:600!important;color:#fff!important;margin:0!important}
+body.swat-gameday-mode .swat-gameday .swat-home-event-date{grid-column:1/-1;margin:0!important;font-size:var(--ux-small)!important;color:#d6d9df!important}
+body.swat-gameday-mode .swat-gameday .swat-home-event-subtitle{margin:0!important;align-self:center;font-size:var(--ux-small)!important;color:#d6d9df!important}
+body.swat-gameday-mode .swat-gameday .swat-home-event-switch{margin:0!important;max-width:150px;grid-column:2;grid-row:3}
+body.swat-gameday-mode .swat-gameday .swat-home-event-switch label>span{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+body.swat-gameday-mode .swat-gameday .swat-home-event-switch select{font-size:var(--ux-small)!important;font-weight:400!important;color:#fff!important;background-color:#202329!important;border-color:#717782!important;padding-inline:8px 25px!important}
+body.swat-gameday-mode .swat-gameday .swat-home-event-meta{grid-column:1/-1;margin:0!important;font-size:var(--ux-small)!important;color:#d6d9df!important}
+body.swat-gameday-mode .swat-gameday .swat-my-weekend{padding:0!important;margin:0 0 20px!important;background:transparent!important;color:var(--ux-text)!important;border:0!important;box-shadow:none!important}
+body.swat-gameday-mode .swat-gameday .swat-my-weekend-head{margin:0 0 4px!important;gap:8px;align-items:center}
+body.swat-gameday-mode .swat-gameday .swat-my-weekend-head h2{margin:0!important;color:var(--ux-text)!important;font-size:var(--ux-body)!important}
+body.swat-gameday-mode .swat-gameday .swat-my-weekend-head .swat-app-eyebrow{display:none!important}
+body.swat-gameday-mode .swat-gameday [data-swat-weekend-label]{font-size:var(--ux-small)!important;color:var(--ux-muted)!important;margin:0!important}
+body.swat-gameday-mode .swat-gameday [data-swat-manage-teams]{font-size:var(--ux-small)!important;font-weight:400!important;border:0!important;background:transparent!important;color:var(--ux-text)!important;padding:8px!important;flex-shrink:0;text-decoration:underline}
+body.swat-gameday-mode .swat-gameday .swat-followed-chips{display:flex!important;gap:4px!important;flex-wrap:wrap;margin:0 0 8px!important}
+body.swat-gameday-mode .swat-gameday .swat-followed-chip{display:inline-flex;align-items:center;max-width:100%;min-height:44px!important;padding:4px 8px!important;border:0!important;border-radius:8px!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;box-shadow:none!important;font-size:var(--ux-small)!important;font-weight:400!important}
+body.swat-gameday-mode .swat-gameday .swat-followed-chip :is(span,button){color:var(--ux-text)!important;font-weight:400!important}
+body.swat-gameday-mode .swat-gameday .swat-followed-chip button{min-width:44px!important;background:transparent!important;border:0!important}
+body.swat-gameday-mode .swat-gameday .swat-next-game-focus{padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;min-height:200px}
+body.swat-gameday-mode .swat-gameday .swat-home-up-next-label{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 6px!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday .swat-home-up-next-label h2{margin:0!important;font-size:var(--ux-body)!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday .swat-home-up-next-label>span{font-size:var(--ux-small)!important;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday .swat-home-next-card{display:block!important;padding:16px!important;margin:0!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;border:0!important;border-radius:var(--ux-radius)!important;box-shadow:none!important;overflow:visible!important}
+body.swat-gameday-mode .swat-gameday .swat-home-next-card::before{display:none!important}
+body.swat-gameday-mode .swat-gameday .swat-home-next-time{display:flex!important;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px;padding:0!important;border:0!important}
+body.swat-gameday-mode .swat-gameday .swat-home-next-time>strong{font-size:32px!important;line-height:1.2!important;font-weight:700!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday .swat-ux-countdown{font-size:var(--ux-small)!important;color:var(--ux-muted)!important;min-width:72px}
+body.swat-gameday-mode .swat-gameday .swat-home-next-main{padding:8px 0 0!important;border:0!important;min-width:0}
+body.swat-gameday-mode .swat-gameday .swat-home-next-main>span{font-size:var(--ux-small)!important;color:var(--ux-muted)!important;font-weight:400!important}
+body.swat-gameday-mode .swat-gameday .swat-home-next-main h3{font-size:var(--ux-large)!important;color:var(--ux-text)!important;font-weight:700!important;margin:4px 0 8px!important}
+body.swat-gameday-mode .swat-gameday :is(.swat-home-next-main,.swat-itinerary-main) p{font-size:var(--ux-small)!important;line-height:1.45!important;color:var(--ux-muted)!important;margin:4px 0!important;overflow-wrap:anywhere}
+body.swat-gameday-mode .swat-gameday .swat-field-badge{display:inline-block;background:var(--ux-bg);color:var(--ux-text)!important;border-radius:5px;padding:2px 6px;font-size:var(--ux-small)!important}
+body.swat-gameday-mode .swat-gameday .swat-home-next-actions{display:grid!important;grid-template-columns:minmax(0,1fr);gap:4px!important;margin-top:12px!important}
+body.swat-gameday-mode .swat-gameday :is(.swat-home-next-actions,.swat-itinerary-actions) a{display:flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px!important;padding:8px 12px!important;font-size:var(--ux-body)!important;font-weight:400!important;text-decoration:underline;color:var(--ux-text)!important;background:transparent!important;border:0!important;border-radius:10px!important;white-space:normal!important}
+body.swat-gameday-mode .swat-gameday a.swat-ux-directions{min-height:52px!important;background:var(--ux-gold)!important;color:var(--ux-gold-ink)!important;text-decoration:none!important}
+body.swat-gameday-mode .swat-gameday .swat-weekend-change{display:grid!important;gap:4px;padding:12px!important;background:var(--ux-note)!important;color:var(--ux-note-ink)!important;border:0!important;border-radius:10px!important;margin:12px 0!important}
+body.swat-gameday-mode .swat-gameday .swat-weekend-change :is(strong,span){font-size:var(--ux-small)!important;font-weight:400!important;color:var(--ux-note-ink)!important}
+body.swat-gameday-mode .swat-gameday .swat-weekend-timeline{margin:12px 0 0!important;padding:0!important;background:transparent!important;border:0!important;scroll-margin-top:88px}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-day{margin:16px 0 4px!important;padding:0!important;border:0!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-day h3{font-size:var(--ux-body)!important;color:var(--ux-muted)!important;margin:0!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-game{padding:0!important;margin:0!important;background:transparent!important;color:var(--ux-text)!important;border:0!important;border-bottom:1px solid var(--ux-line)!important;border-radius:0!important;box-shadow:none!important;display:block!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-game summary{display:grid!important;grid-template-columns:84px minmax(0,1fr) 16px;gap:10px;align-items:start;padding:14px 0!important;list-style:none;cursor:pointer}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-game summary::-webkit-details-marker{display:none}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-time{display:grid!important;gap:6px;border:0!important;padding:0!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-time strong{font-size:var(--ux-body)!important;font-weight:700!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-time span{font-size:var(--ux-small)!important;color:var(--ux-muted)!important;background:var(--ux-surface);padding:3px 5px;border-radius:6px;overflow-wrap:anywhere;line-height:1.35}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-main{min-width:0;padding:0!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-team{display:block;font-size:var(--ux-small)!important;color:var(--ux-muted)!important;border:0!important;padding:0!important;background:transparent!important;font-weight:400!important;overflow-wrap:anywhere}
+body.swat-gameday-mode .swat-gameday .swat-ux-opponent{display:block;font-size:var(--ux-body)!important;font-weight:700!important;color:var(--ux-text)!important;overflow-wrap:anywhere}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-actions{display:flex!important;flex-wrap:wrap;gap:4px!important;padding:0 0 12px 94px!important;margin:0!important}
+body.swat-gameday-mode .swat-gameday .swat-itinerary-game:not([open]) .swat-itinerary-actions{display:none!important}
+body.swat-gameday-mode .swat-gameday .is-live :is(.swat-ux-game-status,.swat-itinerary-time span){color:var(--ux-live)!important;background:var(--ux-live-bg)!important}
+body.swat-gameday-mode .swat-gameday del{font-size:var(--ux-small);color:var(--ux-muted);text-decoration:line-through}
+body.swat-gameday-mode .swat-gameday .swat-ux-empty{color:var(--ux-muted)!important;font-size:var(--ux-small)!important;padding:8px 0;margin:0}
+body.swat-gameday-mode .swat-gameday .swat-home-tools{margin:20px 0!important}
+body.swat-gameday-mode .swat-gameday .swat-home-section-head{margin:0 0 8px!important}
+body.swat-gameday-mode .swat-gameday .swat-home-section-head h2{font-size:var(--ux-body)!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday .swat-home-tool-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+body.swat-gameday-mode .swat-gameday .swat-home-tool-grid>*{display:flex!important;flex-direction:column;justify-content:center;align-items:center;gap:4px;min-height:72px!important;padding:8px 2px!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;border:0!important;border-radius:10px!important;box-shadow:none!important;text-decoration:none}
+body.swat-gameday-mode .swat-gameday .swat-home-tool-grid strong{color:var(--ux-text)!important;font-size:var(--ux-small)!important;font-weight:400!important}
+body.swat-gameday-mode .swat-gameday .swat-home-tool-grid small{display:none!important}
+body.swat-gameday-mode .swat-gameday .swat-home-tool-icon{color:var(--ux-note-ink)!important}
+body.swat-gameday-mode .swat-gameday .swat-smart-alert-row{position:relative;display:grid!important;grid-template-columns:minmax(0,1fr);padding:16px!important;margin:0 0 16px!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;border:0!important;gap:8px!important;border-radius:var(--ux-radius)!important}
+body.swat-gameday-mode .swat-gameday .swat-smart-alert-row>div{padding-right:36px}
+body.swat-gameday-mode .swat-gameday .swat-smart-alert-row :is(strong,span,p){display:block;color:var(--ux-text)!important;font-size:var(--ux-small)!important;font-weight:400!important;margin:0!important;line-height:1.45!important}
+body.swat-gameday-mode .swat-gameday [data-swat-enable-alerts]{background:var(--ux-gold)!important;color:var(--ux-gold-ink)!important;border:0!important;border-radius:10px!important;font-size:var(--ux-body)!important;min-height:48px!important}
+body.swat-gameday-mode .swat-gameday .swat-alert-dismiss{position:absolute;right:4px;top:4px;min-width:44px!important;min-height:44px!important;background:transparent!important;border:0!important;color:var(--ux-text)!important;font-size:24px!important}
+body.swat-gameday-mode .swat-gameday .swat-gameday-rules{padding:8px 12px!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;border:0!important}
+body.swat-gameday-mode .swat-gameday .swat-gameday-rules summary :is(small,strong){font-size:var(--ux-body)!important;color:var(--ux-text)!important;font-weight:400!important}
+body.swat-gameday-mode .swat-gameday .swat-gameday-tabs{position:fixed!important;top:auto!important;bottom:0!important;left:50%!important;transform:translateX(-50%)!important;width:100%!important;max-width:640px!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:0!important;padding:6px 4px calc(6px + env(safe-area-inset-bottom))!important;margin:0!important;background:var(--ux-surface)!important;border:0!important;border-top:1px solid var(--ux-line)!important;border-radius:0!important;z-index:60!important;overflow:visible!important}
+body.swat-gameday-mode .swat-gameday .swat-gameday-tabs button{min-width:0!important;padding:4px 0!important;font-size:12px!important;font-weight:400!important;color:var(--ux-muted)!important;display:grid!important;gap:2px;place-items:center}
+body.swat-gameday-mode .swat-gameday .swat-gameday-tabs button.is-active{background:var(--ux-note)!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday .swat-gameday-tabs button svg{display:block!important;width:18px;height:18px}
+body.swat-gameday-mode .swat-gameday .swat-gameday-tabs button span{font:inherit!important;color:inherit!important}
+body.swat-gameday-mode .swat-gameday :is(.swat-home-next-main,.swat-home-hero) {overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){body.swat-gameday-mode .swat-gameday *,body.swat-gameday-mode .swat-gameday *::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Runtime push instructions retain errors but use the same readable size. */
+body.swat-gameday-mode .swat-gameday .swat-smart-alert-feedback{display:block;font-size:var(--ux-small)!important;color:var(--ux-muted)!important;line-height:1.45!important;margin-top:6px!important}
+/* Hidden is authoritative even when older themes force display with !important. */
+body.swat-gameday-mode .swat-gameday [hidden][hidden]{display:none!important}
+
+/* Override the staging draft's older portrait-only tile rules. */
+body.swat-gameday-mode .swat-gameday .swat-home-tools .swat-home-tool-grid > :is(a,button){display:flex!important;flex-direction:column!important;min-height:72px!important;padding:8px 2px!important;gap:4px!important;}
+body.swat-gameday-mode .swat-gameday .swat-home-tools .swat-home-tool-grid > :is(a,button) strong{font-size:14px!important;line-height:1.3!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;white-space:normal!important;}
+body.swat-gameday-mode .swat-gameday .swat-home-tools .swat-home-tool-grid > :is(a,button) small{display:none!important;}
+
+
+/* 1.0.13 live cascade fix: the old :is() rule inherits the specificity
+   of its two-attribute pitching selector, even when matching game text. */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-next-game-focus .swat-home-up-next-label h2,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-next-game-focus .swat-home-next-time > strong,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-next-game-focus .swat-home-next-main > h3,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline .swat-itinerary-time > strong,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools .swat-home-section-head > h2,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-smart-alert-row > div > strong {
+ color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-smart-alert-row > div > span,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-smart-alert-row .swat-smart-alert-feedback {
+ color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important;
+}
+/* Restore the real native event select's full tap area under its visible label. */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero .swat-home-event-switch label {
+ position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;
+ min-height:44px!important;padding:0 12px!important;background:#202329!important;border:1px solid #717782!important;border-radius:10px!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero .swat-home-event-switch label > span {
+ position:static!important;display:block!important;width:auto!important;height:auto!important;
+ clip:auto!important;clip-path:none!important;overflow:visible!important;margin:0!important;
+ font-size:14px!important;font-weight:400!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero .swat-home-event-switch label > span::after {
+ content:"⌄"!important;display:inline-block;margin-left:8px;color:#f6c515;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero .swat-home-event-switch select {
+ position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;
+ min-height:44px!important;max-width:none!important;clip:auto!important;clip-path:none!important;
+ margin:0!important;padding:0!important;opacity:0!important;pointer-events:auto!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-event-switch label:focus-within {
+ outline:3px solid #2475d0!important;outline-offset:3px!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend .swat-my-weekend-head [data-swat-manage-teams] {
+ min-width:0!important;min-height:44px!important;max-width:none!important;white-space:nowrap!important;
+ padding:8px!important;border:0!important;border-radius:0!important;background:transparent!important;
+ color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;font-weight:400!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-smart-alert-row [data-swat-enable-alerts] {
+ width:100%!important;max-width:none!important;min-height:48px!important;margin:0!important;
+ white-space:normal!important;font-size:16px!important;font-weight:500!important;
+ color:var(--ux-gold-ink)!important;-webkit-text-fill-color:var(--ux-gold-ink)!important;
+}
+body.swat-gameday-mode .swat-app-main,
+body.swat-gameday-mode .swat-gameday.swat-gameday {min-height:0!important;}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules {margin-bottom:12px!important;}
+
+/* Division rules use the same appearance tokens as the rest of Game Day. */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-card,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-card > summary,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-card__body,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-card__footer,
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-sections > section {
+ background:var(--ux-surface)!important;color:var(--ux-text)!important;border-color:var(--ux-line)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-card :is(span,small,strong,h3,p,li,a) {
+ color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-stats > div {
+ background:var(--ux-bg)!important;border-color:var(--ux-line)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-card summary :is(small,.swat-division-rule-card__summary-meta),
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-division-rule-stats > div > span {
+ color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules p {
+ color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules .swat-app-eyebrow {
+ color:var(--ux-note-ink)!important;-webkit-text-fill-color:var(--ux-note-ink)!important;
+}
+/* Related pitching controls follow the selected appearance too. */
+body.swat-gameday-mode .swat-gameday.swat-gameday [data-pitch-endpoint] :is(select,button,.pitch-table-head,.pitch-player,.pitch-game-log,.pitch-game-log > div) {
+ background:var(--ux-surface)!important;color:var(--ux-text)!important;border-color:var(--ux-line)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday [data-pitch-endpoint] :is(select,button,.pitch-table-head,.pitch-player,.pitch-game-log) :is(span,strong,summary,p) {
+ color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;
+}
+/* Keep results in the flexible matchup column, never in the narrow time rail. */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline .swat-itinerary-game > summary {
+ grid-template-columns:76px minmax(0,1fr) 16px!important;gap:10px!important;align-items:start!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline :is(.swat-itinerary-time,.swat-itinerary-main) {
+ min-width:0!important;max-width:100%!important;white-space:normal!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline .swat-itinerary-time > strong {
+ white-space:nowrap!important;line-height:1.4!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline :is(.swat-itinerary-team,.swat-ux-opponent,.swat-itinerary-result) {
+ display:block!important;position:static!important;width:auto!important;max-width:100%!important;
+ white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.45!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline .swat-itinerary-result {
+ margin:6px 0!important;padding:4px 6px!important;border-radius:6px!important;
+ font-size:14px!important;font-weight:500!important;color:var(--ux-text)!important;
+ background:var(--ux-surface)!important;-webkit-text-fill-color:currentColor!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline .is-live .swat-itinerary-result {
+ color:var(--ux-live)!important;background:var(--ux-live-bg)!important;
+}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-itinerary-actions {padding-left:86px!important;}
+/* Appearance preference: independent from followed teams and sync state. */
+body.swat-gameday-mode .swat-gameday .swat-appearance{display:flex;justify-content:flex-end;gap:4px;margin:0 0 8px;}
+body.swat-gameday-mode .swat-gameday .swat-appearance button{min-height:44px!important;min-width:64px!important;padding:8px 12px!important;border:1px solid var(--ux-line)!important;border-radius:8px!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;font-size:14px!important;font-weight:400!important;cursor:pointer;}
+body.swat-gameday-mode .swat-gameday .swat-appearance button[aria-pressed="true"]{background:var(--ux-note)!important;border-color:var(--ux-note-ink)!important;color:var(--ux-note-ink)!important;-webkit-text-fill-color:var(--ux-note-ink)!important;}
+body.swat-gameday-mode .swat-gameday .swat-appearance button:focus-visible{outline:3px solid #2475d0!important;outline-offset:3px!important;}
+
+
+/* =====================================================================
+   SWAT GAME DAY DESIGN SYSTEM (child 1.0.12)
+   One token set + one component language for every Game Day view.
+   Lives at the end of the last Game Day stylesheet so it wins by source
+   order at the same specificity as the 1.0.13 rules above; no new file,
+   no new dependency. Presentation only: no data, storage or JS hooks.
+   ===================================================================== */
+body.swat-gameday-mode{
+ /* Type faces: both already bundled + preloaded by inc/fonts.php */
+ --gd-font-display-stack:"Barlow","Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;
+ --gd-font-ui:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ /* Type scale (roles) */
+ --gd-t-display:clamp(26px,7vw,34px);   /* event title */
+ --gd-t-section:20px;                   /* Today / Schedule / Standings ... */
+ --gd-t-card:16px;                      /* team names, card headings */
+ --gd-t-data:20px;                      /* game time */
+ --gd-t-score:24px;                     /* scores */
+ --gd-t-body:16px; --gd-t-meta:14px; --gd-t-helper:13px; --gd-t-label:12px;
+ /* Spacing (4px grid) */
+ --gd-s1:4px;--gd-s2:8px;--gd-s3:12px;--gd-s4:16px;--gd-s5:20px;--gd-s6:24px;--gd-s8:32px;
+ /* Surfaces */
+ --gd-r-sm:8px;--gd-r-md:12px;--gd-r-lg:16px;
+ --gd-card-shadow:0 1px 2px rgba(16,18,22,.06);
+ --gd-dark:#0b0d10;--gd-gold:#f6c515;
+ --gd-on-dark:#fff;--gd-on-dark-muted:#b9bfc7;
+ /* Status (text always paired with a colour, never colour alone) */
+ --gd-live:#0f5c35;--gd-live-bg:#dff3e7;
+ --gd-final:#17191c;--gd-final-bg:#e7e9ec;
+ --gd-delay:#6b4300;--gd-delay-bg:#ffe8a3;
+ --gd-cancel:#8a1c14;--gd-cancel-bg:#fbe0dc;
+ --gd-pending:#4b525b;--gd-pending-bg:#eef0f2;
+ --gd-active-bg:#0b0d10;--gd-active-ink:#fff;
+}
+body.swat-gameday-mode[data-swat-appearance="dark"]{
+ --gd-card-shadow:none;--gd-live:#a0efbb;--gd-live-bg:#173a26;--gd-final:#fafafa;--gd-final-bg:#2b3038;
+ --gd-delay:#ffd76a;--gd-delay-bg:#3b2f0c;--gd-cancel:#ffb4ab;--gd-cancel-bg:#43201c;--gd-pending:#c4c8ce;--gd-pending-bg:#262a31;--gd-active-bg:#f6c515;--gd-active-ink:#111;
+}
+@media(prefers-color-scheme:dark){body.swat-gameday-mode:not([data-swat-appearance="light"]){
+ --gd-card-shadow:none;--gd-live:#a0efbb;--gd-live-bg:#173a26;--gd-final:#fafafa;--gd-final-bg:#2b3038;
+ --gd-delay:#ffd76a;--gd-delay-bg:#3b2f0c;--gd-cancel:#ffb4ab;--gd-cancel-bg:#43201c;--gd-pending:#c4c8ce;--gd-pending-bg:#262a31;--gd-active-bg:#f6c515;--gd-active-ink:#111;
+}}
+
+/* ---------- Type roles ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(h1,h2,h3){font-family:var(--gd-font-display-stack)!important;font-weight:700!important;letter-spacing:.01em!important;text-transform:uppercase!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;overflow-wrap:anywhere}
+body.swat-gameday-mode .swat-gameday.swat-gameday h2{font-size:var(--gd-t-section)!important;line-height:1.1!important;margin:0!important}
+/* Surfaces that stay dark in both modes (form panels, context cards, alert banner): the heading/eyebrow
+   ink above must not apply to them. 1.0.12 regression fix: REPORT SCORE / FIELD HELP / context titles were dark-on-dark. */
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-form-panel,.swat-context-card,.swat-alert) :is(h1,h2,h3,strong){color:var(--gd-on-dark)!important;-webkit-text-fill-color:var(--gd-on-dark)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-form-panel,.swat-context-card) .swat-app-eyebrow{color:var(--gd-gold)!important;-webkit-text-fill-color:var(--gd-gold)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-form-panel,.swat-context-card) .swat-form-note{color:var(--gd-on-dark-muted)!important;-webkit-text-fill-color:var(--gd-on-dark-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-alert>div>span{background:var(--gd-gold)!important;color:#111!important;-webkit-text-fill-color:#111!important;padding:2px 8px!important;border-radius:999px!important;font-size:var(--gd-t-label)!important;font-weight:700!important;letter-spacing:.05em!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday h3{font-size:18px!important;line-height:1.15!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-eyebrow{font-size:var(--gd-t-label)!important;line-height:1.2!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important;margin:0 0 2px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(td,.swat-game-meta strong,.swat-team-row strong,.swat-bracket-team strong,.swat-bracket-game-time,.swat-home-next-time>strong,.swat-itinerary-time strong){font-variant-numeric:tabular-nums}
+
+/* ---------- Status bar + appearance: one row from 375px up ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-statusbar{min-height:44px!important;padding:0!important;margin:0 0 var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-statusbar>div{min-height:36px;align-items:center;overflow:hidden}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-updated{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-appearance{margin:0 0 var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-appearance button{min-height:36px!important;padding:0 var(--gd-s3)!important;font-size:var(--gd-t-helper)!important}
+@media(min-width:375px){
+  /* Keep sync status readable: appearance controls get their own row instead of stealing status width. */
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-statusbar>div{max-width:none!important;flex:1 1 auto}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-updated{overflow:visible;text-overflow:clip}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-appearance{position:static!important;justify-content:flex-end!important;margin:calc(-1 * var(--gd-s1)) 0 var(--gd-s2)!important;display:flex!important;gap:4px}
+}
+
+/* ---------- Event header (dark SWAT band) ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero{gap:var(--gd-s1) var(--gd-s3)!important;padding:var(--gd-s4)!important;border-radius:var(--gd-r-lg)!important;margin:0 0 var(--gd-s3)!important;background:var(--gd-dark)!important;border-top:3px solid var(--gd-gold)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero h1{font-size:var(--gd-t-display)!important;font-weight:800!important;line-height:1!important;letter-spacing:.005em!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-event-date{order:-1;font-size:var(--gd-t-label)!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--gd-gold)!important;-webkit-text-fill-color:var(--gd-gold)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-event-date span{color:#8e96a1!important;-webkit-text-fill-color:#8e96a1!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-event-subtitle{font-size:var(--gd-t-meta)!important;font-weight:600!important;color:#e6e8eb!important;-webkit-text-fill-color:#e6e8eb!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-event-meta,body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-event-meta span{font-size:var(--gd-t-helper)!important;color:#b9bfc7!important;-webkit-text-fill-color:#b9bfc7!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero .swat-home-event-switch label{border-color:#5d636c!important;background:#1b1e23!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-hero .swat-home-event-switch label>span{font-size:var(--gd-t-meta)!important;font-weight:600!important}
+
+/* ---------- Section headings (one pattern everywhere) ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-section-heading{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:var(--gd-s3)!important;margin:0 0 var(--gd-s3)!important;padding:0!important;border:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-section-heading.swat-section-gap{margin-top:var(--gd-s6)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-section-heading>span{font-size:var(--gd-t-helper)!important;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-section-head h2,body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend-head h2,body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-up-next-label h2{font-size:var(--gd-t-section)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-view{margin-top:var(--gd-s2)}
+
+/* ---------- Primary navigation (Today | Schedule | Scores | Standings | More) ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs{box-shadow:0 -2px 10px rgba(0,0,0,.06)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs button{position:relative;min-height:52px!important;font-size:var(--gd-t-label)!important;font-weight:600!important;white-space:nowrap!important;border-radius:var(--gd-r-sm)!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs button.is-active{background:transparent!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs button.is-active::before{content:"";position:absolute;top:-6px;left:22%;right:22%;height:3px;border-radius:0 0 3px 3px;background:var(--gd-gold)}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs button.is-active svg{stroke-width:2.2}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs button span{font-size:var(--gd-t-label)!important;font-weight:600!important}
+
+/* ---------- Game row: ONE component for Today, Schedule, Scores, Pitching ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-list{display:grid!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;column-gap:var(--gd-s2)!important;row-gap:var(--gd-s1)!important;align-items:center;gap:var(--gd-s2)!important;padding:var(--gd-s3) var(--gd-s3) var(--gd-s2) var(--gd-s4)!important;margin:0!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;border:1px solid var(--ux-line)!important;border-left:4px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;box-shadow:var(--gd-card-shadow)!important;min-height:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card>*{margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta>div{display:flex!important;align-items:baseline!important;gap:var(--gd-s2)!important;min-width:0;flex-wrap:wrap}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta strong{font-family:var(--gd-font-display-stack)!important;font-size:var(--gd-t-data)!important;font-weight:700!important;line-height:1!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;white-space:nowrap}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta div span{font-size:var(--gd-t-helper)!important;font-weight:500!important;color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta>a{flex:0 0 auto;display:inline-flex!important;align-items:center;min-height:32px!important;padding:0 var(--gd-s2)!important;border-radius:var(--gd-r-sm)!important;background:var(--ux-bg)!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;font-size:var(--gd-t-meta)!important;font-weight:700!important;text-decoration:none!important;white-space:nowrap}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta>a::before{content:"";width:12px;height:12px;margin-right:4px;background:currentColor;opacity:.7;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s7-6.6 7-12a7 7 0 1 0-14 0c0 5.4 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s7-6.6 7-12a7 7 0 1 0-14 0c0 5.4 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'/%3E%3C/svg%3E") center/contain no-repeat}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-matchup{display:grid!important;gap:2px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-team-row{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:var(--gd-s3)!important;min-height:28px!important;padding:0!important;border:0!important;background:transparent!important;text-decoration:none!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-team-row span{font-size:var(--gd-t-card)!important;font-weight:600!important;line-height:1.25!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;overflow-wrap:anywhere}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-team-row strong{font-family:var(--gd-font-display-stack)!important;font-size:var(--gd-t-score)!important;font-weight:700!important;line-height:1!important;min-width:1.4em;text-align:right;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-team-row strong:empty{display:none!important}
+/* Row 1: time + division | status.  Row 2: matchup.  Row 3: field | actions. (display:contents keeps the JS markup untouched) */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta,body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-footer{display:contents!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta>div{grid-column:1;grid-row:1}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-footer .swat-game-status{grid-column:2;grid-row:1;justify-self:end}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-matchup{grid-column:1/-1;grid-row:2}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-meta>a{grid-column:1;grid-row:3;justify-self:start}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-footer-actions{grid-column:2;grid-row:3;justify-content:flex-end;margin:0 -8px 0 0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-footer-actions{display:flex!important;gap:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-footer-actions a{display:inline-flex!important;align-items:center;min-height:36px!important;padding:0 var(--gd-s2)!important;font-size:var(--gd-t-helper)!important;font-weight:600!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;text-decoration:underline!important;text-underline-offset:3px;background:transparent!important;border:0!important}
+/* Status badge */
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-game-status,.swat-bracket-match-meta strong){display:inline-flex!important;align-items:center;gap:6px;min-height:24px;padding:2px var(--gd-s2)!important;border-radius:999px!important;font-size:var(--gd-t-label)!important;font-weight:700!important;letter-spacing:.05em!important;text-transform:uppercase!important;white-space:nowrap;background:var(--gd-pending-bg)!important;color:var(--gd-pending)!important;-webkit-text-fill-color:currentColor!important;border:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .is-upcoming :is(.swat-game-status,.swat-bracket-match-meta strong){background:transparent!important;color:var(--ux-muted)!important;padding-left:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .is-live :is(.swat-game-status,.swat-bracket-match-meta strong){background:var(--gd-live-bg)!important;color:var(--gd-live)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .is-live :is(.swat-game-status,.swat-bracket-match-meta strong)::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;animation:gd-pulse 1.6s ease-in-out infinite}
+body.swat-gameday-mode .swat-gameday.swat-gameday .is-final :is(.swat-game-status,.swat-bracket-match-meta strong){background:var(--gd-final-bg)!important;color:var(--gd-final)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .is-delayed :is(.swat-game-status,.swat-bracket-match-meta strong){background:var(--gd-delay-bg)!important;color:var(--gd-delay)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .is-cancelled :is(.swat-game-status,.swat-bracket-match-meta strong){background:var(--gd-cancel-bg)!important;color:var(--gd-cancel)!important}
+@keyframes gd-pulse{50%{opacity:.35}}
+/* State accents (left rule + text label = never colour alone) */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card.is-live{border-left-color:var(--gd-live)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card.is-delayed{border-left-color:#c58a00!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card.is-cancelled{border-left-color:var(--gd-cancel)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card.is-cancelled .swat-team-row span{text-decoration:line-through;text-decoration-thickness:1px;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card.is-final{border-left-color:var(--ux-text)!important}
+/* Finals: result first, scheduled time steps back */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card.is-final .swat-game-meta strong{font-family:var(--gd-font-ui)!important;font-size:var(--gd-t-meta)!important;font-weight:600!important;color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card:is(.is-final,.is-live) .swat-team-row{min-height:32px!important}
+
+/* ---------- Schedule: day tabs + filters ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-day-tabs{display:flex!important;gap:var(--gd-s2);overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--gd-s4)) var(--gd-s3);padding:0 var(--gd-s4) 2px;scroll-snap-type:x proximity}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-day-tabs::-webkit-scrollbar{display:none}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-day-tabs:empty{display:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-day-tabs button{flex:0 0 auto;scroll-snap-align:start;min-height:44px!important;padding:0 var(--gd-s4)!important;border-radius:999px!important;border:1px solid var(--ux-line)!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;font-size:var(--gd-t-meta)!important;font-weight:600!important;white-space:nowrap}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-day-tabs button[aria-pressed="true"]{background:var(--gd-active-bg)!important;border-color:var(--gd-active-bg)!important;color:var(--gd-active-ink)!important;-webkit-text-fill-color:var(--gd-active-ink)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-filter-bar{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--gd-s2)!important;margin:0 0 var(--gd-s3)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-filter-bar select,body.swat-gameday-mode .swat-gameday.swat-gameday .pitch-controls select{width:100%!important;min-height:44px!important;padding:0 32px 0 var(--gd-s3)!important;border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-sm)!important;background-color:var(--ux-surface)!important;color:var(--ux-text)!important;font-size:var(--gd-t-meta)!important;font-weight:500!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-clear-filters{min-height:44px!important;padding:0 var(--gd-s3)!important;font-size:var(--gd-t-meta)!important;font-weight:600!important;text-decoration:underline;background:transparent!important;border:0!important;color:var(--ux-text)!important}
+
+/* ---------- Today ---------- */
+/* swat-gameday-premium.css:41 hides Playing Now / Up Next / Finals / Championships; restore them below Your Teams */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-view[data-swat-section="today"]:not([hidden]){display:block!important;margin-top:var(--gd-s6)}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-championships-panel:not([hidden]){display:block!important;margin:0 0 var(--gd-s6)!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend:not(.has-followed-teams) .swat-my-weekend-head [data-swat-manage-teams]{display:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend{margin:0 0 var(--gd-s5)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend-head{align-items:flex-end!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend-head>div{flex:1 1 auto;min-width:0}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-my-weekend-head [data-swat-weekend-label]{max-width:none!important;margin:2px 0 0!important;font:400 var(--gd-t-helper)/1.4 var(--gd-font-ui)!important;color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-itinerary-empty:not([hidden]){display:flex!important;align-items:center;justify-content:space-between;gap:var(--gd-s3);padding:var(--gd-s3) var(--gd-s4)!important;margin:var(--gd-s2) 0 0!important;border:1px dashed var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;text-align:left!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-itinerary-empty p{margin:0!important;font-size:var(--gd-t-meta)!important;color:var(--ux-muted)!important;text-align:left!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-itinerary-empty button{flex:0 0 auto;min-height:44px!important;padding:0 var(--gd-s4)!important;border-radius:var(--gd-r-sm)!important;background:var(--gd-gold)!important;color:#111!important;-webkit-text-fill-color:#111!important;border:0!important;font-size:var(--gd-t-meta)!important;font-weight:700!important}
+/* Next Game: time, matchup, field, status, directions — in that order of weight */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-next-game-focus{min-height:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-next-card{padding:var(--gd-s4)!important;border:1px solid var(--ux-line)!important;border-left:4px solid var(--gd-gold)!important;border-radius:var(--gd-r-lg)!important;box-shadow:var(--gd-card-shadow)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-next-game-focus .swat-home-next-time>strong{font-family:var(--gd-font-display-stack)!important;font-size:clamp(34px,10vw,44px)!important;line-height:1!important;font-weight:800!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-next-game-focus .swat-home-next-main>h3{font-family:var(--gd-font-ui)!important;text-transform:none!important;letter-spacing:0!important;font-size:18px!important;font-weight:700!important;line-height:1.25!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-next-main .swat-field-badge{font-size:var(--gd-t-meta)!important;font-weight:700!important;padding:2px 8px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-next-actions{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday a.swat-ux-directions{min-height:48px!important;border-radius:var(--gd-r-md)!important;font-weight:700!important;order:-1}
+/* Your Teams itinerary rows */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-itinerary-day h3{font-family:var(--gd-font-ui)!important;font-size:var(--gd-t-meta)!important;font-weight:700!important;letter-spacing:.04em!important;color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-weekend-timeline .swat-itinerary-time>strong{font-family:var(--gd-font-display-stack)!important;font-size:18px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-followed-chip{min-height:36px!important;border:1px solid var(--ux-line)!important;max-width:calc(50% - 4px)}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-followed-chip:only-child{max-width:100%}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-followed-chip em{color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;font-style:normal;margin-left:6px}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-followed-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------- Tournament Hub: compact utility tiles ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools{margin:0 0 var(--gd-s5)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools .swat-home-tool-grid{gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools .swat-home-tool-grid>:is(a,button){min-height:68px!important;border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;box-shadow:var(--gd-card-shadow)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools .swat-home-tool-grid>:is(a,button) strong{font-family:var(--gd-font-ui)!important;font-size:var(--gd-t-helper)!important;font-weight:700!important;letter-spacing:.04em!important;text-transform:uppercase!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tool-icon svg{width:20px!important;height:20px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules{border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-rules>summary{min-height:44px;display:flex;align-items:center}
+
+/* ---------- Standings (pool) ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card{padding:0!important;margin:0 0 var(--gd-s3)!important;border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;overflow:hidden;box-shadow:var(--gd-card-shadow)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card h3{padding:var(--gd-s3) var(--gd-s4) 0!important;margin:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-rules{padding:2px var(--gd-s4) var(--gd-s2)!important;margin:0!important;font-size:var(--gd-t-label)!important;color:var(--ux-muted)!important;border:0!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-scroll{overflow-x:auto!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card table{width:100%!important;border-collapse:collapse!important;table-layout:auto!important;margin:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td){padding:10px 6px!important;font-size:var(--gd-t-meta)!important;text-align:center!important;border:0!important;border-top:1px solid var(--ux-line)!important;background:transparent!important;color:var(--ux-text)!important;vertical-align:middle}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card th{font-size:var(--gd-t-label)!important;font-weight:700!important;letter-spacing:.05em!important;color:var(--ux-muted)!important;background:var(--ux-bg)!important;border-top:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):first-child{width:2.2em;padding-left:var(--gd-s4)!important;font-weight:700!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td){white-space:nowrap;width:2.4em;min-width:2.4em}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):nth-child(2){text-align:left!important;width:auto;min-width:8em;white-space:normal!important;font-weight:600!important;line-height:1.25;overflow-wrap:break-word}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):last-child{padding-right:var(--gd-s4)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):nth-child(6){font-weight:800!important;background:rgba(246,197,21,.14)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card td small{font-size:var(--gd-t-label)!important;color:var(--gd-delay)!important;font-weight:700}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card tr.is-followed-team td{box-shadow:inset 0 0 0 9999px rgba(246,197,21,.10)}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card tr.is-followed-team td:first-child{box-shadow:inset 4px 0 0 var(--gd-gold),inset 0 0 0 9999px rgba(246,197,21,.10)}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-postseason-tabs{display:grid!important;grid-template-columns:1fr 1fr!important;gap:4px!important;padding:4px!important;margin:0 0 var(--gd-s3)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;border:1px solid var(--ux-line)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-postseason-tabs button{min-height:44px!important;border-radius:var(--gd-r-sm)!important;border:0!important;background:transparent!important;color:var(--ux-muted)!important;font-size:var(--gd-t-meta)!important;font-weight:700!important;letter-spacing:.05em!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-postseason-tabs button.is-active{background:var(--gd-active-bg)!important;color:var(--gd-active-ink)!important;-webkit-text-fill-color:var(--gd-active-ink)!important}
+
+/* ---------- Bracket: flat, vertical, mobile-first (same data, no panning) ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-board{padding:0!important;margin:0 0 var(--gd-s6)!important;border:0!important;background:transparent!important;box-shadow:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-heading{margin:0 0 var(--gd-s2)!important;padding:0 2px!important;border:0!important;background:transparent!important;transform:none!important;text-indent:0!important;overflow:visible!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-path{display:grid!important;gap:var(--gd-s3)!important;grid-template-columns:minmax(0,1fr)!important;overflow:visible!important;padding:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot{display:grid!important;gap:var(--gd-s2)!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;min-width:0!important;width:auto!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot::before,body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot::after{display:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot-label{display:flex!important;justify-content:space-between;align-items:baseline;padding:0 2px!important;margin:var(--gd-s2) 0 0!important;border:0!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot-label strong{display:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot-label span{font-size:var(--gd-t-meta)!important;font-weight:700!important;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-match{display:grid!important;gap:var(--gd-s1)!important;padding:var(--gd-s3) var(--gd-s3) var(--gd-s3) var(--gd-s4)!important;margin:0!important;border:1px solid var(--ux-line)!important;border-left:4px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;box-shadow:var(--gd-card-shadow)!important;min-width:0!important;width:auto!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-match.is-live{border-left-color:var(--gd-live)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-match.is-final{border-left-color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-match-meta{display:flex!important;justify-content:space-between!important;align-items:center!important;padding:0!important;border:0!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-match-meta span{font-size:var(--gd-t-label)!important;font-weight:700!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-game-details{display:flex!important;flex-wrap:wrap;align-items:baseline!important;gap:2px var(--gd-s2)!important;padding:0 0 var(--gd-s1)!important;margin:0!important;border:0!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-game-time{order:-1;font-family:var(--gd-font-display-stack)!important;font-size:var(--gd-t-data)!important;font-weight:700!important;line-height:1.1!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-bracket-game-date,.swat-bracket-game-field){font-size:var(--gd-t-meta)!important;color:var(--ux-muted)!important;font-weight:500!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-game-field{font-weight:700!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-game-field::before{content:"·";margin-right:4px;font-weight:500;color:var(--ux-muted)}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-team{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:var(--gd-s3)!important;align-items:center;min-height:30px!important;padding:2px 0!important;margin:0!important;border:0!important;border-top:1px solid var(--ux-line)!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-team span{font-size:var(--gd-t-card)!important;font-weight:600!important;color:var(--ux-text)!important;overflow-wrap:anywhere}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-team strong{font-family:var(--gd-font-display-stack)!important;font-size:22px!important;font-weight:700!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-team.is-followed-team{box-shadow:inset 3px 0 0 var(--gd-gold);padding-left:8px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-championship-card{border-left-color:var(--gd-gold)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-championship-time{font-family:var(--gd-font-display-stack)!important;font-size:var(--gd-t-data)!important;font-weight:700!important;color:var(--ux-text)!important;padding:0!important;margin:0 0 var(--gd-s1)!important;background:transparent!important;border:0!important}
+
+/* ---------- Fields ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-grid{display:grid!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card{display:grid!important;gap:var(--gd-s2)!important;padding:var(--gd-s3) var(--gd-s4)!important;margin:0!important;border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;box-shadow:var(--gd-card-shadow)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card>*{margin:0!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card .swat-app-eyebrow{display:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card h3{font-size:22px!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card small{display:block;font-size:var(--gd-t-meta)!important;font-weight:500!important;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card>p{font-size:var(--gd-t-meta)!important;line-height:1.4!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card>div:last-child{display:flex!important;flex-wrap:wrap;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card>div:last-child a{display:inline-flex!important;align-items:center;justify-content:center;min-height:44px!important;padding:0 var(--gd-s3)!important;border-radius:var(--gd-r-sm)!important;border:1px solid var(--ux-line)!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important;font-size:var(--gd-t-helper)!important;font-weight:700!important;letter-spacing:.04em;text-decoration:none!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-field-card>div:last-child a[target="_blank"]{flex:1 1 100%;background:var(--gd-gold)!important;border-color:var(--gd-gold)!important;color:#111!important;-webkit-text-fill-color:#111!important;font-size:var(--gd-t-meta)!important}
+
+/* ---------- Pitching (presentation only; calculations untouched) ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-controls{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-controls label{display:grid!important;gap:4px;font-size:var(--gd-t-label)!important;font-weight:700!important;letter-spacing:.05em;text-transform:uppercase;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-update :is(span,[data-pitch-status]){color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important;opacity:1!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-update{display:flex!important;align-items:center;justify-content:space-between;gap:var(--gd-s2);margin:var(--gd-s3) 0!important;font-size:var(--gd-t-helper)!important;color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live [data-pitch-results]>h3{margin:0 0 4px!important;color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;background:transparent!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live :is(.pitch-meta,.pitch-intro,.pitch-note){color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-player{border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;margin:0 0 var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-player summary{min-height:52px!important;display:flex!important;align-items:center;justify-content:space-between;padding:0 var(--gd-s4)!important;font-weight:600}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-player summary strong{font-family:var(--gd-font-display-stack)!important;font-size:22px!important;font-variant-numeric:tabular-nums}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-team-list{display:grid!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-pitch-count-live .pitch-team-list button{display:flex!important;justify-content:space-between;align-items:center;gap:var(--gd-s2);min-height:52px!important;padding:0 var(--gd-s4)!important;border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;text-align:left}
+
+/* ---------- More ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-more-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--gd-s2)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-more-grid>*{display:grid!important;align-content:start;gap:4px;min-height:84px!important;padding:var(--gd-s3)!important;border:1px solid var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;text-align:left!important;text-decoration:none!important;box-shadow:var(--gd-card-shadow)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-more-grid strong{font-size:var(--gd-t-meta)!important;font-weight:700!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-more-grid span{font-size:var(--gd-t-helper)!important;color:var(--ux-muted)!important;line-height:1.35}
+
+/* ---------- Empty states ---------- */
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-empty{padding:var(--gd-s4)!important;border:1px dashed var(--ux-line)!important;border-radius:var(--gd-r-md)!important;background:transparent!important;text-align:left!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-empty strong{display:block;font-size:var(--gd-t-meta)!important;font-weight:700!important;color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-gameday.swat-gameday .swat-app-empty p{margin:2px 0 0!important;font-size:var(--gd-t-helper)!important;color:var(--ux-muted)!important}
+
+/* ---------- Follow Teams sheet: outside .swat-gameday, so scope from body ---------- */
+body.swat-gameday-mode .swat-team-picker-sheet{
+  font-family:var(--gd-font-ui)!important;background:var(--ux-surface)!important;color:var(--ux-text)!important;
+  border:1px solid var(--ux-line)!important;border-bottom:0!important;box-shadow:0 -20px 60px rgba(0,0,0,.20)!important;
+}
+body.swat-gameday-mode .swat-team-picker-head h2{font-family:var(--gd-font-display-stack)!important;font-size:var(--gd-t-section)!important;line-height:1.1!important;font-weight:700!important;letter-spacing:.01em!important;text-transform:uppercase!important;color:var(--ux-text)!important;-webkit-text-fill-color:currentColor!important}
+body.swat-gameday-mode .swat-team-picker .swat-app-eyebrow{display:block!important;margin:0 0 2px!important;font-family:var(--gd-font-ui)!important;font-size:var(--gd-t-label)!important;line-height:1.2!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-team-picker-head button{min-height:44px!important;padding:0 var(--gd-s4)!important;border:0!important;border-radius:var(--gd-r-sm)!important;background:var(--gd-gold)!important;color:#111!important;-webkit-text-fill-color:#111!important;font-family:var(--gd-font-ui)!important;font-size:var(--gd-t-meta)!important;font-weight:700!important}
+body.swat-gameday-mode .swat-team-picker-help,body.swat-gameday-mode .swat-team-picker-count{color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important;background:var(--ux-surface)!important}
+body.swat-gameday-mode .swat-team-search{color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-team-search input{min-height:44px!important;background:var(--ux-surface)!important;border-color:var(--ux-line)!important;color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-team-pick-row{min-height:54px!important;background:var(--ux-surface)!important;border-color:var(--ux-line)!important;color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-team-pick-row strong{color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important}
+body.swat-gameday-mode .swat-team-pick-row small{color:var(--ux-muted)!important;-webkit-text-fill-color:var(--ux-muted)!important}
+body.swat-gameday-mode .swat-team-pick-row em{background:var(--ux-bg)!important;color:var(--ux-text)!important;-webkit-text-fill-color:var(--ux-text)!important;border:1px solid var(--ux-line)!important}
+body.swat-gameday-mode .swat-team-pick-row.is-followed{border-color:#b28a00!important;background:rgba(246,197,21,.10)!important}
+body.swat-gameday-mode .swat-team-pick-row.is-followed em{background:var(--gd-gold)!important;border-color:var(--gd-gold)!important;color:#111!important;-webkit-text-fill-color:#111!important}
+body.swat-gameday-mode .swat-team-picker :is(button,input):focus-visible{outline:3px solid #2475d0!important;outline-offset:3px!important}
+
+/* ---------- Phones: all 8 standings columns stay visible (no hidden RS/RD) ---------- */
+@media(max-width:430px){
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td){padding:9px 3px!important;width:1.9em;min-width:1.9em}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card td:not(:nth-child(2)){font-size:13px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card th{font-size:11px!important;letter-spacing:.02em!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):first-child{padding-left:10px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):last-child{padding-right:10px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):nth-child(2){min-width:5.5em;font-size:14px!important;padding-left:6px!important}
+}
+/* ---------- 320px: keep every target, tighten gutters ---------- */
+@media(max-width:359px){
+  body.swat-gameday-mode .swat-gameday.swat-gameday{padding-left:12px!important;padding-right:12px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-day-tabs{margin-inline:-12px;padding-inline:12px}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-game-card{padding-left:var(--gd-s3)!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td){padding:9px 4px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-standing-card :is(th,td):nth-child(2){min-width:7.5em}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools .swat-home-tool-grid>:is(a,button) strong{font-size:12px!important}
+}
+/* ---------- Tablet + desktop: use width for lists, not bigger cards ---------- */
+@media(min-width:768px){
+  body.swat-gameday-mode .swat-gameday.swat-gameday{max-width:760px!important;margin-inline:auto!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs{max-width:760px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-game-list,.swat-field-grid){grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-home-tools .swat-home-tool-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-filter-bar{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-more-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-bracket-slot-label{grid-column:1/-1}
+}
+@media(min-width:1200px){
+  body.swat-gameday-mode .swat-gameday.swat-gameday{max-width:1040px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday .swat-gameday-tabs{max-width:1040px!important}
+  body.swat-gameday-mode .swat-gameday.swat-gameday :is(.swat-game-list,.swat-field-grid){grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
