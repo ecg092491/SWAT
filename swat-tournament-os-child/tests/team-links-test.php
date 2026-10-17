@@ -99,7 +99,8 @@ $check( 'description: not found', '' === swat_child_team_description( array( 'mo
 // Templates are wired.
 $event = file_get_contents( SWAT_CHILD_DIR . '/single-tournament.php' );
 $check( 'event page: cards, results and standings use team links (5 places)', 5 === substr_count( $event, '$team_html(' ) && false === strpos( $event, 'esc_html( $away )' ) && false === strpos( $event, "esc_html( \$row['team'] ?? '' )" ) );
-$check( 'header: Teams after Tournaments', false !== strpos( file_get_contents( SWAT_CHILD_DIR . '/header.php' ), "Tournaments</a></li>\n\t\t\t\t\t<li><a href=\"<?php echo esc_url( home_url( '/teams/' ) ); ?>\">Teams</a></li>" ) );
+$header = file_get_contents( SWAT_CHILD_DIR . '/header.php' );
+$check( 'header: Teams after Tournaments', strpos( $header, "home_url( '/tournaments/' )" ) < strpos( $header, "home_url( '/teams/' )" ) && false !== strpos( $header, "esc_html_e( 'Teams', 'swat-tournament-os-child' )" ) );
 $check( 'homepage: Browse all teams link', false !== strpos( file_get_contents( SWAT_CHILD_DIR . '/front-page.php' ), "home_url( '/teams/' )" ) );
 $check( 'team page: opponents linked', 2 === substr_count( file_get_contents( SWAT_CHILD_DIR . '/team-profile.php' ), 'swat_child_team_key_link_html(' ) );
 

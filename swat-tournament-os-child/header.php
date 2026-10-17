@@ -25,26 +25,30 @@ $event      = $is_gameday ? swat_os_current_event() : array();
 			<a class="swat-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( swat_os_logo_url() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
 			<button class="swat-menu-toggle" type="button" aria-expanded="false" aria-controls="swat-primary-nav"><span class="swat-menu-bars" aria-hidden="true"></span><span class="screen-reader-text"><?php esc_html_e( 'Menu', 'swat-tournament-os' ); ?></span></button>
 			<nav id="swat-primary-nav" class="swat-primary-nav" aria-label="<?php esc_attr_e( 'Primary navigation', 'swat-tournament-os' ); ?>">
-				<ul class="menu">
-					<li><a href="<?php echo esc_url( home_url( '/tournaments/' ) ); ?>">Tournaments</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/teams/' ) ); ?>">Teams</a></li>
-					<li class="swat-menu-parent menu-item-swat-gameday"><a class="swat-btn swat-btn-gold" href="<?php echo esc_url( swat_os_gameday_url() ); ?>">Game Day</a><ul class="swat-submenu">
-						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'schedule' ) ) ); ?>">Schedule</a></li>
-						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'scores' ) ) ); ?>">Scores</a></li>
-						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'standings' ) ) ); ?>">Standings</a></li>
-						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'pitching' ) ) ); ?>">Pitch Counts</a></li>
+				<?php if ( has_nav_menu( 'primary' ) ) : ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'menu', 'fallback_cb' => false ) ); ?>
+                <?php else : ?>
+                <ul class="menu">
+					<li><a href="<?php echo esc_url( home_url( '/tournaments/' ) ); ?>"><?php esc_html_e( 'Tournaments', 'swat-tournament-os-child' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/teams/' ) ); ?>"><?php esc_html_e( 'Teams', 'swat-tournament-os-child' ); ?></a></li>
+					<li class="swat-menu-parent menu-item-swat-gameday"><a class="swat-btn swat-btn-gold" href="<?php echo esc_url( swat_os_gameday_url() ); ?>"><?php esc_html_e( 'Game Day', 'swat-tournament-os-child' ); ?></a><ul class="swat-submenu">
+						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'schedule' ) ) ); ?>"><?php esc_html_e( 'Schedule', 'swat-tournament-os-child' ); ?></a></li>
+						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'scores' ) ) ); ?>"><?php esc_html_e( 'Scores', 'swat-tournament-os-child' ); ?></a></li>
+						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'standings' ) ) ); ?>"><?php esc_html_e( 'Standings', 'swat-tournament-os-child' ); ?></a></li>
+						<li><a href="<?php echo esc_url( swat_os_gameday_url( array( 'view' => 'pitching' ) ) ); ?>"><?php esc_html_e( 'Pitch Counts', 'swat-tournament-os-child' ); ?></a></li>
 					</ul></li>
-					<li class="swat-menu-parent"><a href="<?php echo esc_url( home_url( '/rules/' ) ); ?>">Rules</a><ul class="swat-submenu">
-						<li><a href="<?php echo esc_url( home_url( '/pitching/' ) ); ?>">Pitching Limits</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/rules/#division-rules' ) ); ?>">Rules by Division</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/rules/#full-rules' ) ); ?>">Full Handbook</a></li>
+					<li class="swat-menu-parent"><a href="<?php echo esc_url( home_url( '/rules/' ) ); ?>"><?php esc_html_e( 'Rules', 'swat-tournament-os-child' ); ?></a><ul class="swat-submenu">
+						<li><a href="<?php echo esc_url( home_url( '/pitching/' ) ); ?>"><?php esc_html_e( 'Pitching Limits', 'swat-tournament-os-child' ); ?></a></li>
+						<li><a href="<?php echo esc_url( home_url( '/rules/#division-rules' ) ); ?>"><?php esc_html_e( 'Rules by Division', 'swat-tournament-os-child' ); ?></a></li>
+						<li><a href="<?php echo esc_url( home_url( '/rules/#full-rules' ) ); ?>"><?php esc_html_e( 'Full Handbook', 'swat-tournament-os-child' ); ?></a></li>
 					</ul></li>
-					<li><a href="<?php echo esc_url( home_url( '/fields-facilities/' ) ); ?>">Fields &amp; Facilities</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/fields-facilities/' ) ); ?>"><?php esc_html_e( 'Fields & Facilities', 'swat-tournament-os-child' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'swat-tournament-os-child' ); ?></a></li>
 				</ul>
+                <?php endif; ?>
 			</nav>
 			<div class="swat-header-actions">
-				<a class="swat-btn swat-btn-ghost swat-header-register" href="https://play.swatourneys.com/">REGISTER</a>
+				<a class="swat-btn swat-btn-ghost swat-header-register" href="https://play.swatourneys.com/"><?php esc_html_e( 'REGISTER', 'swat-tournament-os-child' ); ?></a>
 			</div>
 		</div>
 	</header>
