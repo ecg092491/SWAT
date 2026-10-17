@@ -69,6 +69,11 @@ function swat_child_hub_enqueue() {
 	if ( ! swat_child_hub_active() ) {
 		return;
 	}
+	wp_enqueue_script( 'swat-gameday-model', SWAT_CHILD_URI . '/assets/js/swat-gameday-model.js', array(), SWAT_CHILD_VERSION, true );
+	$scripts = wp_scripts();
+	if ( isset( $scripts->registered['swat-gameday'] ) ) {
+		$scripts->registered['swat-gameday']->deps[] = 'swat-gameday-model';
+	}
 	$deps = array();
 	foreach ( array( 'swat-os', 'swat-mobile-nav-refine', 'swat-child-fonts', 'swat-child', 'swat-division-rules', 'swat-weekend-pitching' ) as $handle ) {
 		if ( wp_style_is( $handle, 'enqueued' ) || wp_style_is( $handle, 'registered' ) ) {

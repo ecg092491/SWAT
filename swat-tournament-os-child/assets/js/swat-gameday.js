@@ -120,7 +120,7 @@
 			if (isLive(g)) return 'LIVE';
 			if (isPastUnresolved(g)) return 'RESULT PENDING';
 			const raw = norm(g && g.status);
-			return raw === 'SCHEDULED' ? 'UPCOMING' : (raw || 'UPCOMING');
+			return raw === 'SCHEDULED' ? 'UPCOMING' : (raw || 'STATUS TBD');
 		}
 
 		function formatTime(value) {
@@ -206,7 +206,7 @@
 	}
 
 	function hasScore(value) {
-		return value !== null && value !== undefined && String(value).trim() !== '' && Number.isFinite(Number(value));
+		return SWATGameDayModel.hasScore(value);
 	}
 
 	function gameRound(g) {
@@ -214,7 +214,7 @@
 	}
 
 	function isChampionship(g) {
-		return /champ/i.test(gameRound(g));
+		return SWATGameDayModel.isChampionship(g);
 	}
 
 	function gameLabel(g) {
@@ -226,6 +226,7 @@
 		if (isLive(g)) return 'Live';
 		if (isFinal(g)) return 'Final';
 		const raw = norm(g.status);
+		if (!raw) return 'Status TBD';
 		if (raw.indexOf('DELAY') !== -1) return 'Delayed';
 		if (raw.indexOf('CANCEL') !== -1) return 'Cancelled';
 		if (raw.indexOf('POSTPON') !== -1) return 'Postponed';
@@ -1191,7 +1192,7 @@ function populateFilters(games) {
 
 
 	function traditionalBracketSvg() {
-		const games = bracketGames().filter(g => !state.bracketDivision || (g.division || 'Tournament') === state.bracketDivision);
+		const games = bracketGames().filter(g => SWATGameDayModel.belongsToDivision(g, state.bracketDivision));
 		if (!games.length) return null;
 		const groups = new Map();
 		games.forEach(g => { const key = bracketGroupLabel(g) + '|' + (g.schedule_id || ''); if (!groups.has(key)) groups.set(key, []); groups.get(key).push(g); });
@@ -1276,7 +1277,7 @@ function populateFilters(games) {
 		qa('details[data-swat-round]', root).forEach(el => { state.roundOpen[el.dataset.swatRound] = el.open; });
 		const gamesForBracket = bracketGames();
 		const all = canonicalGames();
-		const availableDivisions = unique(all.concat(gamesForBracket).map(g => g.division || 'Tournament')).sort((a,b) => a.localeCompare(b, undefined, {numeric:true}));
+		const availableDivisions = unique(all.concat(gamesForBracket).flatMap(g => SWATGameDayModel.divisionMembers(g))).sort((a,b) => a.localeCompare(b, undefined, {numeric:true}));
 		if (!availableDivisions.includes(state.bracketDivision)) {
 			const followed = followedDivisions(all.concat(gamesForBracket));
 			const selected = all.find(g => state.selectedTeam && [String(g.away_id || g.away), String(g.home_id || g.home)].includes(state.selectedTeam));
@@ -1291,7 +1292,7 @@ function populateFilters(games) {
         const postseasonControls = q('.swat-postseason-controls'), postseasonTabs = q('.swat-postseason-tabs');
         if (postseasonControls) postseasonControls.hidden = !availableDivisions.length;
         if (postseasonTabs) postseasonTabs.hidden = !availableDivisions.length;
-		const selectedGames = gamesForBracket.filter(g => (g.division || 'Tournament') === state.bracketDivision);
+		const selectedGames = gamesForBracket.filter(g => SWATGameDayModel.belongsToDivision(g, state.bracketDivision));
 		const download = q('[data-swat-bracket-download]');
 		if (download) {
 			download.disabled = !selectedGames.length;
@@ -1321,17 +1322,18 @@ function populateFilters(games) {
 		let cards = '', earlier = '';
 		labels.forEach(label => {
 			const rows = tiers[label];
-			const name = tierName(label);
+			const members = SWATGameDayModel.divisionMembers(rows[0]);
+			const name = members.length > 1 ? members.join(' / ') + ' ' + tierName(label) + ' (combined)' : tierName(label);
 			rows.filter(isChampionship).forEach(g => {
-				const decided = isFinal(g) && hasScore(g.home_score) && hasScore(g.away_score) && Number(g.home_score) !== Number(g.away_score);
+				const decided = SWATGameDayModel.championSide(g);
 				const href = appUrl(SWATGameDay.gamedayUrl, {game: g.id});
 				if (decided) {
-					const winner = Number(g.home_score) > Number(g.away_score) ? 'home' : 'away';
+					const winner = decided;
 					const loser = winner === 'home' ? 'away' : 'home';
 					cards += '<article class="swat-ps-champ is-final"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Champion</p><p class="swat-ps-winner">' + esc(bracketTeamLabel(g[winner])) + '</p><p class="swat-ps-k is-quiet">Runner-Up</p><p class="swat-ps-runner">' + esc(bracketTeamLabel(g[loser])) + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '"><strong>' + esc(g[winner + '_score']) + '–' + esc(g[loser + '_score']) + '</strong> final</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
 				} else {
 					const live = isLive(g) && hasScore(g.away_score) && hasScore(g.home_score);
-					cards += '<article class="swat-ps-champ' + (isLive(g) ? ' is-live' : '') + '"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Championship' + (isLive(g) ? ' · Live' : '') + '</p><p class="swat-ps-matchup">' + esc(bracketTeamLabel(g.away)) + (live ? ' <b>' + esc(g.away_score) + '</b>' : '') + '<span>vs</span>' + esc(bracketTeamLabel(g.home)) + (live ? ' <b>' + esc(g.home_score) + '</b>' : '') + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '">' + (isLive(g) ? 'Live' : (norm(g.status).indexOf('DELAY') !== -1 ? 'Delayed' : 'Upcoming')) + '</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
+					cards += '<article class="swat-ps-champ' + (isLive(g) ? ' is-live' : '') + '"><p class="swat-ps-tier">' + esc(name) + '</p><p class="swat-ps-k">Championship' + (isLive(g) ? ' · Live' : '') + '</p><p class="swat-ps-matchup">' + esc(bracketTeamLabel(g.away)) + (live ? ' <b>' + esc(g.away_score) + '</b>' : '') + '<span>vs</span>' + esc(bracketTeamLabel(g.home)) + (live ? ' <b>' + esc(g.home_score) + '</b>' : '') + '</p><p class="swat-ps-meta"><a href="' + esc(href) + '">' + (isLive(g) ? 'Live' : (isFinal(g) ? 'Final · no champion declared' : (norm(g.status).indexOf('DELAY') !== -1 ? 'Delayed' : (g.status ? 'Upcoming' : 'Status TBD')))) + '</a> · <span class="swat-ps-when">' + esc(when(g)) + '</span></p></article>';
 				}
 			});
 			const rounds = [];
