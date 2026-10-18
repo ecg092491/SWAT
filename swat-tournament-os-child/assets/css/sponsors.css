@@ -1,0 +1,47 @@
+/**
+ * Game Day sponsor banners (child 1.0.33).
+ *
+ * Loaded on Game Day only, after postseason.css, and only when at least one
+ * sponsor is saved at SWAT Operations -> Sponsors (inc/sponsors.php). Builds on
+ * the 1.0.17 strip rule in swat-gameday-hub.css and its --gd-* tokens, so light
+ * and dark follow the existing appearance setting.
+ *
+ * - The whole banner is the tap target (stretched link), at least 44px tall.
+ * - Logos sit on a white tile so dark logos stay visible in dark mode.
+ * - With a logo: logo on the left, "SPONSOR" label over the name and tagline.
+ *   Without one: the original single-row strip.
+ */
+
+.swat-hub .swat-sponsor-strip{
+  position:relative;align-items:center;min-height:var(--gd-touch,44px);box-sizing:border-box;
+  margin:12px 0;padding:10px 12px;border:1px solid var(--gd-line);border-radius:var(--gd-radius,12px);
+  background:var(--gd-surface);color:var(--gd-ink);line-height:1.3;
+}
+.swat-hub .swat-sponsor-strip a{color:inherit;font-weight:700;text-decoration:underline;text-decoration-color:var(--gd-accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.swat-hub .swat-sponsor-strip a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.swat-hub .swat-sponsor-strip a:focus-visible{outline:none}
+.swat-hub .swat-sponsor-strip:has(a:focus-visible){outline:3px solid var(--gd-accent);outline-offset:2px;box-shadow:0 0 0 5px var(--gd-ink)}
+@media (hover:hover){.swat-hub .swat-sponsor-strip:has(a):hover{border-color:var(--gd-line-strong)}}
+.swat-hub .swat-sponsor-strip b{font-weight:700}
+.swat-hub .swat-sponsor-tag{flex-shrink:0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gd-muted)}
+
+/* Logo and/or tagline layout */
+.swat-hub .swat-sponsor-text{display:grid;gap:2px;min-width:0}
+.swat-hub .swat-sponsor-tagline{font-size:13px;color:var(--gd-muted);overflow-wrap:anywhere}
+.swat-hub .swat-sponsor-strip.has-logo{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"logo tag" "logo text";column-gap:12px;row-gap:1px}
+.swat-hub .swat-sponsor-strip.has-logo .swat-sponsor-logo{grid-area:logo}
+.swat-hub .swat-sponsor-strip.has-logo .swat-sponsor-tag{grid-area:tag;align-self:end}
+.swat-hub .swat-sponsor-strip.has-logo .swat-sponsor-text{grid-area:text;align-self:start}
+.swat-hub .swat-sponsor-logo{display:flex;align-items:center;justify-content:center;width:88px;height:44px;padding:4px 6px;box-sizing:border-box;border-radius:8px;background:#fff;box-shadow:inset 0 0 0 1px rgba(11,13,16,.08)}
+.swat-hub .swat-sponsor-logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.swat-hub .swat-sponsor-text>span:first-child{font-size:14px;overflow-wrap:anywhere}
+
+/* Spacing inside views: the strip leads the view, ahead of filters and lists. */
+.swat-hub .swat-app-view>.swat-sponsor-strip:first-child{margin-top:4px}
+.swat-hub [data-swat-postseason-panel]>.swat-sponsor-strip{margin:12px 0}
+
+@media (max-width:360px){
+  .swat-hub .swat-sponsor-logo{width:72px;height:40px}
+  .swat-hub .swat-sponsor-strip.has-logo{column-gap:10px;padding:8px 10px}
+}
+@media print{.swat-hub .swat-sponsor-strip{break-inside:avoid}}

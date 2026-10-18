@@ -1,0 +1,36 @@
+/*
+Theme Name: SWAT Tournament OS Child
+Theme URI: https://swatourneys.com/
+Description: Child theme for SWAT Tournament OS. Adds editable per-tournament registration status and deadlines, local Barlow + Inter typography, and a homepage without the game-time list. Requires the parent theme SWAT Tournament OS (folder: swat-tournament-os-master). Adds scoped Game Day text contrast overrides. 1.0.19: parent-first homepage (Find my team’s schedule) and Game Day team view with next game, directions and bracket slots. 1.0.33: SWAT Operations -> Sponsors for Game Day sponsor banners with view/click stats. Does not modify parent files, Playbook sync, or pitching logic.
+Author: SWAT Tournaments
+Author URI: https://swatourneys.com/
+Template: swat-tournament-os-master
+Version: 1.0.35-review
+Requires at least: 6.4
+Requires PHP: 8.0
+Text Domain: swat-tournament-os-child
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Shared Home / Game Day design tokens. Classic theme: one source of truth. */
+:root{
+ --gd-bg:#0b0d10;--gd-page:var(--gd-bg);--gd-surface:#15181d;--gd-surface-2:#202026;
+ --gd-line:#2a2f37;--gd-ink:#f4f4f6;--gd-ink-2:var(--gd-ink);--gd-muted:#a2a2ae;
+ --gd-accent:#F6C515;--gd-accent-ink:#0b0d10;--gd-gold-text:var(--gd-accent);--gd-accent-soft:var(--gd-surface-2);
+ --gd-line-strong:#80818c;--gd-win:var(--gd-gold-text);--gd-danger:var(--swat-bad);--gd-danger-soft:var(--swat-bad-bg);
+ --gd-warn-ink:var(--swat-warn);--gd-warn-soft:var(--swat-warn-bg);--gd-star:var(--gd-gold-text);--gd-shadow:none;
+ --swat-ok:#8ee6ae;--swat-ok-bg:#123322;--swat-warn:#ffda85;--swat-warn-bg:#3b2c10;
+ --swat-bad:#ffabb0;--swat-bad-bg:#3b1b22;--swat-neutral:#d1d5dc;--swat-neutral-bg:#272c34;
+ --gd-radius:16px;--gd-radius-lg:16px;--gd-control-radius:10px;--gd-gutter:16px;--gd-touch:44px;--gd-nav-h:48px;
+ --gd-head:"Barlow Condensed","Arial Narrow",sans-serif;--gd-body:"Barlow",system-ui,sans-serif;
+ --gd-display:clamp(2rem,8vw,3.4rem);--gd-title:clamp(1.5rem,5vw,2rem);--gd-item:20px;--gd-body-size:16px;--gd-meta:14px;
+ --gd-page-title:var(--gd-title);--gd-section-title:var(--gd-title);
+ --swat-font-head:var(--gd-head);--swat-font-body:var(--gd-body);
+}
+:root[data-swat-appearance="light"],body[data-swat-appearance="light"]{
+ --gd-bg:#f5f6f8;--gd-surface:#fff;--gd-surface-2:#eceef2;--gd-line:#d9dde3;
+ --gd-ink:#0b0d10;--gd-muted:#4a525d;--gd-line-strong:#737782;--gd-gold-text:#8a6400;
+ --swat-ok:#176237;--swat-ok-bg:#e2f3e8;--swat-warn:#704900;--swat-warn-bg:#fff0c8;
+ --swat-bad:#a22232;--swat-bad-bg:#ffeaed;--swat-neutral:#4a525d;--swat-neutral-bg:#e8ebef;
+}

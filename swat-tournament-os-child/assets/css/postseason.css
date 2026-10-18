@@ -1,0 +1,53 @@
+/* Division view uses the same tokens and cards as the hub. */
+#swat-postseason{color:var(--gd-ink);min-width:0}
+#swat-postseason .swat-ps-head{margin:0 0 16px;padding:0;border:0;background:none}
+#swat-postseason .swat-ps-eyebrow{font-size:var(--gd-meta);color:var(--gd-muted);margin:0 0 4px}
+#swat-postseason .swat-ps-title{font:700 var(--gd-title)/1.2 var(--gd-head);overflow-wrap:anywhere;color:var(--gd-ink)}
+#swat-postseason .swat-ps-label{display:block;margin:0 0 8px;font-size:var(--gd-body-size);color:var(--gd-muted)}
+#swat-postseason .swat-ps-row{display:flex;align-items:stretch;gap:8px;margin-bottom:16px}
+#swat-postseason .swat-bracket-filter{flex:1;min-width:0;display:block}
+#swat-postseason .swat-bracket-filter select{width:100%;min-height:44px;font:600 16px var(--gd-body);padding:10px;background:var(--gd-surface-2);color:var(--gd-ink);border:1px solid var(--gd-line-strong);border-radius:var(--gd-control-radius)}
+#swat-postseason .swat-bracket-export{flex:0 1 120px;min-width:0;white-space:normal}
+#swat-postseason .swat-postseason-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;background:none;border:0;padding:0}
+#swat-postseason .swat-postseason-tabs button{min-height:44px;font:600 var(--gd-body-size) var(--gd-body)}
+#swat-postseason .swat-postseason-tabs button.is-active{background:var(--gd-accent);color:var(--gd-accent-ink);border-color:var(--gd-accent);box-shadow:none}
+#swat-postseason .swat-ps-champs{display:grid;gap:16px;margin-bottom:16px}
+#swat-postseason .swat-ps-champ p{margin:0}
+#swat-postseason .swat-ps-tier{color:var(--gd-muted);font-weight:600;margin-bottom:12px}
+#swat-postseason .swat-ps-k{color:var(--gd-gold-text);margin-top:8px}
+#swat-postseason .swat-ps-k.is-quiet{color:var(--gd-muted);margin-top:16px}
+#swat-postseason .swat-ps-winner{font:700 var(--gd-display)/1.1 var(--gd-head);overflow-wrap:anywhere}
+#swat-postseason .swat-ps-runner{font:600 var(--gd-item)/1.2 var(--gd-head);color:var(--gd-muted);overflow-wrap:anywhere}
+#swat-postseason .swat-ps-matchup{display:grid;gap:4px;font:600 var(--gd-title)/1.2 var(--gd-head);overflow-wrap:anywhere}
+#swat-postseason .swat-ps-matchup span{font:400 var(--gd-meta) var(--gd-body);color:var(--gd-muted)}
+#swat-postseason .swat-ps-meta{margin-top:12px!important;font-size:var(--gd-meta);color:var(--gd-muted);font-variant-numeric:tabular-nums}
+#swat-postseason .swat-ps-meta a{display:inline-flex;align-items:center;min-height:44px;color:var(--gd-ink)}
+#swat-postseason .swat-ps-meta strong{font:700 var(--gd-title) var(--gd-head)}
+#swat-postseason .swat-ps-rounds{margin-bottom:16px}
+#swat-postseason .swat-ps-rounds h3{margin:16px 0 8px}
+#swat-postseason .swat-ps-round{margin-bottom:12px}
+#swat-postseason .swat-ps-round>summary{display:flex;align-items:center;gap:8px;min-height:44px;list-style:none;cursor:pointer}
+#swat-postseason .swat-ps-round>summary::-webkit-details-marker{display:none}
+#swat-postseason .swat-ps-round-name{flex:1;min-width:0;font:600 var(--gd-item) var(--gd-head)}
+#swat-postseason .swat-ps-round-meta{color:var(--gd-muted);text-align:right}
+#swat-postseason .swat-ps-round-icon::after{content:"+";font-size:24px;color:var(--gd-gold-text)}
+#swat-postseason .swat-ps-round[open] .swat-ps-round-icon::after{content:"−"}
+#swat-postseason .swat-ps-round .swat-game-list{margin-top:12px}
+#swat-postseason .swat-ps-pool{margin-bottom:16px;min-width:0}
+#swat-postseason .swat-ps-pool-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:8px}
+#swat-postseason .swat-ps-pool-head span{font-size:var(--gd-meta);color:var(--gd-muted)}
+#swat-postseason .swat-ps-scroll{overflow:auto;max-width:100%;border-radius:var(--gd-control-radius);overscroll-behavior-x:contain}
+#swat-postseason .swat-ps-table{width:100%;min-width:480px;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:var(--gd-body-size);font-variant-numeric:tabular-nums;color:var(--gd-ink);background:var(--gd-surface)}
+#swat-postseason .swat-ps-table :is(th,td){padding:8px 4px;border:0;border-bottom:1px solid var(--gd-line);background:var(--gd-surface);text-align:center;vertical-align:middle}
+#swat-postseason .swat-ps-table th{font-size:var(--gd-meta);color:var(--gd-muted);font-weight:600;text-transform:none;letter-spacing:0;height:44px}
+#swat-postseason .swat-ps-table .swat-ps-rank{width:28px}
+#swat-postseason .swat-ps-table .swat-ps-team{width:40%;min-width:150px;position:sticky;left:0;z-index:1;text-align:left;white-space:normal;overflow-wrap:anywhere;background:var(--gd-surface);box-shadow:1px 0 var(--gd-line)}
+#swat-postseason .swat-ps-table th.swat-ps-team{z-index:2}
+#swat-postseason .swat-ps-team a{display:flex;align-items:center;min-height:44px;color:var(--gd-ink);text-decoration:underline}
+#swat-postseason .swat-ps-table .is-followed-team .swat-ps-team{color:var(--gd-gold-text)}
+#swat-postseason .swat-ps-table .is-leader .swat-ps-team{font-weight:600}
+#swat-postseason .swat-coin{display:block;font-size:var(--gd-meta);color:var(--gd-muted)}
+#swat-postseason .swat-ps-rules{margin:16px 0}
+#swat-postseason .swat-ps-rules summary{min-height:44px;cursor:pointer;font-weight:600}
+#swat-postseason .swat-ps-rules :is(p,li){font-size:var(--gd-body-size);color:var(--gd-muted)}
+#swat-postseason .swat-ps-sr{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}

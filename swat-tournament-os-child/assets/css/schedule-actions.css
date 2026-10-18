@@ -1,0 +1,30 @@
+.swat-directory-card .swat-event-card-body{min-width:0}.swat-directory-card h2{overflow-wrap:break-word;line-height:1.2}.swat-directory-card .swat-event-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.swat-directory-card .swat-event-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border:1px solid #d9dde3;border-radius:10px;font-size:14px;line-height:1.25;text-decoration:none;color:#17191d;background:#f3f4f6;box-sizing:border-box}.swat-directory-card .swat-event-actions a[aria-label^="View schedule"]{background:#ffcf24;border-color:#ffcf24;color:#17191d;font-weight:800}.weekend-bar__actions a.weekend-bar__status{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;border:1px solid currentColor;border-radius:8px;text-decoration:none;font-size:14px;line-height:1.25}.swat-directory-filters{display:flex;flex-wrap:wrap;align-items:end;gap:12px}.swat-directory-filters label{display:grid;gap:5px}.swat-directory-filters select,.swat-directory-filters button{min-height:44px;padding:8px 12px;border:1px solid #d9dde3;border-radius:8px;background:#fff;color:#17191d;font:inherit;max-width:100%}.swat-event-actions a:focus-visible,.weekend-bar__status:focus-visible{outline:3px solid #4185de;outline-offset:3px}
+.swat-past-results{grid-column:1/-1;border:1px solid #d9dde3;border-radius:14px;margin-top:24px;background:#f7f8fa}.swat-past-results>summary{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;cursor:pointer;padding:18px;font-size:20px;font-weight:800;color:#17191d;list-style:none}.swat-past-results>summary::after{content:'+'}.swat-past-results[open]>summary::after{content:'−'}.swat-past-results>summary span{font-size:14px;font-weight:500;color:#59616b}.swat-past-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:16px}.swat-directory-card .swat-event-actions a[aria-label^="View results"]{background:#e8edf4;color:#25364b;border-color:#cbd4df}.swat-directory-card[hidden],.swat-past-results[hidden]{display:none!important}
+@media(max-width:760px){
+.swat-past-grid{grid-template-columns:minmax(0,1fr);padding:10px;gap:12px}
+[data-swat-tournament-grid]{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px!important}
+.swat-directory-card{display:flex!important;flex-direction:column!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;min-width:0!important;border-radius:16px!important;overflow:hidden}
+.swat-directory-card>.swat-event-date{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important;width:auto!important;min-width:0!important;min-height:0!important;padding:10px 16px!important;background:#f3f4f6!important;color:#17191d!important;border-bottom:1px solid #e3e6ea}
+.swat-directory-card>.swat-event-date span{font-size:13px!important;color:#454b55!important;letter-spacing:.06em}
+.swat-directory-card>.swat-event-date strong{font-size:20px!important;line-height:1!important;color:#17191d!important}
+.swat-directory-card>.swat-event-card-body{width:100%!important;box-sizing:border-box!important;padding:16px!important;min-width:0}
+.swat-directory-card .swat-reg-row{gap:8px;margin-bottom:10px}
+.swat-directory-card h2{font-size:22px!important;line-height:1.2!important;letter-spacing:0!important;margin:0 0 10px!important;overflow-wrap:break-word}
+.swat-directory-card p{font-family:var(--swat-font-body)!important;font-size:14px!important;line-height:1.5!important;margin:6px 0!important}
+.swat-directory-card .swat-event-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;margin-top:14px!important}
+.swat-directory-card .swat-event-actions a{width:100%!important;min-width:0!important;min-height:44px!important;padding:10px 6px!important;font-size:12px!important;line-height:1.25!important;white-space:normal!important;font-family:var(--swat-font-body)!important}
+.swat-directory-filters{gap:8px}
+.swat-directory-filters label{flex:1 1 130px;min-width:0}
+.swat-directory-filters select{width:100%;font-size:14px}
+.weekend-bar__actions{flex-wrap:wrap;gap:10px}
+}
+/* 1.0.31: tournament directory readability + waitlist button */
+.swat-directory-card h2{font-family:var(--swat-font-head,"Barlow",system-ui,sans-serif)!important;font-weight:800!important;font-size:24px!important;line-height:1.15!important;letter-spacing:0!important;text-transform:none!important;margin:2px 0 8px!important;color:#17191d}
+.swat-directory-card .swat-reg-row{min-height:0}
+.swat-directory-card .swat-reg-row:empty{display:none}
+.swat-directory-card .swat-reg-when{display:inline-flex;align-items:center;min-height:28px;padding:2px 12px;border:1px solid currentColor;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.06em;line-height:1.2;text-transform:uppercase;white-space:nowrap}
+.swat-directory-card .swat-reg-when.is-schedule{background:#e7f0ff;color:#123c7a}
+.swat-directory-card .swat-reg-when.is-now{background:#fbc716;color:#17191d;border-color:#17191d}
+.swat-directory-card .swat-event-actions a.swat-waitlist-link{background:#17191d!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:2px solid #17191d!important;border-radius:8px!important;font-weight:800!important;letter-spacing:.04em;justify-content:center;text-align:center;text-decoration:none}
+.swat-directory-card .swat-event-actions a.swat-waitlist-link:hover{background:#000!important;border-color:#000!important}
+.swat-directory-card .swat-event-actions .swat-reg-unavailable{width:100%;justify-content:center;box-sizing:border-box;border:0;border-radius:8px;background:#eceef1;color:#454b55;font-size:12px;text-align:center}
